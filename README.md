@@ -1,3 +1,5 @@
+<img src="/imgage/store.png" alt="store logo" style="height: 100px; width:100px;"/>
+
 # Frontend for Read-Review-Read
 Using TiniApp framework
 
