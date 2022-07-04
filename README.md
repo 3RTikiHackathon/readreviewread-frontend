@@ -1,35 +1,22 @@
+# Backend for Read-Review-Read
+Using TiniApp framework
 
+# What is Read-Review-Read
+Read-Review-Read is a brand new social network and e-commerce platform for book lover.
 
-## Chức năng
+# Features
+* It works like a traditional social network with features like: Profile, Friends, Group, New feed, Posts...
+* More than a social network: RRR is implemented special features for book lovers: Reading progress tracking, review challenges...
+* RRR is also a book store, where all the publisher & seller can join to give readers the best books ever recommended by Artificial intelligence.
+* Readers also get a certificate of ownership which they can share with everybody on other platforms.
 
-- Xem thông tin brand (logo, cover)
-- Banners quảng cáo
-- Danh mục sản phẩm
-- Thông tin sản phẩm
-- Sắp xếp và lọc sản phẩm
-- Tìm kiếm sản phẩm
-- Mua và thanh toán sản phẩm thông qua Tiki
-
-<br/>
-
-## Hướng dẫn cài đặt
-
-Trước hết, vui lòng tải về [Tini Studio](https://developers.tiki.vn/downloads) để chỉnh sửa cũng như khởi chạy template.
-
-### Cài đặt
-
-1. Từ menu của Tini Studio chọn `File --> New Project --> Ở mục Template chọn Brand`. Hoặc có thể clone trực tiếp repo này về và mở bằng Tini Studio.
-
-2. Cài đặt các packages
+# Installation Instructions
+First, please download [Tini Studio](https://developers.tiki.vn/downloads) to edit and launch the template.
+## Installation
+1. From the menu of Tini Studio select `File -> New Project -> In the Template section select Brand`. Or you can clone this repo directly and open it with Tini Studio.
+2. Install packages
 
    ```sh
    yarn
    ```
-
-3. Thay thế các thông số của brand tại file `app.js`
-   ```js
-   brandName: <your_brand_name>;
-   brandLogo: <your_brand_name>;
-   brandCover: <your_brand_name>;
-   ```
-4. Mở simulator và xem thành quả.
+3. Open the simulator and see the result.
