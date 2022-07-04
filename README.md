@@ -1,6 +1,7 @@
   <div align="center">
      <img src="/image/store.png" alt="store logo" style="height: 30%; width:30%;"/>
   </div>
+
 # Frontend for Read-Review-Read
 Using TiniApp framework
 
