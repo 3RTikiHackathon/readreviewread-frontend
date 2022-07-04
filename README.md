@@ -1,5 +1,5 @@
   <div align="center">
-     <img src="/image/store.png" alt="store logo" style="height: 50%; width:50%;"/>
+     <img src="/image/store.png" alt="store logo" style="height: 40%; width:40%;"/>
   </div>
 # Frontend for Read-Review-Read
 Using TiniApp framework
