@@ -1,21 +1,4 @@
-<!-- <div align="center">
-  <img width="200" src="https://salt.tikicdn.com/ts/miniapp/8f/b5/0e/9f86f79f537964ecdde56000092dd0de.png" alt="QR" /> -->
-<h3 align="center">Brand Template</h3>
-  <p align="center">
-    Ứng dụng giúp hỗ trợ các Seller mở brand trên Tini App
-    <br />
-    <a href="https://github.com/tikivn/miniapp-getting-started/tree/main/brand"><strong>Xem thêm tại »</strong></a>
-    <br />
-    <br />
-  </p>
-</div>
 
-<div align="center">
-  <img src="https://salt.tikicdn.com/ts/miniapp/98/f8/c0/2a36796f9b471fabcfcc7b651b3fffc8.png" alt="Screen Shot" width="360">
-  <h3 align="center">Brand Template</h3>
-</div>
-
-<br/>
 
 ## Chức năng
 
