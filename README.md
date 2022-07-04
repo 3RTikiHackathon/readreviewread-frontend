@@ -1,5 +1,5 @@
 <img src="/image/store.png" alt="store logo" style="height: 100px; width:100px;"/>
-
+![Store logo](/image/store.png "Store logo")
 # Frontend for Read-Review-Read
 Using TiniApp framework
 
