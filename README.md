@@ -1,4 +1,4 @@
-# Backend for Read-Review-Read
+# Frontend for Read-Review-Read
 Using TiniApp framework
 
 # What is Read-Review-Read
