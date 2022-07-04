@@ -1,0 +1,13 @@
+{
+  "name": "brand-tiki",
+  "version": "0.1.0",
+  "tiki": {
+    "appIdentifier": "hoang.it1.brand.tiki",
+    "buildNumber": 1
+  },
+  "dependencies": {
+    "@tiki.vn/tini-ui": "0.9.1-rc.0",
+    "lodash": "^4.17.21",
+    "query-string": "^7.0.1"
+  }
+}

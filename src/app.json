@@ -1,0 +1,44 @@
+{
+  "pages": ["pages/home/index", "pages/product/index", "pages/search/index","pages/profile/index"],
+  "window": {
+    "defaultTitle": "",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "borderTopActiveColor": "#1A94FF",
+    "selectedColor": "#1A94FF",
+    "borderTopColor": "#EBEBF0",
+    "items": [
+      {
+        "name": "Feed",
+        "pagePath": "pages/home/index",
+        "icon": "/assets/icons/tab-home.png",
+        "activeIcon": "assets/icons/tab-home-active.png"
+      },
+      {
+        "name": "Store",
+        "pagePath": "pages/store/index",
+        "icon": "/assets/icons/tab-store.svg",
+        "activeIcon": "assets/icons/tab-store-active.svg"
+      },
+      {
+        "name": "My Read",
+        "pagePath": "pages/search/index",
+        "icon": "/assets/icons/tab-read.svg",
+        "activeIcon": "assets/icons/tab-read-active.svg"
+      },
+      {
+        "name": "Challenge",
+        "pagePath": "pages/product/index",
+        "icon": "/assets/icons/tab-challenge.svg",
+        "activeIcon": "assets/icons/tab-challenge-active.svg"
+      },
+      {
+        "name": "Profile",
+        "pagePath": "pages/profile/index",
+        "icon": "/assets/icons/tab-account.png",
+        "activeIcon": "assets/icons/tab-account-active.png"
+      }
+    ]
+  }
+}
