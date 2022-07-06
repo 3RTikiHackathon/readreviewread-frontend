@@ -11,13 +11,13 @@
     "items": [
       {
         "name": "Feed",
-        "pagePath": "pages/home/index",
+        "pagePath": "pages/feed/index",
         "icon": "/assets/icons/tab-home.png",
         "activeIcon": "assets/icons/tab-home-active.png"
       },
       {
         "name": "Store",
-        "pagePath": "pages/store/index",
+        "pagePath": "pages/home/index",
         "icon": "/assets/icons/tab-store.svg",
         "activeIcon": "assets/icons/tab-store-active.svg"
       },

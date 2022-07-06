@@ -19,8 +19,8 @@
 
   <view class="best-seller-section p-medium bg-white">
     <section-title
-      title="Bán chạy"
-      action="Xem thêm"
+      title="New releases"
+      action="See more"
       sort="top_seller"
       onTapActionButton="goToProductPage"
     />
@@ -37,20 +37,8 @@
   <view class="section-divider"/>
 
   <view class="p-medium">
-    <section-title title="Danh mục"/>
-    <category-list
-      isLoading="{{isLoading}}"
-      class="w-full mb-4x-small"
-      categories="{{categories}}"
-      onTapCategory="goToCategoryDetail"
-    />
-  </view>
-
-  <view class="section-divider"/>
-
-  <view class="p-medium">
     <section-title
-      title="Phổ biến"
+      title="Best seller"
       action="Xem thêm"
       sort="default"
       onTapActionButton="goToProductPage"
@@ -59,23 +47,6 @@
       isLoading="{{isLoading}}"
       skeletons="{{4}}"
       products="{{popularProducts.data}}"
-      onTapProduct="onTapProduct"
-    />
-  </view>
-  
-  <view class="section-divider"/>
-
-  <view class="p-medium">
-    <section-title
-      title="Hàng mới"
-      action="Xem thêm"
-      sort="newest"
-      onTapActionButton="goToProductPage"
-    />
-    <product-section
-      isLoading="{{isLoading}}"
-      skeletons="{{4}}"
-      products="{{newestProducts.data}}"
       onTapProduct="onTapProduct"
     />
   </view>

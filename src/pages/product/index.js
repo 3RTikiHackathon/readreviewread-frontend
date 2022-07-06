@@ -241,7 +241,7 @@ Page({
     });
 
     my.setNavigationBar({
-      title: title || 'Sản phẩm',
+      title: 'Sản phẩm',
     });
 
     showCart();
