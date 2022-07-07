@@ -28,3 +28,7 @@
   width: 20px;
   height: 20px;
 }
+
+.text-justify{
+  text-align: justify;
+}

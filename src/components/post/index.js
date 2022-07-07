@@ -25,7 +25,6 @@ Component({
    
   },
   didUpdate() {
-    console.log(this.props)
   },
   didUnmount() {},
 

@@ -13,7 +13,7 @@
     </view>
   </view>
   <view class="margin-top-8px">
-    <view class="text-10px line-height">{{post.content}}</view>
+    <view class="text-12px line-height">{{post.content}}</view>
   </view>
   <image class="margin-top-8px width-100" src={{post.image}}></image>
   <view class="display-flex post-interaction margin-top-12px px-medium"> 
