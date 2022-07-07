@@ -1,8 +1,14 @@
 {
-  "pages": ["pages/home/index", "pages/product/index", "pages/search/index","pages/profile/index"],
+  "pages": [
+    "pages/home/index",
+    "pages/product/index",
+    "pages/search/index",
+    "pages/profile/index",
+    "pages/my_journey/index"
+  ],
   "window": {
     "defaultTitle": "",
-    "backgroundColor": "#fff"
+    "backgroundColor": "rgba(228, 228, 228, 0.6)"
   },
   "tabBar": {
     "borderTopActiveColor": "#1A94FF",
@@ -38,7 +44,14 @@
         "pagePath": "pages/profile/index",
         "icon": "/assets/icons/tab-account.png",
         "activeIcon": "assets/icons/tab-account-active.png"
+      },
+      {
+        "name": "My Journey",
+        "pagePath": "pages/my_journey/index",
+        "icon": "/assets/icons/tab-account.png",
+        "activeIcon": "assets/icons/tab-account-active.png"
       }
+
     ]
   }
 }
