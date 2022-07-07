@@ -2,7 +2,7 @@
   "name": "brand-tiki",
   "version": "0.1.0",
   "tiki": {
-    "appIdentifier": "hoang.it1.brand.tiki",
+    "appIdentifier": "vn.tiki.miniapp.ReadReviewRead",
     "buildNumber": 1
   },
   "dependencies": {

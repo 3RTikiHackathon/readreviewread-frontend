@@ -1,5 +1,5 @@
 <view class="px-medium pb-medium">
-   
+   <comment></comment>
   <block
   tiki:for="{{Posts.data}}"
   tiki:key="id">
