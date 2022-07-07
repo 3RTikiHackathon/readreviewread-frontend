@@ -1,37 +1,21 @@
 <view class="py-medium post">
   <view class="display-flex">
-    <image class="ava-icon " src={{post.userAvatar}}></image>
-    <view class="margin-left-4px">
-      <view class=" text-12px">
-        <text class="text-bold margin-right-4px">{{post.userName}}</text> 
-        <text class="">{{post.action}} </text> 
-        <text class="text-bold margin-left-4px">{{post.bookName}}</text>
+    <image class="ava-icon-comment" src={{comment.userAvatar}}></image>
+    <view class="margin-left-8px">
+      <view>
+        <text class="text-12px text-bold margin-right-4px">{{comment.userName}}</text> 
+        <text class=" text-12px text-gray">
+          {{comment.postedTime}}
+        </text>
       </view>
-      <view class=" text-12px text-gray">
-        {{post.postedTime}}
+      <view class="">
+        <view class="text-12px line-height">{{comment.content}}</view>
+      </view>
+      <view>
+        <text  class=" text-10px text-gray">Thích</text>
+        <text  class=" text-10px text-gray margin-left-12px">Bình luận</text>
       </view>
     </view>
   </view>
-  <view class="margin-top-8px">
-    <view class="text-12px line-height">{{post.content}}</view>
-  </view>
-  <image class="margin-top-8px width-100" src={{post.image}}></image>
-  <view class="display-flex post-interaction margin-top-12px px-medium"> 
-    <view class="display-flex align-center">
-      <image class = "icon icon-20px" src = "/assets/icons/Like-line.svg"></image>
-      <text class="text-bold text-14px blue-50 margin-left-4px">{{post.likes}}</text>
-    </view>
-    <view class="display-flex align-center margin-left-12px">
-      <icon type="chat" size="20" color="#5cb3ff"></icon>
-      <text class="text-bold text-14px blue-50 margin-left-4px">{{post.comments}}</text>
-    </view>
-    <view class="display-flex align-center  margin-left-12px">
-      <icon type="share" size="20" color="#5cb3ff"></icon>
-      <text class="text-bold text-14px blue-50 margin-left-4px">{{post.shares}}</text>
-    </view>
-    <view class="display-flex align-center  margin-left-12px">
-      <icon type="bookmark_add_glyph" size="20" color="#5cb3ff"></icon>
-      
-    </view>
-  </view>
+ 
 </view>

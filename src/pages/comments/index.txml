@@ -4,6 +4,5 @@
   tiki:for="{{Comments.data}}"
   tiki:key="id">
     <comment comment="{{item}}"/>
-    <view class="section-divider feed-section-divider"/>
   </block>
 </view>
