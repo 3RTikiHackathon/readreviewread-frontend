@@ -14,6 +14,11 @@
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.9.0.tgz#bf6ef7ec948488107940df3b5e927c94c8c3439b"
   integrity sha512-0BgbahtMluDHtyoY5B1O5sVWvnSCJ+jhYcW/m/mmzL4mAnoX0BVzwvnMHoan0dBFn/xlpmOtbvpDdhhatfTCuA==
 
+"@tiki.vn/tini-style@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.12.0.tgz#feddf99282b7d695d61cbe89924b05d4fad51bba"
+  integrity sha512-4swSXhnEA18o82it0NPmBzJ00fO6wJCqZTZhxzNimDVWHYWtjbWVKia1ipsbAxYkmBkdAJZf/2kW8eQ75Rqzlg==
+
 "@tiki.vn/tini-ui@0.9.1-rc.0":
   version "0.9.1-rc.0"
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.9.1-rc.0.tgz#c2c1f23f1a0368ea74fde0f4193bd4f2b76448f4"
