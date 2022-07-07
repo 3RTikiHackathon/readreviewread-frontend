@@ -1,0 +1,14 @@
+<view class="px-medium pb-medium">
+   <comment></comment>
+  <block
+  tiki:for="{{Posts.data}}"
+  tiki:key="id">
+    <post post="{{item}}"/>
+    <view class="section-divider feed-section-divider"/>
+  </block>
+      
+
+    
+
+  
+</view>

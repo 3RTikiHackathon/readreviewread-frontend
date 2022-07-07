@@ -1,0 +1,17 @@
+.feed-loading-more-skeleton {
+  margin-top: 20px;
+}
+
+.feed-section-divider,
+.feed-filtered-list {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.sticky-top-buttons {
+  position: fixed;
+  padding: 0 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+}

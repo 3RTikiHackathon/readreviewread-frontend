@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "post":"components/post/index",
+    "comment":"components/comment/index"
+
+  }
+}

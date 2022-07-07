@@ -2,7 +2,7 @@
   "name": "testRRR",
   "version": "0.1.0",
   "tiki": {
-    "appIdentifier": "vn.tiki.miniapp.testRRR",
+    "appIdentifier": "vn.tiki.miniapp.ReadReviewRead",
     "buildNumber": 1
   },
   "dependencies": {
