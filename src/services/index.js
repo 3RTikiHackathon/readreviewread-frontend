@@ -85,3 +85,14 @@ export const getCouponsAPI = () => {
   let coupons = require('./mock/coupons.json')
   return coupons;
 };
+
+export const getPosts = () =>{
+  let posts = require('./mock/post.json');
+  return {
+    data : posts,
+    paging: {
+      current_page: 1,
+      last_page: 1,
+    }
+  };
+}

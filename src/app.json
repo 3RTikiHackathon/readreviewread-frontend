@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/home/index", "pages/product/index", "pages/search/index","pages/profile/index"],
+  "pages": ["pages/feed/index","pages/home/index", "pages/product/index", "pages/search/index","pages/profile/index"],
   "window": {
     "defaultTitle": "",
     "backgroundColor": "#fff"
