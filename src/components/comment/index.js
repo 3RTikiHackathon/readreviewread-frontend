@@ -6,9 +6,9 @@ Component({
     comment: {
     id: '',
     userName: 'Trường Nguyễn',
-    userAvatar: '/assets/images/ava.png',
-    content: 'Sách này cũng không hay lắm đâu',
-    postedTime: '16:30 July 7, 2022',
+    userAvatar: '/assets/images/ava_truong.jpg',
+    content: 'Cuốn sách này đã cho mình nhiều bài học trong cuộc sống. Đặc biệt cuốn sách này tạo động lực cho mình về các kế hoạch tương lai.',
+    postedTime: '2h',
     likes: 1251,
     } 
   }, // các thuộc tính

@@ -96,3 +96,14 @@ export const getPosts = () =>{
     }
   };
 }
+
+export const getComments = () =>{
+  let comments = require('./mock/comment.json');
+  return {
+    data : comments,
+    paging: {
+      current_page: 1,
+      last_page: 1,
+    }
+  };
+}

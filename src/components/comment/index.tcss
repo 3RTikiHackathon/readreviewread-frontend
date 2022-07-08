@@ -1,7 +1,8 @@
-.ava-icon{
-  width: 40px;
-  height: 40px;
+.ava-icon-comment{
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
+  flex: none;
 }
 .product-section-horizontal {
   overflow-x: auto;
@@ -12,8 +13,6 @@
 .line-height{
   line-height:1.4;
 }
-
-
 
 .icon{
   width: 24px;

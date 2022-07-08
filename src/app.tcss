@@ -275,3 +275,7 @@ image {
   align-items: center;
 }
 
+.icon-16px{
+  width: 16px;
+  height: 16px;
+}

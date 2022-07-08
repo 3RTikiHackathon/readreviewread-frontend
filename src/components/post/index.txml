@@ -1,3 +1,4 @@
+<import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
 <view class="py-medium post">
   <view class="display-flex">
     <image class="ava-icon " src={{post.userAvatar}}></image>
@@ -19,15 +20,15 @@
   <view class="display-flex post-interaction margin-top-12px px-medium"> 
     <view class="display-flex align-center">
       <image class = "icon icon-20px" src = "/assets/icons/Like-line.svg"></image>
-      <text class="text-bold text-14px blue-50 margin-left-4px">{{post.likes}}</text>
+      <text class="text-bold text-14px blue-50 margin-left-4px">{{numberFormatter(post.likes)}}</text>
     </view>
-    <view class="display-flex align-center margin-left-12px">
+    <view catchTap='onCommentTap' class="display-flex align-center margin-left-12px">
       <icon type="chat" size="20" color="#5cb3ff"></icon>
-      <text class="text-bold text-14px blue-50 margin-left-4px">{{post.comments}}</text>
+      <text class="text-bold text-14px blue-50 margin-left-4px">{{numberFormatter(post.comments)}}</text>
     </view>
     <view class="display-flex align-center  margin-left-12px">
       <icon type="share" size="20" color="#5cb3ff"></icon>
-      <text class="text-bold text-14px blue-50 margin-left-4px">{{post.shares}}</text>
+      <text class="text-bold text-14px blue-50 margin-left-4px">{{numberFormatter(post.shares)}}</text>
     </view>
     <view class="display-flex align-center  margin-left-12px">
       <icon type="bookmark_add_glyph" size="20" color="#5cb3ff"></icon>
