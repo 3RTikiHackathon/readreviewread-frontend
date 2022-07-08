@@ -7,3 +7,6 @@
   justify-content: center;
   
 }
+.chart-center {
+  text-align: center;
+}

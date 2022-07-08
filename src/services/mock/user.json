@@ -18,5 +18,25 @@
   "userAvatar": "/assets/images/ava_hoang.jpg",
   "coupons" : 69,
   "points" : 420
+},
+{
+  "id": "4",
+  "userName": "Yến Nguyễn",
+  "userAvatar": "/assets/images/ava_yen.jpg",
+  "coupons" : 69,
+  "points" : 420
+},{
+  "id": "5",
+  "userName": "Nguyen Dinh Thai",
+  "userAvatar": "/assets/images/ava_thai.jpg",
+  "coupons" : 69,
+  "points" : 420
+},{
+  "id": "6",
+  "userName": "Fabrizio Romano",
+  "userAvatar": "/assets/images/ava_fabri.jpg",
+  "coupons" : 69,
+  "points" : 420
 }
+
 ]
