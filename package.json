@@ -7,9 +7,8 @@
   },
   "dependencies": {
     "@tiki.vn/tini-style": "^0.12.0",
-    "@tiki.vn/tini-types": "^0.3.0",
     "@tiki.vn/tini-ui": "0.9.1-rc.0",
     "lodash": "^4.17.21",
-    "query-string": "^7.1.1"
+    "query-string": "^7.0.1"
   }
 }

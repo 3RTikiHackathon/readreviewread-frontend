@@ -1,4 +1,7 @@
 
+
+  
+  
 <carousel
   arrows
   indicator-dots
@@ -24,3 +27,9 @@
   </carousel-item>
 </carousel>
 
+
+<view class="page">
+  <view class="component-item">
+      <image class="rate-image margin-right-8px" src="/c:/Users/admin/Documents/readreviewread-frontend/src/assets/images/dac-nhan-tam-biamem2019-76k-bia11.jpg"></image>
+  </view>
+</view>
