@@ -1,16 +1,12 @@
 .container {
   min-height: 100%;
-  background-color: white;
-  margin-left: 100px;
-  margin-right: 100px;
+  background-color: gray;
+
   padding: 16px;
-  border-radius: 50px;
   display: flex;
   justify-content: center;
   
 }
-.text_title{
-  font-size: 50;
-  color:rgba(153, 153, 153)
-  
+.chart-center {
+  text-align: center;
 }

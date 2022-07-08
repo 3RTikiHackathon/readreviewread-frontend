@@ -1,5 +1,4 @@
 <view>
-
   <carousel
     arrows
     indicator-dots
@@ -24,5 +23,15 @@
       </view>
     </carousel-item>
   </carousel>
-  <image src="/assets/images/ava_hoang.jpg"></image>
+  
+  <view class="chart-center align-center">
+    <text>Reading progress</text>
+    <image src="/assets/images/bar-chart.jpg"></image>
+  </view>
+  
+  <view class="chart-center">
+    <text>Reading genre</text>
+    <image src="/assets/images/pie-chart.jpg"></image>
+  </view>
+
 </view>  
