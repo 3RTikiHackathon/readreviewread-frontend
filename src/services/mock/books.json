@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "bookName": "Đắc Nhân Tâm",
+    "bookCover": "/assets/images/dac-nhan-tam-biamem2019-76k-bia11.jpg",
+    "percent": 69,
+    "author": "Tim Marshall",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png",
+    "isCurrently": true 
+  },
+  {
+    "id": "2",
+    "bookName": "Tôi tài giỏi bạn cũng thế",
+    "bookCover": "/assets/images/ebook-toi-tai-gioi-ban-cung-the-adam-khoo-1483074548.jpg",
+    "percent": 69,
+    "author": "Adam Khoo",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png",
+    "isCurrently": true 
+  },
+  {
+    "id": "3",
+    "bookName": "My Black Book",
+    "bookCover": "/assets/images/31joNDvZOaL.jpg",
+    "percent": 69,
+    "author": "Hoàng Dương",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png",
+    "isCurrently": true 
+  },
+  {
+    "id": "4",
+    "bookName": "Truyện Kiều",
+    "bookCover": "/assets/icons/book2.svg",
+    "percent": 69,
+    "author": "Nguyễn Du",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png",
+    "isCurrently": true 
+  },
+  {
+    "id": "5",
+    "bookName": "Ngồi khóc trên cây",
+    "bookCover": "/assets/icons/book3.svg",
+    "percent": 69,
+    "author": "Nguyễn Nhật Ánh",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png",
+    "isCurrently": true 
+  }
+]

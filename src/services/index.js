@@ -68,7 +68,7 @@ export const getBannersAPI = async () => {
 
 export const getUserInfo = () => {
   let user = require('./mock/user.json');
-  return user;
+  return user[0];
 };
 
 export const getNumOrders = () => {
@@ -88,6 +88,20 @@ export const getCouponsAPI = () => {
 
 export const getPosts = () =>{
   let posts = require('./mock/post.json');
+  let books = require('./mock/books.json');
+  let users = require('./mock/user.json');
+  posts.map(post => {
+    books.map(book => {
+      if (book.id == post.bookId){
+        post.book = book;
+      }
+    })
+    users.map(user => {
+      if(user.id == user.bookId){
+        post.user = user;
+      }
+    })
+  })
   return {
     data : posts,
     paging: {
@@ -97,7 +111,7 @@ export const getPosts = () =>{
   };
 }
 export const getMyRead = () =>{
-  let books = require('./mock/my-read.json');
+  let books = require('./mock/books.json');
   return {
     data : books,
     paging: {

@@ -5,11 +5,9 @@ Component({
   props: {     
     post: {
     id: '',
-    userName: 'Trường Nguyễn',
-    userAvatar: '/assets/images/ava.png',
-    bookName: 'Dark Nhân Tâm',
+    book:'',
+    user:'',
     action: 'reviewed',
-    bookCover: '',
     image:'/assets/images/dark-nhan-tam.png',
     content: 'Cuốn sách này đã cho mình nhiều bài học trong cuộc sống. Đặc biệt cuốn sách này tạo động lực cho mình về các kế hoạch tương lai. Mình cảm ơn giả đã tạo ra một cuốn sách ý nghĩa này.',
     postedTime: '16:30 July 7, 2022',
