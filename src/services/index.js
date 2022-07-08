@@ -97,7 +97,7 @@ export const getPosts = () =>{
       }
     })
     users.map(user => {
-      if(user.id == user.bookId){
+      if(user.id == post.userId){
         post.user = user;
       }
     })
@@ -110,20 +110,46 @@ export const getPosts = () =>{
     }
   };
 }
-export const getMyRead = () =>{
+export const getMyRead = (listName) =>{
+  let myRead = require('./mock/my-read.json');
   let books = require('./mock/books.json');
+  let booksToReturn = [];
+  myRead.map(read => {
+    if(read.list == listName){
+      books.map(book => {
+        if(read.bookId == book.id){
+          read.book = book;
+        }
+      })
+      booksToReturn.push(read)
+    }
+  })
   return {
-    data : books,
+    data : booksToReturn,
     paging: {
       current_page: 0,
       last_page: 0,
     }
   };
 }
-export const getComments = () =>{
+export const getComments = (postId) =>{
   let comments = require('./mock/comment.json');
+  let users = require('./mock/user.json')
+  let commentsToReturn =[];
+  comments.map(comment => {
+    if (comment.postId == postId){
+      users.map(user => {
+        if (comment.userId == user.id)
+        {
+          comment.userName = user.userName;
+          comment.userAvatar = user.userAvatar;
+        } 
+      })
+      commentsToReturn.push(comment);
+    }
+  })
   return {
-    data : comments,
+    data : commentsToReturn,
     paging: {
       current_page: 1,
       last_page: 1,

@@ -4,7 +4,7 @@ Component({
   data: { x: 1 }, // data của component
   props: {     
     post: {
-    id: '',
+    id: '1',
     book:'',
     user:'',
     action: 'reviewed',
@@ -29,8 +29,12 @@ Component({
   // các methods
   methods: {
     onCommentTap(){
+
       navigate({
         page: 'comments',
+        params: {
+          postId: this.props.post.id
+        }
       });
     }
   },
