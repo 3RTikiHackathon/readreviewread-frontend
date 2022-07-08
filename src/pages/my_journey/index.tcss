@@ -7,8 +7,3 @@
   justify-content: center;
   
 }
-.text_title{
-  font-size: 50;
-  color:white;
-    
-}

@@ -1,8 +1,8 @@
 
 
-  
-  
-<carousel
+
+<view>
+  <carousel
   arrows
   indicator-dots
   onChange="onChange"
@@ -25,11 +25,11 @@
       <text>35</text>
     </view>
   </carousel-item>
-</carousel>
-
-
-<view class="page">
-  <view class="component-item">
-      <image class="rate-image margin-right-8px" src="/c:/Users/admin/Documents/readreviewread-frontend/src/assets/images/dac-nhan-tam-biamem2019-76k-bia11.jpg"></image>
-  </view>
+ </carousel>
+<image src="src/assets/images/ava_hoang.jpg"></image>
 </view>
+  
+
+
+
+

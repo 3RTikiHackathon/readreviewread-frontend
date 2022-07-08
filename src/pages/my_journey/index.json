@@ -1,14 +1,2 @@
 {
-  "usingComponents": {
-    "product-section": "components/product-section/index",
-    "sort": "components/sort/index",
-    "filter": "components/filter/index",
-    "category-list": "components/category-list/index",
-    "filtered-list": "components/filtered-list/index",
-    "empty": "components/empty/index",
-    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
-    "calendar": "@tiki.vn/tini-ui/es/calendar/index",
-    "block-header": "components/block-header/index",
-    "block-variant": "components/block-variant/index"
-  }
 }
