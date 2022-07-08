@@ -26,9 +26,9 @@ Component({
 
   // các methods
   methods: {
-    onCommentTap(){
+    onItemTap(){
       navigate({
-        page: 'comments',
+        page: 'my-read-detail',
       });
     }
   },
