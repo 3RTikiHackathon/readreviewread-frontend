@@ -107,3 +107,8 @@ export const getComments = () =>{
     }
   };
 }
+
+export const getBookDetail = () => {
+  let BookDetail = require('./mock/book_detail.json')
+  return BookDetail;
+}

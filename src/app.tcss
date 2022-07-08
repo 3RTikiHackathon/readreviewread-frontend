@@ -49,6 +49,15 @@ image {
   background-color: var(--gray10);
 }
 
+.line-divider {
+  height: 1px;
+  background-color: var(--gray40);
+  margin-top: 10px;
+  margin-bottom: -15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .navigation-bar {
   position: fixed;
   top: 0;
@@ -264,6 +273,7 @@ image {
 }
 .text-14px{
   font-size: 14px;
+  font-family: Arial, sans-serif;
 }
 .text-gray{                
   color: #9c9c9c;

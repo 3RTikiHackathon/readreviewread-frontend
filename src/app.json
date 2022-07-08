@@ -5,6 +5,8 @@
     "pages/search/index",
     "pages/profile/index",
     "pages/my_journey/index",
+    "pages/store/index",
+    "pages/book_detail/index",
     "pages/comments/index"
   ],
   "window": {
@@ -24,7 +26,13 @@
       },
       {
         "name": "Store",
-        "pagePath": "pages/home/index",
+        "pagePath": "pages/store/index",
+        "icon": "/assets/icons/tab-store.svg",
+        "activeIcon": "assets/icons/tab-store-active.svg"
+      },
+      {
+        "name": "Book-detail",
+        "pagePath": "pages/book_detail/index",
         "icon": "/assets/icons/tab-store.svg",
         "activeIcon": "assets/icons/tab-store-active.svg"
       },
