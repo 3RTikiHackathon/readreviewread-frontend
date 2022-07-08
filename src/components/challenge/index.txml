@@ -1,0 +1,11 @@
+<import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
+<view class="py-medium post">
+  <view class="display-flex">
+    <image class="book-cover" src={{challenge.bookCover}}></image>
+    <view class="margin-left-4px">
+      
+    </view>
+    
+  </view>
+
+</view>

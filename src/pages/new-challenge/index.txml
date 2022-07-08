@@ -1,5 +1,8 @@
 <view>
-  <block-header title="What's new?" description="" />
+  <view class="section-divider product-section-divider"/>
+  <view class="py-medium">
+    <view class="font-bold text-medium mb-small">"Phổ biến"</view>
+  </view>
   <carousel indicator-dots arrows>
 <carousel-item>
 <image class="w-full" mode="aspectFill" src="https://picsum.photos/714/327?random=1"/>
@@ -13,6 +16,6 @@
 </carousel>
 </view>
 
-<view>
-  <input type="button" value="See more" style="float: right;"></input>
-</view>
+
+
+
