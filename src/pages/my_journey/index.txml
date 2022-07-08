@@ -1,26 +1,28 @@
+<view>
 
-<carousel
-  arrows
-  indicator-dots
-  onChange="onChange"
->
-  <carousel-item>
-     <view class="container">
-       <text class="text_title">Total books</text>      
-       <text>35</text>
-     </view>
-  </carousel-item>
-  <carousel-item>
-    <view class="container">
-      <text>Total pages</text>
-      <text>35</text>
-    </view>
-  </carousel-item>
-  <carousel-item>
-    <view class="container">
-      <text>Total time</text>
-      <text>35</text>
-    </view>
-  </carousel-item>
-</carousel>
-
+  <carousel
+    arrows
+    indicator-dots
+    onChange="onChange"
+  >
+    <carousel-item>
+       <view class="container">
+         <text class="text_title">Total books</text>      
+         <text>35</text>
+       </view>
+    </carousel-item>
+    <carousel-item>
+      <view class="container">
+        <text>Total pages</text>
+        <text>35</text>
+      </view>
+    </carousel-item>
+    <carousel-item>
+      <view class="container">
+        <text>Total time</text>
+        <text>35</text>
+      </view>
+    </carousel-item>
+  </carousel>
+  <image src="/assets/images/ava_hoang.jpg"></image>
+</view>  

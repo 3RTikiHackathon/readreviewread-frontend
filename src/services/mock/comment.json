@@ -1,26 +1,50 @@
 [
   {
     "id": "1",
-    "userName": "Trường Nguyễn",
-    "userAvatar": "/assets/images/ava_truong.jpg",
+    "postId":"1",
+    "userId": "2",
     "content": "Cuốn sách này đã cho mình nhiều bài học trong cuộc sống. Đặc biệt cuốn sách này tạo động lực cho mình về các kế hoạch tương lai.",
     "postedTime": "2h",
     "likes": 1251
   },
   {
     "id": "2",
-    "userName": "Khang Nguyễn",
-    "userAvatar": "/assets/images/ava_khang.jpg",
-    "content": "Cuốn sách này đã cho mình nhiều bài học trong cuộc sống. Đặc biệt cuốn sách này tạo động lực cho mình về các kế hoạch tương lai.",
-    "postedTime": "2h",
+    "postId":"1",
+    "userId": "3",
+    "content": "Cuốn sách này cũng không hay lắm.",
+    "postedTime": "1d",
     "likes": 1251
   },
   {
     "id": "3",
-    "userName": "Hoàng Dương",
-    "userAvatar": "/assets/images/ava_hoang.jpg",
-    "content": "Cuốn sách này đã cho mình nhiều bài học trong cuộc sống. Đặc biệt cuốn sách này tạo động lực cho mình về các kế hoạch tương lai.",
-    "postedTime": "2h",
+    "postId":"1",
+    "userId": "1",
+    "content": "Văn phong của tác giả khá hợp gu của mình.",
+    "postedTime": "2d",
+    "likes": 1251
+  },
+  {
+    "id": "4",
+    "postId":"1",
+    "userId": "6",
+    "content": "Câu chữ sắc sảo, chân thật và ám ảnh đến vô cùng chính là những từ miêu tả đúng nhất về phần đầu tiên của cuốn sách. Đây chính là trải nghiệm của người thật, việc thật thế nên khi đọc xong phần một tôi cảm thấy vô cùng nghẹn ngào, đôi khi là kích động. ",
+    "postedTime": "2w",
+    "likes": 1251
+  },
+  {
+    "id": "5",
+    "postId":"1",
+    "userId": "5",
+    "content": "Trước đây, khi đọc báo, xem trên mạng và nghe người khác kể tôi chỉ biết trầm cảm đáng sợ nhưng không nghĩ là nó đáng sợ đến mức khiến người đọc phải xúc động đến như vậy. ",
+    "postedTime": "2w",
+    "likes": 1251
+  },
+  {
+    "id": "6",
+    "postId":"1",
+    "userId": "4",
+    "content": "Từ việc phân tích, đưa ra những lý lẽ thuyết phục, dẫn chứng, sách giúp bạn đọc từng bước loại dọn dẹp tâm trí từ việc dọn dẹp những suy nghĩ đến các nghĩa vụ trong cuộc sống của bạn, các mối quan hệ và cuối cùng là dọn dẹp không gian quanh ta. ",
+    "postedTime": "2w",
     "likes": 1251
   }
 ]

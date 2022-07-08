@@ -1,12 +1,12 @@
 <import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
 <view class="py-medium post">
   <view class="display-flex">
-    <image class="ava-icon " src={{post.userAvatar}}></image>
+    <image class="ava-icon " src={{post.user.userAvatar}}></image>
     <view class="margin-left-4px">
       <view class=" text-12px">
-        <text class="text-bold margin-right-4px">{{post.userName}}</text> 
+        <text class="text-bold margin-right-4px">{{post.user.userName}}</text> 
         <text class="">{{post.action}} </text> 
-        <text class="text-bold margin-left-4px">{{post.bookName}}</text>
+        <text class="text-bold margin-left-4px">{{post.book.bookName}}</text>
       </view>
       <view class=" text-12px text-gray">
         {{post.postedTime}}

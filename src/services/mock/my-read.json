@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "bookId": "1",
+    "userId": "1",
+    "percent": 69,
+    "list": "Currently"
+  },{
+    "id": "2",
+    "bookId": "2",
+    "userId": "1",
+    "percent": 25,
+    "list": "Currently"
+  },{
+    "id": "3",
+    "bookId": "3",
+    "userId": "1",
+    "percent": 13,
+    "list": "Currently"
+  },
+  {
+    "id": "4",
+    "bookId": "4",
+    "userId": "1",
+    "list": "Read"
+  },
+  {
+    "id": "5",
+    "bookId": "5",
+    "userId": "1",
+    "list": "Want"
+  }
+]

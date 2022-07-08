@@ -2,7 +2,7 @@
   "pages": [
     "pages/feed/index",
     "pages/product/index",
-    "pages/search/index",
+    "pages/my-read/index",
     "pages/profile/index",
     "pages/my_journey/index",
     "pages/store/index",
@@ -38,7 +38,7 @@
       },
       {
         "name": "My Read",
-        "pagePath": "pages/search/index",
+        "pagePath": "pages/my-read/index",
         "icon": "/assets/icons/tab-read.svg",
         "activeIcon": "assets/icons/tab-read-active.svg"
       },
@@ -51,12 +51,6 @@
       {
         "name": "Profile",
         "pagePath": "pages/profile/index",
-        "icon": "/assets/icons/tab-account.png",
-        "activeIcon": "assets/icons/tab-account-active.png"
-      },
-      {
-        "name": "My Journey",
-        "pagePath": "pages/my_journey/index",
         "icon": "/assets/icons/tab-account.png",
         "activeIcon": "assets/icons/tab-account-active.png"
       }

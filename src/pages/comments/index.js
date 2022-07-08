@@ -28,7 +28,7 @@ Page({
         last_page: 0,
       },
     },
-
+    postId:"1",
    
     isStickButtons: false,
     isScrollUp: false,
@@ -42,9 +42,8 @@ Page({
 
     try {
       const [Comments] = await Promise.all([
-        getComments(),
+        getComments(this.data.postId),
       ]);
-      console.log(Comments.data)
       this.hasMore = Comments.paging.current_page < Comments.paging.last_page;
 
       this.setData({
@@ -52,7 +51,8 @@ Page({
         isLoadingComment: false,
         isLoadingCategories: false,
       });
-    } catch {
+    } catch (e) {
+      console.log(e)
       this.setData({
         isLoadingComment: false,
         isLoadingCategories: false,
@@ -189,13 +189,9 @@ Page({
   // Life cycle
   onLoad(query) {
     const {
-      title,
-      sort,
-      category,
-      showCategory = true,
-      showActions = true,
+      postId
     } = parseQuery(query);
-
+    this.setData({postId})
     const data = { ...this.data };
 
     if (sort) {

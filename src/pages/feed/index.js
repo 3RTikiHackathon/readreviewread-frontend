@@ -44,7 +44,6 @@ Page({
       const [Posts] = await Promise.all([
         getPosts(),
       ]);
-      console.log(Posts.data)
       this.hasMore = Posts.paging.current_page < Posts.paging.last_page;
 
       this.setData({
