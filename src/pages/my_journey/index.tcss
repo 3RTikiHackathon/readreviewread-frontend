@@ -8,5 +8,6 @@
   
 }
 .chart-center {
+  display: inline-block;
   text-align: center;
 }
