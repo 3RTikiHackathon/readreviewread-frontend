@@ -16,7 +16,7 @@ Page({
         getUserInfo(),
         getNumOrders(),
       ]);
-
+      
       this.setData({
         user,
         numOrders,

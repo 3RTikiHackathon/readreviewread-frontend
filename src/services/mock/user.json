@@ -1,6 +1,22 @@
+[{
+  "id": "1",
+  "userName": "Đình Trường",
+  "userAvatar": "/assets/images/ava_truong.jpg",
+  "coupons" : 69,
+  "points" : 420
+},
 {
-  "name": "Địt mẹ cuộc đời",
-  "avt": "/assets/images/empty.png",
+  "id": "2",
+  "userName": "Khang Nguyễn",
+  "userAvatar": "/assets/images/ava_khang.jpg",
+  "coupons" : 69,
+  "points" : 420
+},
+{
+  "id": "3",
+  "userName": "Hoàng Dương",
+  "userAvatar": "/assets/images/ava_hoang.jpg",
   "coupons" : 69,
   "points" : 420
 }
+]

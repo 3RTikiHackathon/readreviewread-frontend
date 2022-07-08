@@ -38,21 +38,19 @@ Page({
     }
   },
   onTabClick({ index, tabsName }) {
-    this.loadData();
-
+    this.loadDataWithTabName(this.data.tabs[index].title);
     this.setData({
       [tabsName]: index
     });
   },
   loadData() {
-    
     this.setData({
       isLoadingProduct: true,
       isLoadingCategories: true,
     });
 
     try {
-      const Books = getMyRead();
+      const Books = getMyRead(this.data.tabs[this.data.activeTab].title);
       this.hasMore = Books.paging.current_page < Books.paging.last_page;
       this.setData({
         Books,
@@ -67,7 +65,29 @@ Page({
       });
     }
   },
+  loadDataWithTabName(tabName) {
+    
+    this.setData({
+      isLoadingProduct: true,
+      isLoadingCategories: true,
+    });
 
+    try {
+      const Books = getMyRead(tabName);
+      this.hasMore = Books.paging.current_page < Books.paging.last_page;
+      this.setData({
+        Books,
+        isLoadingProduct: false,
+        isLoadingCategories: false,
+      });
+      
+    } catch (e){
+      this.setData({
+        isLoadingProduct: false,
+        isLoadingCategories: false,
+      });
+    }
+  },
   async loadProducts() {
     this.setData({
       isLoadingProduct: true,

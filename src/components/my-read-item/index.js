@@ -12,8 +12,7 @@ Component({
     reviews: 2,
     read: 1023,
     rate: 4.5,
-    rateImage: "/assets/icons/rating - 4.5.png",
-    isCurrently: true 
+    rateImage: "/assets/icons/rating - 4.5.png"
     } 
   }, // các thuộc tính
 
