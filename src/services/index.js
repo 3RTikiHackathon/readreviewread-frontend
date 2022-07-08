@@ -96,7 +96,16 @@ export const getPosts = () =>{
     }
   };
 }
-
+export const getMyRead = () =>{
+  let books = require('./mock/my-read.json');
+  return {
+    data : books,
+    paging: {
+      current_page: 0,
+      last_page: 0,
+    }
+  };
+}
 export const getComments = () =>{
   let comments = require('./mock/comment.json');
   return {
