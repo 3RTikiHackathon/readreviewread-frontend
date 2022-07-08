@@ -214,7 +214,7 @@ Page({
     });
 
     my.setNavigationBar({
-      title: 'New Feed',
+      title: 'Comments',
     });
 
     showSearch();

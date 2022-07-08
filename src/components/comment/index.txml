@@ -1,4 +1,4 @@
-<view class="py-medium post">
+<view class="py-small post">
   <view class="display-flex">
     <image class="ava-icon-comment" src={{comment.userAvatar}}></image>
     <view class="margin-left-8px">

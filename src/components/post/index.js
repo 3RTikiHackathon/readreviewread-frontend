@@ -1,4 +1,4 @@
-import numberToDisplayString from "../../utils/common"
+import {navigate} from '../../utils/navigate';
 Component({
   mixins: [], // các minxin sử dụng trong Component
   data: { x: 1 }, // data của component
@@ -30,8 +30,10 @@ Component({
 
   // các methods
   methods: {
-    handleTap() {
-     
+    onCommentTap(){
+      navigate({
+        page: 'comments',
+      });
     }
   },
 
