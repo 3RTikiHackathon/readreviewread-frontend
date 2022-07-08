@@ -24,7 +24,7 @@
     </carousel-item>
   </carousel>
   
-  <view class="chart-center align-center">
+  <view class="chart-center">
     <text>Reading progress</text>
     <image src="/assets/images/bar-chart.jpg"></image>
   </view>
