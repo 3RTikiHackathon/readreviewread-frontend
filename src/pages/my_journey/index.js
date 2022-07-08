@@ -39,7 +39,6 @@ Page({
   },
   onTabClick({ index, tabsName }) {
     this.loadData();
-    console.log(this.data.Books)
     this.setData({
       [tabsName]: index
     });

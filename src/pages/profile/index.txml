@@ -13,8 +13,8 @@
       <image 
         class="block avatar" 
         mode="widthFix" 
-        src="{{user.avt}}"/>
-      <view class="mt-2x-small text-medium-2x-small font-bold">{{user.name}}</view>
+        src="{{user.userAvatar}}"/>
+      <view class="mt-2x-small text-medium-2x-small font-bold">{{user.userName}}</view>
     </view>
 
     <view class="px-medium mt-medium">
