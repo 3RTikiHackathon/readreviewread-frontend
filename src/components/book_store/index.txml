@@ -1,0 +1,47 @@
+<template name="loading">
+  <view class="flex">
+    <view class="flex w-50 py-2x-small border-right-gray">
+      <view class="skeleton size-40 skeleton-button-shape-circle" />
+      <view class="ml-2x-small skeleton-75-width">
+        <view class="mb-4x-small skeleton skeleton-50-width skeleton-font-regular"></view>
+        <view class="skeleton skeleton-25-width skeleton-font-regular"></view>
+      </view>
+    </view>
+    <view class="flex w-50 py-2x-small pl-medium">
+      <view class="skeleton size-40 skeleton-button-shape-circle" />
+      <view class="ml-2x-small skeleton-75-width">
+        <view class="mb-4x-small skeleton skeleton-50-width skeleton-font-regular"></view>
+        <view class="skeleton skeleton-25-width skeleton-font-regular"></view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="completed">
+  <view class="flex ">
+    <view class="flex w-20">
+      <view class="ml-1x-small">
+        <view class="mb-1x-small">Items</view>
+        <view class="text-medium font-bold">{{bookDetail.items}}</view>
+      </view>
+    </view>
+    <view class="flex w-30 py-1x-small pl-medium">
+      <view class="ml-2x-small">
+        <view class="mb-1x-small">Solds</view>
+        <view class="text-medium font-bold">{{bookDetail.solds}}</view>
+      </view>
+    </view>
+    <view class="flex w-30 py-1x-small pl-medium pr-medium">
+      <view class="ml-2x-small">
+        <view class="mb-1x-small">Reply</view>
+        <view class="text-medium font-bold">{{bookDetail.reply}}</view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<view class="bg-white p-medium radius-8px">
+  <template
+    is="{{isLoading ? 'loading' : 'completed'}}"
+    data="{{bookDetail}}" />
+</view>

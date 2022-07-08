@@ -45,3 +45,17 @@
   border-radius: 24px;
   width: 100%;
 }
+.ava-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.button_view{
+  background-color: white;
+  border-radius: 32px;
+  color: rgb(96, 96, 228);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 10%;
+  border-radius: 24px;
+  font-size: 11px;
+}

@@ -40,12 +40,30 @@
     </view>
     <view class="component-item ">
       <checkbox onChange="onChange" />
-      <text>Digital book  ⓘ </text>
+      <text>Digital book ⓘ </text>
     </view>
   </view>
   <view class="mt-10x items-center">
     <button class="big_button">
       105.000 ₫
     </button>
+  </view>
+  <view class="line-divider " />
+  <view class="display-flex mt-20x ml-10x">
+    <image class="ava-icon " src="/assets/images/ava_hoang.jpg"></image>
+    <view class="margin-left-4px">
+      <view class="display-flex text-13px">
+        <view>
+          <text class="text-bold margin-right-12px">Nhà sách Minh Hoàng</text>
+          <view class=" text-12px text-gray">
+            Online 2 hours ago
+          </view>
+        </view>
+        <button class="button_view ml-20x">View Shop</button>
+      </view>
+      <view class="">
+        <book_store bookDetail="{{bookDetail}}" isLoading="{{isLoading}}" />
+      </view>
+    </view>
   </view>
 </view>
