@@ -1,0 +1,21 @@
+<view class="py-small post">
+  <view class="display-flex">
+    <image class="ava-icon-comment" src={{comment.userAvatar}}></image>
+    <view class="margin-left-8px">
+      <view>
+        <text class="text-12px text-bold margin-right-4px">{{comment.userName}}</text> 
+        <text class=" text-12px text-gray">
+          {{comment.postedTime}}
+        </text>
+      </view>
+      <view class="">
+        <view class="text-12px line-height">{{comment.content}}</view>
+      </view>
+      <view>
+        <text  class=" text-10px text-gray">Thích</text>
+        <text  class=" text-10px text-gray margin-left-12px">Bình luận</text>
+      </view>
+    </view>
+  </view>
+ 
+</view>

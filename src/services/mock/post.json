@@ -1,0 +1,64 @@
+[
+  {
+    "id": "1",
+    "userName": "Đình Trường",
+    "userAvatar": "/assets/images/ava_truong.jpg",
+    "bookName": "Đắc Nhân Tâm",
+    "action": "reviewed",
+    "bookCover": "",
+    "image":"/assets/images/dark-nhan-tam.png",
+    "content": "Cuốn sách Đắc Nhân Tâm ngoài việc dạy cho chúng ta những cách kỹ năng giao tiếp và bí quyết để thành công, thì nó còn giúp cho chúng ta cách đề phòng và giải quyết những khúc mắc, hiểu lầm từ nhỏ nhặt cho đến nghiêm trong trong vấn đề giao tiếp và ứng xử một cách chuyên nghiệp và tinh tế nhất trong bất kỳ tình huống và trường hợp nào. ",
+    "postedTime": "16:30 July 7, 2022",
+    "likes": 15,
+    "comments": 3,
+    "shares": 2,
+    "isLiked": false
+  },
+  {
+    "id": "2",
+    "userName": "Đình Trường",
+    "userAvatar": "/assets/images/ava_truong.jpg",
+    "bookName": "My Black Book",
+    "action": "reviewed",
+    "bookCover": "",
+    "image":"/assets/images/my-book.jpg",
+    "content": "Mình đánh giá cuốn sách này của Hoàng Dương không đáng tiền lắm, treo đầu dê bán thịt chó.",
+    "postedTime": "12:24 July 5, 2022",
+    "likes": 15,
+    "comments": 3,
+    "shares": 2,
+    "isLiked": false
+  },    
+  {
+    "id": "3",
+    "userName": "Hoàng Dương",
+    "userAvatar": "/assets/images/ava_hoang.jpg",
+    "bookName": "My Black Book",
+    "action": "published",
+    "bookCover": "",
+    "image":"/assets/images/my-book.jpg",
+    "content": "Đây là cuốn sách thực sự tâm huyết của tôi. My Black Book chứa rất nhiều bí mật trong đời tôi mà khi đọc cuốn sách này, các bạn sẽ cảm thấy rất sốc.",
+    "postedTime": "1:30 July 1, 2022",
+    "likes": 1150,
+    "comments": 15,
+    "shares": 10,
+    "isLiked": false
+  },
+  {
+    "id": "4",
+    "userName": "Khang Nguyễn",
+    "userAvatar": "/assets/images/ava_khang.jpg",
+    "bookName": "Tôi tài giỏi bạn cũng thế",
+    "action": "reviewed",
+    "bookCover": "",
+    "image":"/assets/images/toi-tai-gioi-ban-cung-the-3_600x390.png",
+    "content": "Mình tin rằng từ câu chuyện cá nhân của Adam mỗi chúng ta đều nhận thức được tầm quan trọng của việc học hành, ngay từ hôm nay hãy kiên định với mục tiêu của mình, hãy nghiêm khắc với bản thân hơn. Đừng lãng phí thời gian của bạn, luôn nhớ rằng thời gian rất công bằng, nếu bạn cố gắng chắc chắn sẽ được đền đáp xứng đáng.",
+    "postedTime": "0:21 July 1, 2022",
+    "likes": 14,
+    "comments": 2,
+    "shares": 1,
+    "isLiked": false
+  }
+]
+   
+  

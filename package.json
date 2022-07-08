@@ -1,9 +1,9 @@
 {
-  "name": "ReadReviewRead",
+  "name": "readreviewread",
   "version": "0.1.0",
   "tiki": {
     "appIdentifier": "vn.tiki.miniapp.ReadReviewRead",
-    "buildNumber": 1
+    "buildNumber": 2
   },
   "dependencies": {
     "@tiki.vn/tini-style": "^0.12.0",

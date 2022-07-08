@@ -38,3 +38,7 @@ export const delay = (milliseconds) =>
       resolve();
     }, milliseconds);
   });
+
+export const numberToDisplayString = (value) =>{
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}

@@ -1,0 +1,8 @@
+<view class="px-medium pb-medium">
+   
+  <block
+  tiki:for="{{Comments.data}}"
+  tiki:key="id">
+    <comment comment="{{item}}"/>
+  </block>
+</view>

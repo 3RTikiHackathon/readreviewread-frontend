@@ -1,12 +1,12 @@
 import {
   parseQuery,
-  goToPostDetail,
+  goToCommentDetail,
   navigate,
   openDeeplink,
   showCart,
   showSearch
 } from '../../utils/navigate';
-import { getPosts } from '../../services/index';
+import { getComments } from '../../services/index';
 import { systemInfo } from '../../utils/system';
 import { defaultSorts } from '../../utils/constant';
 import { filters, formatFiltersToQuery } from '../../utils/filter';
@@ -19,9 +19,9 @@ Page({
   data: {
     showActions: false,
     showCategory: false,
-    isLoadingPost: true,
-    isLoadingMorePost: false,
-    Posts: {
+    isLoadingComment: true,
+    isLoadingMoreComment: false,
+    Comments: {
       data: [],
       paging: {
         current_page: 0,
@@ -36,65 +36,65 @@ Page({
 
   async loadData() {
     this.setData({
-      isLoadingPost: true,
+      isLoadingComment: true,
       isLoadingCategories: true,
     });
 
     try {
-      const [Posts] = await Promise.all([
-        getPosts(),
+      const [Comments] = await Promise.all([
+        getComments(),
       ]);
-      console.log(Posts.data)
-      this.hasMore = Posts.paging.current_page < Posts.paging.last_page;
+      console.log(Comments.data)
+      this.hasMore = Comments.paging.current_page < Comments.paging.last_page;
 
       this.setData({
-        Posts,
-        isLoadingPost: false,
+        Comments,
+        isLoadingComment: false,
         isLoadingCategories: false,
       });
     } catch {
       this.setData({
-        isLoadingPost: false,
+        isLoadingComment: false,
         isLoadingCategories: false,
       });
     }
   },
 
-  async loadPosts() {
+  async loadComments() {
     this.setData({
-      isLoadingPost: true,
+      isLoadingComment: true,
     });
     try {
-      const Posts = await getPosts({
+      const Comments = await getComments({
         page: 1,
         limit: 10,
         sort: this.data.selectedSort.value,
         category: this.data.selectedCategory,
         filter: formatFiltersToQuery(this.data.selectedFilters),
       });
-      this.hasMore = Posts.paging.current_page < Posts.paging.last_page;
+      this.hasMore = Comments.paging.current_page < Comments.paging.last_page;
       this.setData({
-        Posts,
-        isLoadingPost: false,
+        Comments,
+        isLoadingComment: false,
       });
     } catch {
       this.setData({
-        isLoadingPost: false,
+        isLoadingComment: false,
       });
     }
   },
 
-  async loadMorePosts() {
-    const { Posts, isLoadingPost, isLoadingMorePost } = this.data;
+  async loadMoreComments() {
+    const { Comments, isLoadingComment, isLoadingMoreComment } = this.data;
 
-    if (!this.hasMore || isLoadingPost || isLoadingMorePost) return;
+    if (!this.hasMore || isLoadingComment || isLoadingMoreComment) return;
 
-    this.setData({ isLoadingMorePost: true });
+    this.setData({ isLoadingMoreComment: true });
 
-    const { data: currentPosts, paging: currentPaging } = Posts;
+    const { data: currentComments, paging: currentPaging } = Comments;
 
     try {
-      const { data: nextPosts, paging } = await getPosts({
+      const { data: nextComments, paging } = await getComments({
         page: currentPaging.current_page + 1,
         limit: 10,
         sort: this.data.selectedSort.value,
@@ -105,14 +105,14 @@ Page({
       this.hasMore = paging.current_page < paging.last_page;
 
       this.setData({
-        Posts: {
-          data: [...currentPosts, ...nextPosts],
+        Comments: {
+          data: [...currentComments, ...nextComments],
           paging,
         },
-        isLoadingMorePost: false,
+        isLoadingMoreComment: false,
       });
     } catch {
-      this.setData({ isLoadingMorePost: false });
+      this.setData({ isLoadingMoreComment: false });
     }
   },
 
@@ -120,14 +120,14 @@ Page({
     this.setData({
       selectedFilters,
     });
-    this.loadPosts();
+    this.loadComments();
   },
 
   onSelectSort(selectedSort) {
     this.setData({
       selectedSort,
     });
-    this.loadPosts();
+    this.loadComments();
   },
 
   removeFilter(item) {
@@ -140,7 +140,7 @@ Page({
       };
 
       this.setData(data);
-      this.loadPosts();
+      this.loadComments();
 
       return;
     }
@@ -155,7 +155,7 @@ Page({
       data.selectedFilters.service[servicePos].checked = false;
 
       this.setData(data);
-      this.loadPosts();
+      this.loadComments();
 
       return;
     }
@@ -163,16 +163,16 @@ Page({
     data.selectedFilters[item.key] = null;
 
     this.setData(data);
-    this.loadPosts();
+    this.loadComments();
   },
 
-  onTapPost(Post) {
-    goToPostDetail({ Post, page: 'Post' });
+  onTapComment(Comment) {
+    goToCommentDetail({ Comment, page: 'Comment' });
   },
 
   goToCategoryDetail(category) {
     navigate({
-      page: 'Post',
+      page: 'Comment',
       params: {
         title: category.display_value,
         category: category.query_value,
@@ -214,7 +214,7 @@ Page({
     });
 
     my.setNavigationBar({
-      title: 'New Feed',
+      title: 'Comments',
     });
 
     showSearch();
@@ -244,7 +244,7 @@ Page({
     this.prevScrollTop = scrollTop;
 
     if (systemInfo.windowHeight + scrollTop >= scrollHeight - 1000)
-      this.loadMorePosts();
+      this.loadMoreComments();
   },
 
   onReady() {
@@ -254,7 +254,7 @@ Page({
     });
 
     my.createSelectorQuery()
-      .select('.Post-action-buttons')
+      .select('.Comment-action-buttons')
       .boundingClientRect()
       .exec(([actionButtons]) => {
         this.actionButtons =
