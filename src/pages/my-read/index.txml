@@ -1,0 +1,12 @@
+<view class="px-medium pb-medium">
+  
+  <tabs tabs="{{tabs}}" onTabClick="onTabClick" tabsName="activeTab" activeTab="{{activeTab}}" swipeable="{{true}}">
+  </tabs>
+  <block
+  tiki:for="{{Books.data}}"
+  tiki:key="id">
+    <my-read-item book="{{item}}"></my-read-item>
+  </block>
+  <view class="display-flex justify-center align-center"><button onTap="onTapMyJourney" type="outline" class="border-12px">My Journey</button></view>
+  
+</view>

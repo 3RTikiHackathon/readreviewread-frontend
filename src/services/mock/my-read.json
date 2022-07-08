@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "bookName": "Đắc Nhân Tâm",
+    "bookCover": "/assets/images/dac-nhan-tam-biamem2019-76k-bia11.jpg",
+    "percent": 69,
+    "author": "Tim Marshall",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png",
+    "isCurrently": true 
+  },
+  {
+    "id": "2",
+    "bookName": "Đắc Nhân Tâm - 2",
+    "bookCover": "/assets/images/dac-nhan-tam-biamem2019-76k-bia11.jpg",
+    "percent": 69,
+    "author": "Tim Marshall",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png",
+    "isCurrently": true 
+  },
+  {
+    "id": "3",
+    "bookName": "Đắc Nhân Tâm - 3",
+    "bookCover": "/assets/images/dac-nhan-tam-biamem2019-76k-bia11.jpg",
+    "percent": 69,
+    "author": "Tim Marshall",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png",
+    "isCurrently": true 
+  }
+]

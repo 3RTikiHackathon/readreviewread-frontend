@@ -4,7 +4,7 @@ import {
   showCart,
   openDeeplink,
 } from '../../utils/navigate';
-import { getProductsAPI } from '../../services/index';
+import { getMyRead } from '../../services/index';
 import { systemInfo } from '../../utils/system';
 import { defaultSorts } from '../../utils/constant';
 import { filters, formatFiltersToQuery } from '../../utils/filter';
@@ -18,70 +18,49 @@ Page({
   isSaveRecentKeyAfterScroll: false,
 
   data: {
+    activeTab: 0,
+    tabs: [
+      { title: 'Currently' },
+      { title: 'Read' },
+      { title: 'Want' }
+    ],
     searchTerm: '',
     recentKeys: [],
     isLoadingCategories: false,
     isLoadingProduct: true,
     isLoadingMoreProduct: false,
-    products: {
+    Books: {
       data: [],
       paging: {
         current_page: 0,
         last_page: 0,
       },
-    },
-    popularProducts: {
-      data: [],
-    },
-    sorts: defaultSorts,
-    selectedSort: defaultSorts[0],
-    selectedCategory: null,
-    filters,
-    selectedFilters: {
-      service: null,
-      category: null,
-      stock_location: null,
-      price: null,
-      priceRange: {
-        start: null,
-        end: null,
-      },
-    },
+    }
   },
+  onTabClick({ index, tabsName }) {
+    this.loadData();
 
-  async loadData() {
+    this.setData({
+      [tabsName]: index
+    });
+  },
+  loadData() {
+    
     this.setData({
       isLoadingProduct: true,
       isLoadingCategories: true,
     });
 
     try {
-      const [products, popularProducts, recentKeys] = await Promise.all([
-        getProductsAPI({
-          page: 1,
-          limit: 10,
-          category: this.data.selectedCategory,
-          sort: this.data.selectedSort.value,
-        }),
-        getProductsAPI({
-          page: 1,
-          limit: 4,
-          sort: 'default',
-        }),
-        getStorage('recent-search'),
-      ]);
-
-      this.hasMore = products.paging.current_page < products.paging.last_page;
-
+      const Books = getMyRead();
+      this.hasMore = Books.paging.current_page < Books.paging.last_page;
       this.setData({
-        products,
-        popularProducts,
-        categories: group(products.filters[0].values, 4),
+        Books,
         isLoadingProduct: false,
         isLoadingCategories: false,
-        recentKeys: recentKeys ? recentKeys.slice(0, this.maxSearch) : [],
       });
-    } catch {
+      
+    } catch (e){
       this.setData({
         isLoadingProduct: false,
         isLoadingCategories: false,
@@ -114,6 +93,11 @@ Page({
     }
   },
 
+  onTapMyJourney(){
+    navigate({
+      page: 'my_journey',
+    });
+  },
   async loadMoreProducts() {
     const { products, isLoadingProduct, isLoadingMoreProduct } = this.data;
 
@@ -289,7 +273,11 @@ Page({
 
   // Life cycle
   onLoad() {
-    showCart();
+    this.loadData();
+    my.setNavigationBar({
+      title: 'My Read',
+    });
+    
   },
 
   onPageScroll(event) {
@@ -301,8 +289,5 @@ Page({
 
   onReady() {
     this.loadData();
-    this.setData({
-      filters,
-    });
   },
 });
