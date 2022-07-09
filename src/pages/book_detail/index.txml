@@ -67,4 +67,57 @@
     </view>
   </view>
   <view class="line-divider " />
+  <view class=" mt-20x ml-20x">
+    <text class="text-bold text-14px">
+      New Reader
+    </text>
+  </view>
+  <view class="display-flex mt-2x ml-20x">
+    <image class="ava-reader" src="/assets/images/ava_truong.jpg"></image>
+    <view class="margin-left-4px">
+      <view class="display-flex text-13px">
+        <view>
+          <text class="text-bold margin-right-12px">Đình Trường</text>
+          <view class=" text-12px">
+            tx:
+            <text class="blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
+          </view>
+        </view>
+        <button class="button_view ml-20x">View Profile</button>
+      </view>
+    </view>
+  </view>
+  <view class="display-flex mt-10x ml-20x">
+    <image class="ava-reader" src="/assets/images/ava_khang.jpg"></image>
+    <view class="margin-left-4px">
+      <view class="display-flex text-13px">
+        <view>
+          <text class="text-bold margin-right-12px">Trần Khang</text>
+          <view class=" text-12px text-yellow">
+            Online
+          </view>
+        </view>
+        <button class="button_view button_right_khang">View Profile</button>
+      </view>
+    </view>
+  </view>
+  <view class="display-flex mt-10x ml-20x">
+    <image class="ava-reader" src="/assets/images/ava_thai.jpg"></image>
+    <view class="margin-left-4px">
+      <view class="display-flex text-13px">
+        <view>
+          <text class="text-bold margin-right-12px">Đình Thái</text>
+          <view class=" text-12px">
+            tx:
+            <text class="blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
+          </view>
+          
+        </view>
+        <button class="button_view button_right_thai">View Profile</button>
+      </view>
+    </view>
+  </view>
+  <view class=" mt-2x ml-20x">
+    <text class="blue-50 text-underline text-13px"> See more reader</text>
+  </view>
 </view>

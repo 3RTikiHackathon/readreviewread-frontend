@@ -1,17 +1,17 @@
 <view class="flex ">
-  <view class="flex w-20">
+  <view class="flex w-20 ">
     <view class="ml-1x-small">
       <view class="mb-1x-small font-bold text-12px">Items</view>
       <view class="text-medium text-12px">{{bookDetail.items}}</view>
     </view>
   </view>
-  <view class="flex w-30 py-1x-small pl-medium">
+  <view class="flex w-30 pl-medium">
     <view class="ml-2x-small">
       <view class="mb-1x-small font-bold  text-12px">Solds</view>
       <view class="text-medium text-12px">{{bookDetail.solds}}</view>
     </view>
   </view>
-  <view class="flex w-30 py-1x-small pl-medium pr-medium">
+  <view class="flex w-30 pl-medium">
     <view class="ml-2x-small">
       <view class="mb-1x-small font-bold text-12px">Reply</view>
       <view class="text-medium text-12px">{{bookDetail.reply}}</view>
@@ -20,6 +20,6 @@
 </view>
 
 
-<view class="bg-white p-medium radius-8px">
+<view class="bg-white radius-8px">
   <template is="{{isLoading ? 'loading' : 'completed'}}" data="{{bookDetail}}" />
 </view>

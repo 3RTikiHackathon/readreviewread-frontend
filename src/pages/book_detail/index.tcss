@@ -59,3 +59,16 @@
   border-radius: 24px;
   font-size: 11px;
 }
+.ava-reader{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.button_right_thai{
+  align-items: right;
+  margin-left: 20px;
+}
+.button_right_khang{
+  align-items: right;
+  margin-left: 55px;
+}

@@ -138,7 +138,10 @@ image {
   width: 120px;
   height: 120px;
 }
-
+.size-130 {
+  width: 130px;
+  height: 130px;
+}
 .w-50 {
   width: 50%;
 }
