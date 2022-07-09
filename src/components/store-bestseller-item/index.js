@@ -26,9 +26,13 @@ Component({
 
   // các methods
   methods: {
+    
     onItemTap(){
       navigate({
-        page: 'my-read-detail',
+        page: 'book_detail',
+        params: {
+          bookId: this.props.book.id
+        }
       });
     }
   },

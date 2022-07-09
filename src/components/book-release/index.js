@@ -32,6 +32,13 @@ Component({
     onMoveOrderManagement(e) {
       my.navigateTo({ url: `pages/home/index` });
     },
+    
+      onItemTap(){
+        navigate({
+          page: 'book_detail',
+        });
+      }
+    
   },
 
   // Life cycle

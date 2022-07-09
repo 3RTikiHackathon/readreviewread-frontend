@@ -321,7 +321,9 @@ image {
   width: 80px;
   height: 16px;
 }
-
+.flex-8{
+  flex: 5;
+}
 .flex-3{
   flex: 3;
 }
@@ -349,4 +351,20 @@ image {
 .activityeImage{
   width: 80%;
   border-radius: 10%;
+
+.bg-red{
+  background-color: #FF647C;
+  border: #FF647C;
+}
+.bg-gray{
+  background-color:var(--gray20);
+  border: gray;
+}
+.bg-green{
+  background-color: #00C48C;
+  border: #00C48C;
+}
+.bg-blue{
+  background-color: #5cb3ff;
+  border: #5cb3ff;
 }

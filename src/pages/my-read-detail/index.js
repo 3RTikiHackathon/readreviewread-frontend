@@ -6,7 +6,7 @@ import {
   showCart,
   showSearch,
 } from "../../utils/navigate";
-import { getPosts, getBookDetail } from "../../services/index";
+import { getPosts, getMyReadDetail } from "../../services/index";
 import { systemInfo } from "../../utils/system";
 import { defaultSorts } from "../../utils/constant";
 import { filters, formatFiltersToQuery } from "../../utils/filter";
@@ -18,19 +18,23 @@ Page({
 
   data: {
     isLoading: false,
+    id : '1',
     bookDetail: {},
     isStickButtons: false,
     isScrollUp: false,
     show: false,
+    showNote: false,
+    pageInput: 0,
+    pageNoteInput: "",
+    noteInput: "",
+    isConfirm: false,
     position: 'top',
     animation: true,
     mask: true,
     zIndex: 10,
     disableScroll: true,
     selected: [
-      { key: 1, label: 'Currently' },
-      { key: 2, label: 'Read' },
-      { key: 3, label: 'Want' }
+      { key: 1, label: 'Currently' }
     ],
     items: [
       { key: 1, label: 'Currently' },
@@ -44,32 +48,88 @@ Page({
   },
 
   async loadData() {
+
     this.setData({
       isLoading: true,
     });
 
     try {
-      const [bookDetail] = await Promise.all([getBookDetail()]);
-
+      const bookDetail = getMyReadDetail(this.data.id.toString());
+      
       this.setData({
         bookDetail,
         isLoading: false,
       });
     } catch (error) {
+      console.log(error)
       this.setData({
         isLoading: false,
       });
     }
   },
-
+  onCancelNote(){
+    this.setData({showNote: false})
+  },
+  
+  onConfirm(e){
+    
+    this.setData(
+      {
+        bookDetail: {
+          ...this.data.bookDetail,
+          percent: parseInt(this.data.pageInput/this.data.bookDetail.book.pages*100)
+        }
+      }
+      
+      )
+    this.setData({show: false})
+  },
   onOk() {
-    this.setData({ show: false });
+    this.setData({ show: true });
+  },
+  onNote(){
+    this.setData({showNote: true})
   },
   onCancel() {
     this.setData({ show: false });
   },
   onTap(e) {
     this.setData({ ...e.target.dataset.popup });
+  },
+  onConfirmNote(){
+    // this.setData({note: [...this.data.note, {page: this.data.pageNoteInput, note: this.data.noteInput}]})
+    // console.log(this.data.note)
+    this.setData(
+      {bookDetail: {
+        ...this.data.bookDetail, 
+        notes: [
+          ...this.data.bookDetail.notes, 
+          {
+            page: this.data.pageNoteInput, 
+            note: this.data.noteInput
+          }
+        ]
+      },
+      showNote: false
+    }
+      )
+  },
+  onBuy(){
+    navigate({
+      page: 'book_detail',
+      params: {
+        bookId: this.data.bookDetail.bookId
+      }
+    });
+  },
+  onInputProgress(e){
+    this.setData({pageInput: e.detail.value})
+  },
+  onInputPageNote(e){
+    this.setData({pageNoteInput: e.detail.value})
+  },
+  onInputNote(e){
+    this.setData({noteInput: e.detail.value})
   },
   onBlockScout(){
     navigate({
@@ -150,13 +210,14 @@ Page({
   // Life cycle
   onLoad(query) {
     const {
-      title,
+      id,
       sort,
       category,
       showCategory = true,
       showActions = true,
     } = parseQuery(query);
-
+    this.setData({id})
+  
     const data = { ...this.data };
 
     if (sort) {

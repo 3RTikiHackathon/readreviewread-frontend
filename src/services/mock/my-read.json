@@ -4,19 +4,55 @@
     "bookId": "1",
     "userId": "1",
     "percent": 69,
-    "list": "Currently"
+    "list": "Currently",
+    "notes":[{
+      "page": 20,
+      "note":"Chỗ này quá hay thật xinh đẹp tuyệt vời"
+    },
+    {
+      "page": 105,
+      "note":"Thông tin khá là bổ ích"
+    },
+    {
+      "page": 203,
+      "note":"Haha chuyện thật là nực cười"
+    }]
   },{
     "id": "2",
     "bookId": "2",
     "userId": "1",
     "percent": 25,
-    "list": "Currently"
+    "list": "Currently",
+    "notes":[{
+      "page": 56,
+      "note":"Cái này cũng hay"
+    },
+    {
+      "page": 105,
+      "note":"Thông tin khá là bổ ích"
+    },
+    {
+      "page": 203,
+      "note":"Haha chuyện thật là nực cười"
+    }]
   },{
     "id": "3",
     "bookId": "3",
     "userId": "1",
     "percent": 13,
-    "list": "Currently"
+    "list": "Currently",
+    "notes":[{
+      "page": 10,
+      "note":"Thú vị đấy"
+    },
+    {
+      "page": 105,
+      "note":"Thông tin khá là bổ ích"
+    },
+    {
+      "page": 203,
+      "note":"Haha chuyện thật là nực cười"
+    }]
   },
   {
     "id": "4",
@@ -35,6 +71,19 @@
     "bookId": "6",
     "userId": "1",
     "percent": "2",
-    "list": "Currently"
+    "list": "Currently",
+    "notes":[{
+      "page": 56,
+      "note":"Cái này cũng hay"
+    },
+    {
+      "page": 105,
+      "note":"Thông tin khá là bổ ích"
+    },
+    {
+      "page": 203,
+      "note":"Haha chuyện thật là nực cười"
+    }]
+
   }
 ]
