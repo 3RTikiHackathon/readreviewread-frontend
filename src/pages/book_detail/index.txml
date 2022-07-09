@@ -13,13 +13,13 @@
       
       <text class=" text-24px text-bold margin-left-4px">Confirm transaction?</text>
       <view class="display-flex">
-        <text>Book:</text> <text class="text-bold text-italic margin-left-4px">Những tù nhân của Địa lý</text>
+        <text>Book:</text> <text class="text-bold text-italic margin-left-4px">{{bookDetail.bookName}}</text>
       </view>
       <view class="display-flex">
         <text>Type:</text> <text class="text-bold text-italic margin-left-4px">E-Book</text>
       </view>
       <view class="display-flex">
-        <text>Price:</text> <text class="text-bold text-italic margin-left-4px">105.000 ₫</text>
+        <text>Price:</text> <text class="text-bold text-italic margin-left-4px">{{bookDetail.price}}</text>
       </view>
       <view class="display-flex justify-between align-center py-small">
         <button onTap="onConfirmTransaction" class="bg-blue border-12px">Confirm</button>    
@@ -110,11 +110,11 @@
   </view>
   <view class="line-divider " />
   <view class="display-flex mt-20x ml-10x ">
-    <image class="ava-icon margin-right-8px" src="/assets/images/ava_hoang.jpg"></image>
+    <image class="ava-icon margin-right-8px" src="/assets/images/nha-nam.png"></image>
     <view class="margin-left-4px">
       <view class="display-flex text-13px">
         <view>
-          <text class="text-bold margin-right-12px">Nhà sách Minh Hoàng</text>
+          <text class="text-bold margin-right-12px">Nhà sách Nhã Nam</text>
           <view class=" text-12px text-gray">
             Online 2 hours ago
           </view>
@@ -140,7 +140,7 @@
           <text class="text-bold margin-right-12px">Đình Trường</text>
           <view class=" text-12px">
             tx:
-            <text class="margin-left0.-4px blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
+            <text catchTap='onBlockScout' class="margin-left0.-4px blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
           </view>
         </view>
         <button class="button_view button_right_truong text-bold ">View Profile</button>
@@ -155,7 +155,7 @@
           <text class="text-bold margin-right-12px">Trần Khang</text>
           <view class=" text-12px">
             tx:
-            <text class=" margin-left-4px blue-50 text-underline text-13px">0xd657ffb0a12a2...</text>
+            <text catchTap='onBlockScout' class=" margin-left-4px blue-50 text-underline text-13px">0xd657ffb0a12a2...</text>
           </view>
         </view>
         <button class="button_view button_right_khang text-bold">View Profile</button>
@@ -170,7 +170,7 @@
           <text class="text-bold margin-right-12px">Đình Thái</text>
           <view class=" text-12px">
             tx:
-            <text class="margin-left-4px blue-50 text-underline text-13px"> 0xe9ce5c0b2d6bf...</text>
+            <text catchTap='onBlockScout' class="margin-left-4px blue-50 text-underline text-13px"> 0xe9ce5c0b2d6bf...</text>
           </view>
           
         </view>

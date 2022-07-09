@@ -37,6 +37,14 @@
   "userAvatar": "/assets/images/ava_fabri.jpg",
   "coupons" : 69,
   "points" : 420
+},
+{
+  "id": "7",
+  "userName": "Nhà sách Nhã Nam",
+  "userAvatar": "/assets/images/nha-nam.png",
+  "coupons" : 69,
+  "points" : 420
 }
+
 
 ]

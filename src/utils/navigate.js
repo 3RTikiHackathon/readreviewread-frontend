@@ -88,3 +88,15 @@ export const showSearch = (icon = '') => {
     padding: 8,
   });
 };
+export const showNotify= (icon = '') => {
+  my.addIconsToNavigationBar({
+    icons: [
+      {
+        image: icon || '/assets/icons/107822.png',
+        width: 20,
+        height: 20,
+      },
+    ],
+    padding: 8,
+  });
+};

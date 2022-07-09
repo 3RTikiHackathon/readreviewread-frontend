@@ -5,7 +5,7 @@ import {
   openDeeplink,
   showSearch
 } from '../../utils/navigate';
-import { getMyRead } from '../../services/index';
+import { getBookInStore } from '../../services/index';
 import { systemInfo } from '../../utils/system';
 import { defaultSorts } from '../../utils/constant';
 import { filters, formatFiltersToQuery } from '../../utils/filter';
@@ -51,7 +51,7 @@ Page({
     });
 
     try {
-      const Books = getMyRead(this.data.tabs[this.data.activeTab].title);
+      const Books = getBookInStore(this.data.tabs[this.data.activeTab].title);
       this.hasMore = Books.paging.current_page < Books.paging.last_page;
       this.setData({
         Books,
@@ -74,7 +74,7 @@ Page({
     });
 
     try {
-      const Books = getMyRead(tabName);
+      const Books = getBookInStore(tabName);
       this.hasMore = Books.paging.current_page < Books.paging.last_page;
       this.setData({
         Books,

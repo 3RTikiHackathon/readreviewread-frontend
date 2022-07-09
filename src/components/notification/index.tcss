@@ -1,0 +1,33 @@
+.ava-icon-comment{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex: none;
+}
+.product-section-horizontal {
+  overflow-x: auto;
+}
+
+
+
+.line-height{
+  line-height:1.4;
+}
+
+.icon{
+  width: 24px;
+  height: 24px;
+}
+
+.post-interaction{
+  justify-content: space-between;
+}
+
+.icon-20px{
+  width: 20px;
+  height: 20px;
+}
+
+.text-justify{
+  text-align: justify;
+}

@@ -13,8 +13,8 @@
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
     "price":"105.000 ₫",
-    "detail": "Cuốn sách Những Tù Nhân Của Địa Lý nói về sự liên quan giữa địa lý và chính trị. Cho chúng ta thấy hai thành phần này không thể tách rời."
-    
+    "detail": "Cuốn sách Những Tù Nhân Của Địa Lý nói về sự liên quan giữa địa lý và chính trị. Cho chúng ta thấy hai thành phần này không thể tách rời.",
+    "storeList": "Best seller"
   },
   {
     "id": "2",
@@ -30,7 +30,8 @@
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
     "price":"54.310 ₫",
-    "detail": "Đây là cuốn sách Tôi tài giỏi bạn cũng thế"
+    "detail": "Đây là cuốn sách Tôi tài giỏi bạn cũng thế",
+    "storeList": "Best seller"
    
   },
   {
@@ -48,7 +49,6 @@
     "rateImage": "/assets/icons/rating - 4.5.png",
     "price":"312.123 ₫",
     "detail": "Đây là cuốn sách My Black Book"
-   
   },
   {
     "id": "4",
@@ -64,7 +64,8 @@
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
     "price":"142.321 ₫",
-    "detail": "Đây là cuốn sách Truyện Kiều"
+    "detail": "Đây là cuốn sách Truyện Kiều",
+    "storeList": "Might like"
    
   },
   {
@@ -81,13 +82,13 @@
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
     "price":"123.310 ₫",
-    "detail": "Đây là cuốn sách Ngồi khóc trên cây"
-   
+    "detail": "Đây là cuốn sách Ngồi khóc trên cây",
+    "storeList": "Might like"
   },
   {
     "id": "6",
     "bookName": "Biên bản chiến tranh",
-    "bookCover": "/assets/images/noibuonchientranh.jpg",
+    "bookCover": "/assets/images/bia bien ban chien tranh.u335.d20160519.t085318.jpg",
     "pages":156,
     "items":"35",
   "solds":"4,2K",
@@ -98,8 +99,8 @@
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
     "price":"223.123 ₫",
-    "detail": "Đây là cuốn sách Biên bản chiến tranh"
-   
+    "detail": "Đây là cuốn sách Biên bản chiến tranh",
+    "storeList": "From friends"
   },
   {
     "id": "7",
@@ -115,7 +116,8 @@
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
     "price":"543.643 ₫",
-    "detail": "Đây là cuốn sách Nối buồn chiến tranh"
+    "detail": "Đây là cuốn sách Nối buồn chiến tranh",
+    "storeList": "From friends"
    
   }
   

@@ -1,30 +1,32 @@
-<view>
-  <view class="section-divider product-section-divider"/>
+<view class="bg-white">
+
   <!-- <block-header title="What's new?" description=""/> -->
-  <view class="bg-white">
+  <view >
     <view class="ml-4x-small px-small py-2x-small text-bold text-16px">What's new?</view>
   </view>
   <carousel indicator-dots arrows>
     <carousel-item>
-      <image class="w-full carousel-item" mode="aspectFill" src="https://picsum.photos/714/327?random=1"/>
+      <image class="w-full carousel-item" mode="aspectFill" src="/assets/images/reading-book-web-banner-design-student-reading-book-on-stack-of-book-to-get-inspiration-online-education-digital-classroom-e-learning-concept-header-or-footer-banner-free-vector.jpg"/>
     </carousel-item>
     <carousel-item>
-      <image class="w-full carousel-item" mode="aspectFill" src="https://picsum.photos/714/327?random=2"/>
+      <image class="w-full carousel-item" mode="aspectFill" src="/assets/images/5437e5b83430192748dbcb5c5b985724.jpg"/>
     </carousel-item>
     <carousel-item>
-      <image class="w-full carousel-item" mode="aspectFill" src="https://picsum.photos/714/327?random=3"/>
+      <image class="w-full carousel-item" mode="aspectFill" src="/assets/images/193234127_10158409690293869_3823243487775898900_n.png"/>
     </carousel-item>
   </carousel>
+  <view class = "section-divider"></view>
   <!-- <block-header title="In-progress challenges" description=""/> -->
-  <view class="bg-white">
-    <view class="ml-4x-small mt-small px-small py-2x-small text-bold text-16px">In-progress challenges</view>
+  <view >
+    <view class="ml-4x-small mt-small px-small  text-bold text-16px">In-progress campaigns</view>
   </view>
   <block tiki:for="{{Challanges.data}}" tiki:key="id">
     <challenge challenge="{{item}}"/>
   </block>  
   <!-- <block-header title="Leaderboard" description=""/> -->
-  <view class="bg-white">
-    <view class="ml-4x-small mt-small px-small py-2x-small text-bold text-16px">Leaderboard</view>
+  <view class = "section-divider"></view>
+  <view >
+    <view class="ml-4x-small mt-small px-small  text-bold text-16px">Leaderboard</view>
   </view>
   <view class="mt-3x-small mb-3x-small ml-small mr-small radius-8px">
     <!-- <text class="title mb-8">Variants</text>

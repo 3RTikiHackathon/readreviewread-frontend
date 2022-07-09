@@ -12,7 +12,8 @@
     "pages/my-read-detail/index",
     "pages/book_detail/index",
     "pages/new-challenge/index",
-    "pages/challenge-detail/index"
+    "pages/challenge-detail/index",
+    "pages/notifications/index"
   ],
   "window": {
     "defaultTitle": "",
@@ -42,7 +43,7 @@
         "activeIcon": "assets/icons/tab-read-active.svg"
       },
       {
-        "name": "Challenge",
+        "name": "Campaign",
         "pagePath": "pages/new-challenge/index",
         "icon": "/assets/icons/tab-challenge.svg",
         "activeIcon": "assets/icons/tab-challenge-active.svg"
