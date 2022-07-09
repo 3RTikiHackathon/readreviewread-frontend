@@ -58,5 +58,30 @@
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png"
    
+  },
+  {
+    "id": "6",
+    "bookName": "Biên bản chiến tranh",
+    "bookCover": "/assets/images/noibuonchientranh.jpg",
+    
+    "author": "Trần Mai Hạnh",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png"
+   
+  },
+  {
+    "id": "7",
+    "bookName": "Nỗi buồn chiến tranh",
+    "bookCover": "/assets/images/noibuonchientranh.jpg",
+    
+    "author": "Bảo Ninh",
+    "reviews": 2,
+    "read": 1023,
+    "rate": 4.5,
+    "rateImage": "/assets/icons/rating - 4.5.png"
+   
   }
+  
 ]

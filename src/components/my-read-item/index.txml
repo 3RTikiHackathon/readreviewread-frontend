@@ -1,5 +1,5 @@
 <import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
-<view class="py-medium book display-flex">
+<view catchTap="onItemTap" class="py-medium book display-flex">
   <view class="display-flex flex-3">
     <image class="book-cover" src={{book.book.bookCover}}></image>
     <view class="margin-left-12px">
@@ -14,10 +14,10 @@
         <text class="text-12px text-bold">{{book.book.rate}}</text> <text class="text-12px">/5.0</text>
       </view>
       <view class=" text-12px">
-        <text class="text-bold">{{book.book.read}}</text> <text class="margin-left-4px">people read this book</text>
+        <text class="text-bold">{{numberFormatter(book.book.read)}}</text> <text class="margin-left-4px">people read this book</text>
       </view>
       <view class=" text-12px">
-        <text class="text-bold">{{book.book.reviews}}</text> <text class="margin-left-4px">reviews</text>
+        <text class="text-bold">{{numberFormatter(book.book.reviews)}}</text> <text class="margin-left-4px">reviews</text>
       </view>
     </view>
    

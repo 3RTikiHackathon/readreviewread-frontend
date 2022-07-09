@@ -86,6 +86,11 @@ export const getCouponsAPI = () => {
   return coupons;
 };
 
+export const getBook = () =>  {
+  let book = require('./mock/book_detail.json')
+  return book;
+}
+
 export const getPosts = () =>{
   let posts = require('./mock/post.json');
   let books = require('./mock/books.json');
@@ -157,7 +162,9 @@ export const getComments = (postId) =>{
   };
 }
 
+
 export const getBookDetail = () => {
   let BookDetail = require('./mock/book_detail.json')
   return BookDetail;
 }
+
