@@ -1,12 +1,13 @@
 <view class="px-medium pb-medium">
   <view class="flex flex-col items-center">
     <image class="block avatar" mode="widthFix" src="/assets/images/profile.svg" />
-    <view class="mt-1x-small">
-      <text class="text-16px font-bold account_name">{{user.userName}}</text>
+
+  </view>
+  <view class="flex flex-col items-left mt-0x">
+    <view class="mt-1x-small ml-8x">
+      <text class="text-16px font-bold mr-6x">{{user.userName}}</text>
       <text class="text-gray text-12px">Reader</text>
     </view>
-  </view>
-  <view class="flex flex-col items-center mt-0x">
     <text class="text-small text-left ml-8x">
       Tôi là người thích đọc sách ngôn tình và sách liên quan đến mối quan hệ đồng giới. Đặc biệt tôi là một ...
       <text class="blue-50 text-underline"> Read more</text>

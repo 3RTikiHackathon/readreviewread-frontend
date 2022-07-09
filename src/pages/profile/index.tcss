@@ -4,8 +4,8 @@
   border-radius: 0%;
 }
 .account_name {
-  margin-left: -155px;
-  margin-right: 10px;
+  margin-left: -85%;
+  margin-right: 5%;
 }
 .my-account {
   height: 100vh;
