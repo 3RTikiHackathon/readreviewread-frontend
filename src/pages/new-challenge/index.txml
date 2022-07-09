@@ -1,7 +1,7 @@
-<view>
-  <view class="section-divider product-section-divider"/>
+<view class="bg-white">
+
   <!-- <block-header title="What's new?" description=""/> -->
-  <view class="bg-white">
+  <view >
     <view class="ml-4x-small px-small py-2x-small text-bold text-16px">What's new?</view>
   </view>
   <carousel indicator-dots arrows>
@@ -15,16 +15,18 @@
       <image class="w-full carousel-item" mode="aspectFill" src="https://picsum.photos/714/327?random=3"/>
     </carousel-item>
   </carousel>
+  <view class = "section-divider"></view>
   <!-- <block-header title="In-progress challenges" description=""/> -->
-  <view class="bg-white">
-    <view class="ml-4x-small mt-small px-small py-2x-small text-bold text-16px">In-progress challenges</view>
+  <view >
+    <view class="ml-4x-small mt-small px-small  text-bold text-16px">In-progress challenges</view>
   </view>
   <block tiki:for="{{Challanges.data}}" tiki:key="id">
     <challenge challenge="{{item}}"/>
   </block>  
   <!-- <block-header title="Leaderboard" description=""/> -->
-  <view class="bg-white">
-    <view class="ml-4x-small mt-small px-small py-2x-small text-bold text-16px">Leaderboard</view>
+  <view class = "section-divider"></view>
+  <view >
+    <view class="ml-4x-small mt-small px-small  text-bold text-16px">Leaderboard</view>
   </view>
   <view class="mt-3x-small mb-3x-small ml-small mr-small radius-8px">
     <!-- <text class="title mb-8">Variants</text>

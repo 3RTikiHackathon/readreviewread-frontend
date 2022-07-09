@@ -221,7 +221,9 @@ image {
 .display-flex{
   display: flex;
 }
-
+.padding-top-tab{
+  padding-top: 32px;
+}
 .margin-top-12px{
   margin-top: 12px;
 }
@@ -348,9 +350,15 @@ image {
 .text-color-green{
   color:  #00C48C;
 }
+
+.text-color-purple{
+  color: #af19ff;
+}
+
 .activityeImage{
   width: 80%;
   border-radius: 10%;
+
 
 .bg-red{
   background-color: #FF647C;
@@ -367,4 +375,14 @@ image {
 .bg-blue{
   background-color: #5cb3ff;
   border: #5cb3ff;
+}
+
+.position{
+  position: fixed;
+  width: 100%;
+}
+.big_button {
+  border-radius: 24px;
+  width: 100%;
+  box-sizing: border-box;
 }

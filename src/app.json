@@ -12,7 +12,8 @@
     "pages/my-read-detail/index",
     "pages/book_detail/index",
     "pages/new-challenge/index",
-    "pages/challenge-detail/index"
+    "pages/challenge-detail/index",
+    "pages/notifications/index"
   ],
   "window": {
     "defaultTitle": "",

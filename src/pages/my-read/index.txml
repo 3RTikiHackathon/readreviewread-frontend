@@ -1,7 +1,8 @@
-<view class="px-medium pb-medium">
+<tabs class=" position" tabs="{{tabs}}" onTabClick="onTabClick" tabsName="activeTab" activeTab="{{activeTab}}" swipeable="{{true}}">
+</tabs>
+<view class="px-medium  pb-medium padding-top-tab">
   
-  <tabs tabs="{{tabs}}" onTabClick="onTabClick" tabsName="activeTab" activeTab="{{activeTab}}" swipeable="{{true}}">
-  </tabs>
+  
   <block
   tiki:for="{{Books.data}}"
   tiki:key="id">

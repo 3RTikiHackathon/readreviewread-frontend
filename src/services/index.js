@@ -140,6 +140,25 @@ export const getPosts = () =>{
     }
   };
 }
+
+export const getBookInStore = (listName) => {
+  let books = require('./mock/books.json');
+  let booksToReturn = [];
+  books.map(book => {
+    if(book.storeList == listName){
+      
+      booksToReturn.push(book)
+    }
+  })
+  return {
+    data : booksToReturn,
+    paging: {
+      current_page: 0,
+      last_page: 0,
+    }
+  };
+}
+
 export const getMyRead = (listName) =>{
   let myRead = require('./mock/my-read.json');
   let books = require('./mock/books.json');

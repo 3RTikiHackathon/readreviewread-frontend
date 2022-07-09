@@ -22,7 +22,7 @@ Page({
     tabs: [
       { title: 'Currently' },
       { title: 'Read' },
-      { title: 'Want' }
+      { title: 'Want to read' }
     ],
     searchTerm: '',
     recentKeys: [],

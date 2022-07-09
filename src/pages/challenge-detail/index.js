@@ -13,7 +13,7 @@ Page({
       participant: 100,
       top1: {
         topId: 1,
-        avaPath: '/assets/images/sample-avatar-1.jpg',
+        avaPath: '/assets/images/ava_hoang.jpg',
         displayName: 'Hoàng',
         shortReview: 'Cuốn sách này rất hay, làm tôi đọc đêm quên ăn, ngày quên ngủ. Giá như tôi biết đến cuốn sách n...',
         point: 200
@@ -21,14 +21,14 @@ Page({
       leaderboard: [
         {
           topId: 2,
-          avaPath: '/assets/images/sample-avatar-2.jpg',
+          avaPath: '/assets/images/ava_khang.jpg',
           displayName: 'Khang',
           shortReview: '',
           point: 90
         },
         {
           topId: 3,
-          avaPath: '/assets/images/sample-avatar-3.jpg',
+          avaPath: '/assets/images/ava_truong.jpg',
           displayName: 'Trường',
           shortReview: '',
           point: 80
@@ -38,9 +38,9 @@ Page({
         {
           userId: 2,
           userName: 'Khang',
-          userAvatar: '/assets/images/sample-avatar-2.jpg',
+          userAvatar: '/assets/images/ava_khang.jpg',
           image: '',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n',
+          content: 'Cuốn sách này khá là thú vị, tôi đã học được rất nhiều điều từ khi cầm nó trên tay.',
           postedTime: '16:30 July 7, 2022',
           likes: 20,
           comments: 5,
@@ -49,9 +49,9 @@ Page({
         {
           userId: 3,
           userName: 'Trường',
-          userAvatar: '/assets/images/sample-avatar-3.jpg',
+          userAvatar: '/assets/images/ava_truong.jpg',
           image: '',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n',
+          content: 'Văn phong của tác giả là điều khiến tôi phải chú ý nhất',
           postedTime: '16:30 July 7, 2022',
           likes: 20,
           comments: 5,
