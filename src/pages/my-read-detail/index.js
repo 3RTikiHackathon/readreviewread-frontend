@@ -19,9 +19,28 @@ Page({
   data: {
     isLoading: false,
     bookDetail: {},
-
     isStickButtons: false,
     isScrollUp: false,
+    show: false,
+    position: 'top',
+    animation: true,
+    mask: true,
+    zIndex: 10,
+    disableScroll: true,
+    selected: [
+      { key: 1, label: 'Currently' },
+      { key: 2, label: 'Read' },
+      { key: 3, label: 'Want' }
+    ],
+    items: [
+      { key: 1, label: 'Currently' },
+      { key: 2, label: 'Read' },
+      { key: 3, label: 'Want' }
+    ]
+  },
+
+  onSelect(selected) {
+    this.setData({ selected });
   },
 
   async loadData() {
@@ -43,6 +62,21 @@ Page({
     }
   },
 
+  onOk() {
+    this.setData({ show: false });
+  },
+  onCancel() {
+    this.setData({ show: false });
+  },
+  onTap(e) {
+    this.setData({ ...e.target.dataset.popup });
+  },
+  onBlockScout(){
+    navigate({
+      page:'blockscout',
+      params:''
+    })
+  },
   onSelectFilter(selectedFilters) {
     this.setData({
       selectedFilters,

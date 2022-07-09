@@ -1,4 +1,24 @@
 <view class="px-medium pb-medium">
+
+  <view class="text-center">
+    <popup position="top" show="{{show}}" mask="{{mask}}" disableScroll=true zIndex="10" onClose="onCancel">
+      <view class="py-medium view-pop margin-bottom-8px">
+        <view class="">
+          <view class="text-bold text-24px text-color-red">Congrats</view>
+          <view class="text-bold text-14px">
+            <text>You have earn a new book</text>
+            <text class="text-color-blue margin-left-4px">Certificate</text>
+          </view>
+          <view catchTap='onBlockScout' class="text-12px text-underline text-gray">
+            View on Blockscout
+          </view>
+        </view>
+        <image class="block avatar py-small" mode="widthFix" src="{{bookDetail.avt}}" />
+        <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.name}}</view>
+        <view class=" text-14px">{{bookDetail.author}}</view>
+      </view>
+    </popup>
+  </view>
   <view tiki:if="{{isLoading}}" class="flex flex-col items-center">
     <view class="skeleton avatar skeleton-button-shape-circle">
     </view>
@@ -6,10 +26,10 @@
     </view>
   </view>
 
-  <view tiki:else class="flex flex-col items-center">
+  <view tiki:else class="flex flex-col items-center margin-top-8px">
     <image class="block avatar" mode="widthFix" src="{{bookDetail.avt}}" />
     <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.name}}</view>
-    <view class="mt-2x-small text-14px">{{bookDetail.author}}</view>
+    <view class=" text-14px">{{bookDetail.author}}</view>
   </view>
   <view class="line-divider " />
   <view class="px-medium mt-medium">
@@ -19,38 +39,91 @@
     <image class="block avatar" mode="widthFix" src="{{bookDetail.bookStar}}" />
   </view>
   <view class="line-divider " />
+  <view class="mt-20x items-center">
+    <dropdown bottomSheetTitle="Custom" labelKey="label" idKey="key" value="{{selected}}" onSelect="onSelect"
+      placeholder="Currently" className="drop_down">
+    </dropdown>
+  </view>
   <view class="mt-20x flex flex-col items-center">
-    <text class="text-small text-center">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim...
+    <text class="text-14px align-center text-bold">
+      Rate it!
+    </text>
+  </view>
+  <view class="flex flex-col items-center">
+    <image class="star_icon" mode="widthFix" src="/assets/images/voting_star.svg" />
+  </view>
+  <progress percent="69" active="true" show-info="true" />
+  <view class="flex flex-col items-center">
+    <button class="background_button text-bold">Update your progress</button>
+  </view>
+  <view class="line-divider " />
+  <view class="mt-20x flex flex-col ml-10x">
+    <text class="font-bold text-16px">My Notes</text>
+  </view>
+  <view class="items-center display-flex ml-10x">
+    <text class="font-bold text-12px">Page 20</text>
+    <image class="vertical_line" mode="widthFix" src="/assets/images/vertical_line.svg" />
+    <text class="text-12px margin_note">Chỗ này quá hay thật xinh đẹp tuyệt vời.</text>
+  </view>
+  <view class="items-center display-flex ml-10x">
+    <text class="font-bold text-12px">Page 105</text>
+    <image class="vertical_line_2" mode="widthFix" src="/assets/images/vertical_line.svg" />
+    <text class="text-12px margin_note">Thanh niên nhân vật này có vẻ non.</text>
+  </view>
+  <view class="items-center display-flex ml-10x">
+    <text class="font-bold text-12px">Page 203</text>
+    <image class="vertical_line_2" mode="widthFix" src="/assets/images/vertical_line.svg" />
+    <text class="text-12px margin_note">Haha chuyện thật là lực cười.</text>
+  </view>
+  <view class="flex flex-col items-center mt-20x">
+    <button class="background_button text-bold">
+      <text class="text-14px">
+        Take a note
+      </text>
+    </button>
+  </view>
+  <view class="line-divider " />
+  <view class="mt-20x flex flex-col ml-10x">
+    <text class="font-bold text-16px">Book Description</text>
+  </view>
+  <view class="flex flex-col items-center">
+    <text class="text-small text-left ml-10x">
+      Cuốn sách Những Tù Nhân Của Địa Lý nói về sự liên quan giữa địa lý và chính trị. Cho chúng ta thấy hai thành phần
+      này không thể tách rời mà ảnh hưởng...
       <text class="blue-50 text-underline"> Read more</text>
     </text>
   </view>
   <view class="mt-10x items-center display-flex ">
     <button class="background_button margin_button">
-      <text>Preview</text>
+      <text class="text-bold">Preview</text>
     </button>
-    <button class="background_button">Review</button>
+    <button class="background_button text-bold">Review</button>
   </view>
   <view class="line-divider " />
-  <view class="mt-20x ml-10x mb-20x items-center display-flex ">
-    <view class="component-item margin_checkbox">
-      <checkbox onChange="onChange" />
-      <text>Paper book</text>
+  <radio-group class="px-small mt-20x ml-10x mb-20x align-center justify-between display-flex ">
+    <view class="component-item display-flex ">
+      <radio onChange="onChange" />
+      <text class="margin-left-8px ">Paper book</text>
     </view>
-    <view class="component-item ">
-      <checkbox onChange="onChange" />
-      <text>Digital book ⓘ </text>
+    <view class="component-item display-flex ">
+      <radio checked="true" onChange="onChange" />
+      <text class="margin-left-8px">Digital book ⓘ </text>
     </view>
-  </view>
+  </radio-group>
   <view class="mt-10x items-center">
-    <button class="big_button">
-      105.000 ₫
+    <button class="big_button" data-popup="{{
+        show:true,
+        position:'top',
+        mask:true,
+  
+        disableScroll:true
+      }}" onTap="onTap">
+      Buy this book
     </button>
   </view>
   <view class="line-divider " />
-  <view class="display-flex mt-20x ml-10x">
-    <image class="ava-icon " src="/assets/images/ava_hoang.jpg"></image>
+  <view class="display-flex mt-20x ml-10x ">
+    <image class="ava-icon margin-right-8px" src="/assets/images/ava_hoang.jpg"></image>
     <view class="margin-left-4px">
       <view class="display-flex text-13px">
         <view>
@@ -59,65 +132,12 @@
             Online 2 hours ago
           </view>
         </view>
-        <button class="button_view ml-20x">View Shop</button>
+        <button class="button_view ml-20x text-bold">View Shop</button>
       </view>
       <view class="">
         <book_store bookDetail="{{bookDetail}}" isLoading="{{isLoading}}" />
       </view>
     </view>
   </view>
-  <view class="line-divider " />
-  <view class=" mt-20x ml-20x">
-    <text class="text-bold text-14px">
-      New Reader
-    </text>
-  </view>
-  <view class="display-flex mt-2x ml-20x">
-    <image class="ava-reader" src="/assets/images/ava_truong.jpg"></image>
-    <view class="margin-left-4px">
-      <view class="display-flex text-13px">
-        <view>
-          <text class="text-bold margin-right-12px">Đình Trường</text>
-          <view class=" text-12px">
-            tx:
-            <text class="blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
-          </view>
-        </view>
-        <button class="button_view ml-20x">View Profile</button>
-      </view>
-    </view>
-  </view>
-  <view class="display-flex mt-10x ml-20x">
-    <image class="ava-reader" src="/assets/images/ava_khang.jpg"></image>
-    <view class="margin-left-4px">
-      <view class="display-flex text-13px">
-        <view>
-          <text class="text-bold margin-right-12px">Trần Khang</text>
-          <view class=" text-12px text-yellow">
-            Online
-          </view>
-        </view>
-        <button class="button_view button_right_khang">View Profile</button>
-      </view>
-    </view>
-  </view>
-  <view class="display-flex mt-10x ml-20x">
-    <image class="ava-reader" src="/assets/images/ava_thai.jpg"></image>
-    <view class="margin-left-4px">
-      <view class="display-flex text-13px">
-        <view>
-          <text class="text-bold margin-right-12px">Đình Thái</text>
-          <view class=" text-12px">
-            tx:
-            <text class="blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
-          </view>
-          
-        </view>
-        <button class="button_view button_right_thai">View Profile</button>
-      </view>
-    </view>
-  </view>
-  <view class=" mt-2x ml-20x">
-    <text class="blue-50 text-underline text-13px"> See more reader</text>
-  </view>
+  
 </view>
