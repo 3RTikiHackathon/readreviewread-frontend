@@ -57,7 +57,7 @@ Page({
             },
             {
               topId: 3,
-              userId: 1,
+              userId: 3,
               displayName: "Trường",
               avaPath: "/assets/images/sample-avatar-3.jpg",
               point: 80

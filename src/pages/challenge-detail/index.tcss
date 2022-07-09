@@ -3,3 +3,28 @@
   height: 90px;
 }
 
+.ava-first{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.ava-other{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.bg-aqua{
+  background-color: var(--aqua) 
+}
+
+.border-blue{
+  border-color: #5CB3FF;
+  border-width: 3px;
+  background-color: #C2E1FF;
+}
+
+.center-view{
+  margin: auto;
+}

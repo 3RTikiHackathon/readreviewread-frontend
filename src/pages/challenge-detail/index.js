@@ -8,7 +8,30 @@ Page({
       bannerPath: '',
       rule: 'Express your feeling about Bố già by Mario Puzo (up to 300 words).\nThe result is based on:\n• Community votes\n• Review by author',
       finishTime: 'July, 25th, 2022',
-      participant: 100
+      participant: 100,
+      top1: {
+        topId: 1,
+        avaPath: '/assets/images/sample-avatar-1.jpg',
+        displayName: 'Hoàng',
+        shortReview: 'Cuốn sách này rất hay, làm tôi đọc đêm quên ăn, ngày quên ngủ. Giá như tôi biết đến cuốn s...',
+        point: 100
+      },
+      leaderboard: [
+        {
+          topId: 2,
+          avaPath: '/assets/images/sample-avatar-2.jpg',
+          displayName: 'Khang',
+          shortReview: '',
+          point: 90
+        },
+        {
+          topId: 3,
+          avaPath: '/assets/images/sample-avatar-3.jpg',
+          displayName: 'Trường',
+          shortReview: '',
+          point: 80
+        },
+      ]
     }
   },
 

@@ -11,7 +11,7 @@
               <text class="font-bold ml-2x-small">{{detail.finishTime}}</text>
             </view>    
           </view>
-          <view class="justify-content-center">
+          <view class="center-view display-flex justify-center text-center">
             <image class="book-cover" mode="aspectFill" src={{detail.bookCover}} />
             <view class="text-medium text-blue font-bold">{{detail.title}}</view>
             <view class="text-small">{{detail.author}}</view>
@@ -23,8 +23,31 @@
 
   <view class="mt-2x-small px-small mb-2x-small">
     <view class="bg-white px-medium py-2x-small radius-16px">
-      <view class="flex justify-between text-center">
-        <view class="text-medium text-blue font-bold text-center">Leaderboard</view>
+      <view class="center-view display-flex justify-center text-center">
+        <view class="text-medium text-blue font-bold">Leaderboard</view>
+        <view>
+          <image class="center-view ava-first" mode="aspectFill" src={{detail.top1.avaPath}} />
+          <view class="">
+            <text class="text-medium font-bold">{{detail.top1.displayName}}</text>
+            <text class="text-medium font-bold text-blue ml-2x-small">{{detail.top1.point}}</text>
+          </view>
+          <view class="">
+            <text class="text-small">{{detail.top1.shortReview}}</text>
+            <text class="text-small text-blue ml-5x-small">See more</text>
+          </view>
+        </view>
+        <block tiki:for="{{detail.leaderboard}}" tiki:key="topId">
+          <view class="px-medium py-2x-small mt-4x-small mb-2x-small radius-16px border-blue">
+            <view class="flex justify-between items-center"> 
+              <view class="flex align-center items-center">
+                <view class="font-bold text-blue">{{item.topId}}</view>
+                <image class="ava-other ml-small" mode="aspectFill" src={{item.avaPath}} />
+                <view class="ml-small"> {{item.displayName}}</view>
+              </view>
+              <view class="pr-small text-blue font-bold">{{item.point}}</view>
+            </view>
+          </view>
+        </block>
       </view>
     </view>    
   </view>
