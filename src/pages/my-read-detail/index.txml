@@ -161,7 +161,7 @@
   </view>
   <view class="line-divider " />
     <view class="mt-10x items-center">
-    <button class="big_button" data-popup="{{
+    <button class="buy_button mt-20x" data-popup="{{
         show:true,
         position:'top',
         mask:true,
