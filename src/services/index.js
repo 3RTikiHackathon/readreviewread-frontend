@@ -161,3 +161,10 @@ export const getComments = (postId) =>{
     }
   };
 }
+
+
+export const getBookDetail = () => {
+  let BookDetail = require('./mock/book_detail.json')
+  return BookDetail;
+}
+

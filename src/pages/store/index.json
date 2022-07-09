@@ -1,0 +1,17 @@
+{
+  "defaultTitle": "Tìm kiếm",
+  "titleBarBottomColor": "#fff",
+  "usingComponents": {
+    "product-section": "components/product-section/index",
+    "sort": "components/sort/index",
+    "filter": "components/filter/index",
+    "category-list": "components/category-list/index",
+    "filtered-list": "components/filtered-list/index",
+    "empty": "components/empty/index",
+    "search-bar": "components/search-bar/index",
+    "tabs": "@tiki.vn/tini-ui/es/tabs/index",
+    "tab-content": "@tiki.vn/tini-ui/es/tabs/tab-content/index",
+    "my-read-item" : "components/my-read-item/index"
+
+  }
+}

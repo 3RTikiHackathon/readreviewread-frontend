@@ -1,7 +1,7 @@
 import { getSystemInfo } from './utils/system';
 
 App({
-  brandName: 'BIZBOOKS',
+  brandName: 'Apple',
   brandLogo:
     'https://salt.tikicdn.com/ts/miniapp/f5/19/83/44d96fa4c4bb3737675cc1d7066fe825.png',
   brandCover:
