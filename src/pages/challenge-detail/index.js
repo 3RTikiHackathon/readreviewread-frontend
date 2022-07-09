@@ -13,7 +13,7 @@ Page({
         topId: 1,
         avaPath: '/assets/images/sample-avatar-1.jpg',
         displayName: 'Hoàng',
-        shortReview: 'Cuốn sách này rất hay, làm tôi đọc đêm quên ăn, ngày quên ngủ. Giá như tôi biết đến cuốn s...',
+        shortReview: 'Cuốn sách này rất hay, làm tôi đọc đêm quên ăn, ngày quên ngủ. Giá như tôi biết đến cuốn sách n...',
         point: 100
       },
       leaderboard: [
@@ -31,6 +31,30 @@ Page({
           shortReview: '',
           point: 80
         },
+      ],
+      reviews: [
+        {
+          userId: 2,
+          userName: 'Khang',
+          userAvatar: '/assets/images/sample-avatar-2.jpg',
+          image: '',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n',
+          postedTime: '16:30 July 7, 2022',
+          likes: 20,
+          comments: 5,
+          isLiked: false
+        },
+        {
+          userId: 3,
+          userName: 'Trường',
+          userAvatar: '/assets/images/sample-avatar-3.jpg',
+          image: '',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n',
+          postedTime: '16:30 July 7, 2022',
+          likes: 20,
+          comments: 5,
+          isLiked: false
+        }
       ]
     }
   },

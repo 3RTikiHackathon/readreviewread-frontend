@@ -51,4 +51,12 @@
       </view>
     </view>    
   </view>
+
+  <view class="mt-2x-small px-small mb-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-16px">     
+      <block tiki:for="{{detail.reviews}}" tiki:key="userId">
+        <review review="{{item}}"/>
+      </block>
+    </view>    
+  </view>
 </view>

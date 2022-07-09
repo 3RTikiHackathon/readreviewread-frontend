@@ -1,0 +1,35 @@
+<import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
+<view class="py-medium post">
+  <view class="display-flex">
+    <image class="ava-icon " src={{review.userAvatar}}></image>
+    <view class="margin-left-4px">1
+      <view class=" text-12px">
+        <text class="text-bold margin-right-4px">{{review.userName}}</text> 
+      </view>
+      <view class=" text-12px text-gray">
+        {{review.postedTime}}
+      </view>
+    </view>
+  </view>
+  <view class="margin-top-8px">
+    <view class="text-12px line-height">{{review.content}}</view>
+  </view>
+  <!-- <image class="margin-top-8px width-100" src={{review.image}}></image> -->
+  <view class="display-flex post-interaction margin-top-12px px-medium"> 
+    <view class="display-flex align-center">
+      <image class = "icon icon-20px" src = "/assets/icons/Like-line.svg"></image>
+      <text class="text-bold text-14px blue-50 margin-left-4px">{{numberFormatter(review.likes)}}</text>
+    </view>
+    <view catchTap='onCommentTap' class="display-flex align-center margin-left-12px">
+      <icon type="chat" size="20" color="#5cb3ff"></icon>
+      <text class="text-bold text-14px blue-50 margin-left-4px">{{numberFormatter(review.comments)}}</text>
+    </view>
+    <!-- <view class="display-flex align-center  margin-left-12px">
+      <icon type="share" size="20" color="#5cb3ff"></icon>
+      <text class="text-bold text-14px blue-50 margin-left-4px">{{numberFormatter(review.shares)}}</text>
+    </view> -->
+    <view class="display-flex align-center  margin-left-12px">
+      <icon type="bookmark_add_glyph" size="20" color="#5cb3ff"></icon>
+    </view>
+  </view>
+</view>

@@ -2,6 +2,6 @@
   "defaultTitle": "Challenge detail",
   "backgroundColor": "#EBEBF0",
   "usingComponents": {
-    
+    "review": "components/challenge-review/index"
   }
 }
