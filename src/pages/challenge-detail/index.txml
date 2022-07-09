@@ -11,6 +11,10 @@
             <view class="">
               <text class="">Deadline: </text>
               <text class="font-bold ml-2x-small">{{detail.finishTime}}</text>
+            </view>
+            <view>
+              <text class="">Rewards:</text>
+              <text class="font-bold ml-2x-small">1000 Astra</text>
             </view>    
           </view>
           <view class="flex-1 center-view justify-center text-center">
