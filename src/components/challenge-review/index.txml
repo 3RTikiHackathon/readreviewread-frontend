@@ -9,7 +9,7 @@
       <view class="text-12px text-gray">{{review.postedTime}}</view>
     </view>
   </view>
-  <view class="margin-top-8px text-12px line-height text-justify">{{review.content}}</view>
+  <view class="mt-small text-12px line-height text-justify">{{review.content}}</view>
   <view class="flex post-interaction margin-top-12px px-medium">
     <view class="display-flex align-center">
       <image class = "icon icon-20px" src = "/assets/icons/Like-line.svg"></image>

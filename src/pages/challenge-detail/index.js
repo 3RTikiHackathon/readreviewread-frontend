@@ -1,9 +1,9 @@
 Page({
   data: {
     isLoading: false,
+    isJoined: false,
+    isSubmitted: false,
     detail: {
-      isJoined: false,
-      isSubmitted: false,
       title: 'Bố già',
       author: 'Mario Puzo',
       bookCover: '/assets/images/book-cover-bo-gia.jpg',
@@ -58,7 +58,14 @@ Page({
           isLiked: false
         }
       ]
-    }
+    },
+    show: false,
+    position: 'bottom',
+    animation: true,
+    mask: true,
+    zIndex: 10,
+    disableScroll: true,
+    imgs: undefined,
   },
 
   async loadData() {
@@ -83,15 +90,51 @@ Page({
     this.loadData();
   },
 
-  onSubmit(){
-    
+  onOpenSubmit(e) {
+    this.setData({
+      ...e.target.dataset.popup
+    });
   },
 
-  onOk(){
-
+  onJoin() {
+    this.setData({
+      isJoined: true
+    })
   },
 
-  onCancel(){
+  onSubmit() {
+    this.setData({
+      show:false,
+      isSubmitted: true
+    });
+  },
 
+  onCancel() {
+    this.setData({
+      show:false
+    });
+  },
+
+  onBrowse() {
+    my.chooseImage({
+      count: 5,
+      success: (res) => {
+        my.previewImage({
+          urls: res.filePaths,
+          enablesavephoto: true,
+          enableShowPhotoDownload: true,
+          success: (res) => {
+            console.log('success', res);
+          },
+          fail: (err) => {
+            console.log('fail', err);
+          },
+        });
+      },
+      fail: (e) => {
+        console.log(e);
+        my.alert({ title: 'Fail', content: JSON.stringify(e) });
+      },
+    });
   }
 })

@@ -3,6 +3,7 @@
   "backgroundColor": "#EBEBF0",
   "usingComponents": {
     "review": "components/challenge-review/index",
-    "popup": "@tiki.vn/tini-ui/es/popup/index"
+    "popup": "@tiki.vn/tini-ui/es/popup/index",
+    "textarea": "@tiki.vn/tini-ui/es/textarea/index"
   }
 }

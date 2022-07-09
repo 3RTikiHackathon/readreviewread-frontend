@@ -21,8 +21,26 @@
     </view>    
   </view>
 
-  <view class="mt-2x-small px-small mb-2x-small flex items-center">
-    <button onTap="onSubmit" class="radius-8px display-flex justify-center text-center center-view">Submit</button>
+  <view class="mt-2x-small px-small mb-2x-small flex items-center display-flex justify-center center-view">
+    <view tiki:if="{{isJoined}}">
+      <view tiki:if="{{isSubmitted}}">
+        <button disabled="true" class="radius-8px display-flex justify-center text-center center-view">Submitted</button>
+      </view>
+      <view tiki:else>
+        <button 
+          onTap="onOpenSubmit" 
+          data-popup="{{
+            show:true,
+            position:'bottom',
+          }}" 
+          class="radius-8px display-flex justify-center text-center center-view">Submit</button>
+      </view>
+    </view>
+    <view tiki:else>
+        <button 
+          onTap="onJoin"  
+          class="radius-8px display-flex justify-center text-center center-view">Join</button>
+    </view>
   </view>
 
   <view class="mt-2x-small px-small mb-2x-small">
@@ -63,4 +81,47 @@
       </block>
     </view>    
   </view>
+
+  <view>
+    <popup
+       position="{{position}}"
+       show="{{show}}"
+       mask="{{mask}}"
+       disableScroll
+       zIndex="10"
+       onClose="onCancel"
+    >
+    <view class="bg-white">
+      <view>
+        <view class="mt-small text-center text-blue font-bold text-medium">Submit your submission</view>
+        <view class="block">
+          <textarea placeholder="Enter here" maxlength="600"/>
+        </view>
+        <view style="
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            margin-top:32px;
+        ">
+          <button
+          onTap="onBrowse"
+          size="big"
+          style="width:240px; margin-bottom:10px"
+          type="primary">Upload media content(s)</button>
+          <button
+            onTap="onSubmit"
+            size="big"
+            style="width:150px; margin-bottom:5px"
+            type="primary">Submit</button>
+        </view>
+        <block tiki:for="{{imgs}}">
+          <image class="image-cover" src="{{item}}" />
+        </block>
+      </view>
+    </view> 
+      
+     </popup>
+  </view>
 </view>
+
