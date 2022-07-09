@@ -21,9 +21,9 @@ Page({
   data: {
     activeTab: 0,
     tabs: [
-      { title: 'Currently' },
-      { title: 'Read' },
-      { title: 'Want' }
+      { title: 'Best seller' },
+      { title: 'Might like' },
+      { title: 'From friends' }
     ],
     searchTerm: '',
     recentKeys: [],

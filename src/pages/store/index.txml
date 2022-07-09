@@ -1,6 +1,6 @@
-<view class="px-medium pb-medium">
+<view class=" pb-medium">
 
-  <view class="bg-white radius-8px">
+  <view class="px-medium bg-white radius-8px">
     <view class="flex justify-between">
       <view class="text-medium font-bold">New releases</view>
       <view class="flex items-center">
@@ -9,16 +9,21 @@
       </view>
     </view>
   </view>
-  <view class="mt-medium px-medium">
+  
+  <view class=" px-medium">
     <book-release numOrders="1" isLoading="{{isLoading}}" />
   </view>
-  <view class="line-divider " />
-  <view class="font-bold text-16px mt-20x">
-    Best seller
+  
+  <view class="section-divider " />
+  <view class="px-medium">
+    <tabs class="mt-20x" tabs="{{tabs}}" onTabClick="onTabClick" tabsName="activeTab" activeTab="{{activeTab}}" swipeable="{{true}}">
+    </tabs>
+    
+    <block tiki:for="{{Books.data}}" tiki:key="id">
+      <store-bestseller-item book="{{item}}"></store-bestseller-item>
+    </block>
   </view>
-  <block tiki:for="{{Books.data}}" tiki:key="id">
-    <store-bestseller-item book="{{item}}"></store-bestseller-item>
-  </block>
+  
   <!-- <tabs tabs="{{tabs}}" onTabClick="onTabClick" tabsName="activeTab" activeTab="{{activeTab}}" swipeable="{{true}}">
   </tabs>
   <block tiki:for="{{Books.data}}" tiki:key="id">
