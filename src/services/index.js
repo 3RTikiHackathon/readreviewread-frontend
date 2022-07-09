@@ -85,3 +85,8 @@ export const getCouponsAPI = () => {
   let coupons = require('./mock/coupons.json')
   return coupons;
 };
+
+export const getChallenges = () => {
+  let challenges = require('./mock/challenges.json');
+  return challenges;
+}

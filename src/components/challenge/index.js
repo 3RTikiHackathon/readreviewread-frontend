@@ -10,7 +10,8 @@ Component({
       startTime: '',
       finishTime: '',
       isJoined: true,
-      isSubmitted: false,    
+      isSubmitted: false,
+      timeRemaining: '10 days'    
     }
   },
 
