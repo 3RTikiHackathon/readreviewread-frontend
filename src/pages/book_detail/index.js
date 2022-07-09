@@ -23,7 +23,7 @@ Page({
     ePrice: "70.000 đ",
     isStickButtons: false,
     isScrollUp: false,
-    show: false,
+    show: true,
     position: 'top',
     animation: true,
     mask: true,

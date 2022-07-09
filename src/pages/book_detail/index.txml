@@ -1,4 +1,25 @@
 <view class="px-medium pb-medium">
+  
+<view class="text-center">
+  <popup
+     position="top"
+     show="{{show}}"
+     mask="{{mask}}"
+     disableScroll = true
+     zIndex="10"
+     onClose="onCancel"
+   >
+   <view class="view-pop">
+       <view class = "py-medium">
+       <view class="text-bold text-24px text-color-red">Congrats</view>
+        <view class="text-bold text-14px">
+          <text>You have earn a new book</text>
+          <text class="text-color-blue margin-left-4px">Certificate</text>
+        </view>
+       </view>
+     </view>
+   </popup>
+</view>
   <view tiki:if="{{isLoading}}" class="flex flex-col items-center">
     <view class="skeleton avatar skeleton-button-shape-circle">
     </view>
@@ -47,7 +68,7 @@
       show:true,
       position:'top',
       mask:true,
-      title: 'Click on mask to close popup',
+
       disableScroll:true
     }}"
       onTap="onTap">
@@ -86,7 +107,7 @@
           <text class="text-bold margin-right-12px">Đình Trường</text>
           <view class=" text-12px">
             tx:
-            <text class="blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
+            <text class="margin-left0.-4px blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
           </view>
         </view>
         <button class="button_view button_right_truong text-bold ">View Profile</button>
@@ -101,7 +122,7 @@
           <text class="text-bold margin-right-12px">Trần Khang</text>
           <view class=" text-12px">
             tx:
-            <text class="blue-50 text-underline text-13px">0xd657ffb0a12a2...</text>
+            <text class=" margin-left-4px blue-50 text-underline text-13px">0xd657ffb0a12a2...</text>
           </view>
         </view>
         <button class="button_view button_right_khang text-bold">View Profile</button>
@@ -116,7 +137,7 @@
           <text class="text-bold margin-right-12px">Đình Thái</text>
           <view class=" text-12px">
             tx:
-            <text class="blue-50 text-underline text-13px"> 0xe9ce5c0b2d6bf...</text>
+            <text class="margin-left-4px blue-50 text-underline text-13px"> 0xe9ce5c0b2d6bf...</text>
           </view>
           
         </view>
