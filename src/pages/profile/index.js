@@ -7,15 +7,31 @@ import {
   showCart,
   showSearch,
 } from "../../utils/navigate";
+import {getPostsProfile } from '../../services/index';
+import { systemInfo } from '../../utils/system';
+import { defaultSorts } from '../../utils/constant';
+import { filters, formatFiltersToQuery } from '../../utils/filter';
+import { group } from '../../utils/common';
 Page({
   hasMore: false,
   actionButtons: 0,
   data: {
     isLoading: false,
     disableScroll: true,
+    showActions: false,
+    showCategory: false,
+    isLoadingPost: true,
+    isLoadingMorePost: false,
     user: {},
     numOrders: {},
     isStickButtons: false,
+    Posts: {
+      data: [],
+      paging: {
+        current_page: 0,
+        last_page: 0,
+      },
+    },
   },
 
   onOk() {
@@ -28,32 +44,92 @@ Page({
   async loadData() {
     this.setData({
       isLoading: true,
+      isLoadingPost: true,
+        isLoadingCategories: true,
     });
 
     try {
-      const [user, numOrders] = await Promise.all([
+      const [user, numOrders, Posts] = await Promise.all([
         getUserInfo(),
         getNumOrders(),
+        getPostsProfile(),
       ]);
       
+      this.hasMore = Posts.paging.current_page < Posts.paging.last_page;
+
       this.setData({
         user,
         numOrders,
+        Posts,
         isLoading: false,
+        isLoadingPost: false,
+        isLoadingCategories: false,
       });
     } catch (error) {
       this.setData({
         isLoading: false,
+        isLoadingPost: false,
+        isLoadingCategories: false,
       });
     }
   },
 
-  onBlockScout(){
-    navigate({
-      page:'blockscout',
-      params:''
-    })
+  async loadPosts() {
+    this.setData({
+      isLoadingPost: true,
+    });
+    try {
+      const Posts = await getPostsProfile({
+        page: 1,
+        limit: 10,
+        sort: this.data.selectedSort.value,
+        category: this.data.selectedCategory,
+        filter: formatFiltersToQuery(this.data.selectedFilters),
+      });
+      this.hasMore = Posts.paging.current_page < Posts.paging.last_page;
+      this.setData({
+        Posts,
+        isLoadingPost: false,
+      });
+    } catch {
+      this.setData({
+        isLoadingPost: false,
+      });
+    }
   },
+
+  async loadMorePosts() {
+    const { Posts, isLoadingPost, isLoadingMorePost } = this.data;
+
+    if (!this.hasMore || isLoadingPost || isLoadingMorePost) return;
+
+    this.setData({ isLoadingMorePost: true });
+
+    const { data: currentPosts, paging: currentPaging } = Posts;
+
+    try {
+      const { data: nextPosts, paging } = await getPostsProfile({
+        page: currentPaging.current_page + 1,
+        limit: 10,
+        sort: this.data.selectedSort.value,
+        category: this.data.selectedCategory,
+        filter: formatFiltersToQuery(this.data.selectedFilters),
+      });
+
+      this.hasMore = paging.current_page < paging.last_page;
+
+      this.setData({
+        Posts: {
+          data: [...currentPosts, ...nextPosts],
+          paging,
+        },
+        isLoadingMorePost: false,
+      });
+    } catch {
+      this.setData({ isLoadingMorePost: false });
+    }
+  },
+
   onSelectFilter(selectedFilters) {
     this.setData({
       selectedFilters,

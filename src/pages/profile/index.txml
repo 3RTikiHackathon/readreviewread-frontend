@@ -1,9 +1,9 @@
 <view class="px-medium pb-medium">
   <view class="flex flex-col items-center">
     <image class="block avatar" mode="widthFix" src="/assets/images/profile.svg" />
-    <view class="display-flex mt-1x-small">
-      <view class="text-16px font-bold account_name">{{user.userName}}</view>
-      <view class="text-gray text-16px">Reader</view>
+    <view class="mt-1x-small">
+      <text class="text-16px font-bold account_name">{{user.userName}}</text>
+      <text class="text-gray text-12px">Reader</text>
     </view>
   </view>
   <view class="flex flex-col items-center mt-0x">
@@ -21,25 +21,30 @@
     <my-orders numOrders="{{numOrders}}" isLoading="{{isLoading}}" />
   </view>
 </view>
-<view class="page">
-  <view class="section-divider" />
-  <view class="mt-medium px-medium">
-    <view class="bg-white px-medium py-2x-small radius-16px">
-      <view class="flex justify-between items-center">
-        <view class="flex">
-          <image class="block size-40" src="/assets/icons/ic-support.svg" />
-          <view class="ml-2x-small">
-            <view class="font-bold mb-4x-small">Support</view>
-            <view class="text-small text-gray60">Call or chat with us</view>
-          </view>
-        </view>
-        <icon type="arrow_right" color="#808089" />
-      </view>
-    </view>
-  </view>
-  <view class="version mt-medium w-full flex flex-col items-center">
-    <view class="mb-medium text-small text-blue text-underline font-medium">Terms and Conditions</view>
-    <view class="text-x-small text-gray60">version: 1.0.0</view>
+
+<view class="section-divider" />
+<view class="px-medium pb-medium">
+  <view>
+    <text class="text-16px text-bold ml-8px mt-20x">
+      Activities
+    </text>
+    <!-- <image class="ava-icon ml-20x" src="/assets/images/ava_truong.jpg"></image> -->
+    <block tiki:for="{{Posts.data}}" tiki:key="id">
+      <post-profile class="px-medium ml-20x" post="{{item}}" />
+    </block>
   </view>
 </view>
-  
+
+
+<view class="page">
+  <view class="mt-medium px-medium flex flex-col items-center">
+    <view class="flex justify-between mt-20x">
+      <image class="block size-40" src="/assets/icons/ic-support.svg" />
+      <view class="ml-2x-small">
+        <view class="font-bold mb-4x-small align_support">Support</view>
+        <view class="text-small text-gray60">Call or chat with us</view>
+      </view>
+      <icon type="arrow_right" color="#808089" />
+    </view>
+  </view>
+</view>
