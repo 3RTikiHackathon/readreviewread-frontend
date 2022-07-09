@@ -2,6 +2,8 @@ Page({
   data: {
     isLoading: false,
     detail: {
+      isJoined: false,
+      isSubmitted: false,
       title: 'Bố già',
       author: 'Mario Puzo',
       bookCover: '/assets/images/book-cover-bo-gia.jpg',
@@ -79,5 +81,17 @@ Page({
   // Life cycle
   onReady(){
     this.loadData();
+  },
+
+  onSubmit(){
+    
+  },
+
+  onOk(){
+
+  },
+
+  onCancel(){
+
   }
 })

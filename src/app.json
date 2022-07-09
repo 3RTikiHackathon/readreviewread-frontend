@@ -29,7 +29,7 @@
       },
       {
         "name": "Challenge",
-        "pagePath": "pages/challenge-detail/index",
+        "pagePath": "pages/new-challenge/index",
         "icon": "/assets/icons/tab-challenge.svg",
         "activeIcon": "assets/icons/tab-challenge-active.svg"
       },

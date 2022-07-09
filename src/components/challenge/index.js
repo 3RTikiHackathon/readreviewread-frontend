@@ -29,6 +29,9 @@ Component({
 
   methods: {
     onChallengeTap() {
+      navigate({
+        page: 'challenge-detail'
+      })
       // navigate to challenge-detail page with param
     }
   }

@@ -7,8 +7,6 @@
   overflow-x: auto;
 }
 
-
-
 .line-height{
   line-height:1.4;
 }
@@ -33,4 +31,5 @@
 
 .text-justify{
   text-align: justify;
+  text-justify: inter-word;
 }

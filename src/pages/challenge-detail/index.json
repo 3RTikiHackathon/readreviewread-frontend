@@ -2,6 +2,7 @@
   "defaultTitle": "Challenge detail",
   "backgroundColor": "#EBEBF0",
   "usingComponents": {
-    "review": "components/challenge-review/index"
+    "review": "components/challenge-review/index",
+    "popup": "@tiki.vn/tini-ui/es/popup/index"
   }
 }

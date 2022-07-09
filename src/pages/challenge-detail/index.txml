@@ -21,6 +21,10 @@
     </view>    
   </view>
 
+  <view class="mt-2x-small px-small mb-2x-small flex items-center">
+    <button onTap="onSubmit" class="radius-8px display-flex justify-center text-center center-view">Submit</button>
+  </view>
+
   <view class="mt-2x-small px-small mb-2x-small">
     <view class="bg-white px-medium py-2x-small radius-16px">
       <view class="center-view display-flex justify-center text-center">
