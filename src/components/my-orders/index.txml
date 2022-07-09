@@ -15,6 +15,7 @@
       onTap="onMoveOrderManagement" 
       value="{{numOrders[item.key]}}"
       src="{{item.src}}" 
-      text="{{item.value}}"/>
+      text="{{item.value}}"
+      author="{{item.author}}"/>
   </view>
 </view>
