@@ -9,16 +9,22 @@
      zIndex="10"
      onClose="onCancel"
    >
-   <view class="view-pop">
-       <view class = "py-medium">
-       <view class="text-bold text-24px text-color-red">Congrats</view>
+   <view class="py-medium view-pop margin-bottom-8px">
+      <view class = "">
+        <view class="text-bold text-24px text-color-red">Congrats</view>
         <view class="text-bold text-14px">
           <text>You have earn a new book</text>
           <text class="text-color-blue margin-left-4px">Certificate</text>
         </view>
-       </view>
-     </view>
-   </popup>
+        <view catchTap='onBlockScout' class="text-12px text-underline text-gray">
+          View on Blockscout
+        </view>
+      </view>
+       <image class="block avatar py-small" mode="widthFix" src="{{bookDetail.avt}}" />
+      <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.name}}</view>
+      <view class=" text-14px">{{bookDetail.author}}</view>
+    </view>
+  </popup>
 </view>
   <view tiki:if="{{isLoading}}" class="flex flex-col items-center">
     <view class="skeleton avatar skeleton-button-shape-circle">
