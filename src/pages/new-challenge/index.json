@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Challenges",
+  "defaultTitle": "Campaign",
   "backgroundColor": "#EBEBF0",
   "usingComponents": {
     "block-header": "components/block-header/index",

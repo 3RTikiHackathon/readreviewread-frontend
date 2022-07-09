@@ -43,7 +43,7 @@
         "activeIcon": "assets/icons/tab-read-active.svg"
       },
       {
-        "name": "Challenge",
+        "name": "Campaign",
         "pagePath": "pages/new-challenge/index",
         "icon": "/assets/icons/tab-challenge.svg",
         "activeIcon": "assets/icons/tab-challenge-active.svg"

@@ -213,7 +213,7 @@ Page({
     });
 
     my.setNavigationBar({
-      title: 'New Feed',
+      title: 'News Feed',
     });
 
     showSearch();

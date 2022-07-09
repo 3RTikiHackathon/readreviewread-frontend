@@ -48,8 +48,8 @@ Page({
         },
         {
           userId: 3,
-          userName: 'Trường',
-          userAvatar: '/assets/images/ava_truong.jpg',
+          userName: 'Yến',
+          userAvatar: '/assets/images/ava_yen.jpg',
           image: '',
           content: 'Văn phong của tác giả là điều khiến tôi phải chú ý nhất',
           postedTime: '16:30 July 7, 2022',
@@ -69,8 +69,8 @@ Page({
     submitInput: "",
     mySubmit: {
       userId: 3,
-      userName: 'Đạt',
-      userAvatar: '/assets/images/sample-avatar-3.jpg',
+      userName: 'Trường',
+      userAvatar: '/assets/images/ava_truong.jpg',
       image: '',
       content: '',
       postedTime: '17:00 July 9, 2022',
