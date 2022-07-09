@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/home/index", "pages/product/index", "pages/search/index","pages/profile/index", "pages/new-challenge/index"],
+  "pages": ["pages/home/index", "pages/product/index", "pages/search/index","pages/profile/index", "pages/new-challenge/index", "pages/challenge-detail/index"],
   "window": {
     "defaultTitle": "",
     "backgroundColor": "#fff"
@@ -29,7 +29,7 @@
       },
       {
         "name": "Challenge",
-        "pagePath": "pages/new-challenge/index",
+        "pagePath": "pages/challenge-detail/index",
         "icon": "/assets/icons/tab-challenge.svg",
         "activeIcon": "assets/icons/tab-challenge-active.svg"
       },

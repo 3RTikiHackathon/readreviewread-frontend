@@ -1,0 +1,31 @@
+<view>
+  <view class="mt-2x-small px-small mb-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-16px">
+      <view class="flex justify-between items-center">
+        <view class="flex">
+          <view>
+            <view class="text-medium font-bold text-blue">Rules</view>
+            <text class="text-small">{{detail.rule}}</text>
+            <view class="">
+              <text class="">Deadline: </text>
+              <text class="font-bold ml-2x-small">{{detail.finishTime}}</text>
+            </view>    
+          </view>
+          <view class="justify-content-center">
+            <image class="book-cover" mode="aspectFill" src={{detail.bookCover}} />
+            <view class="text-medium text-blue font-bold">{{detail.title}}</view>
+            <view class="text-small">{{detail.author}}</view>
+          </view>
+        </view>
+      </view>
+    </view>    
+  </view>
+
+  <view class="mt-2x-small px-small mb-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-16px">
+      <view class="flex justify-between text-center">
+        <view class="text-medium text-blue font-bold text-center">Leaderboard</view>
+      </view>
+    </view>    
+  </view>
+</view>
