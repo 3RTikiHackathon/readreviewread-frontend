@@ -4,7 +4,7 @@
     "pages/product/index",
     "pages/my-read/index",
     "pages/profile/index",
-    "pages/my_journey/index",
+    "pages/blockscout/index",
     "pages/store/index",
     "pages/book_detail/index",
     "pages/comments/index"

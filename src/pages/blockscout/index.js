@@ -62,10 +62,7 @@ Page({
     this.setData({ ...e.target.dataset.popup });
   },
   onBlockScout(){
-    navigate({
-      page:'blockscout',
-      params:''
-    })
+    navigate({page:"blockscout"})
   },
   onSelectFilter(selectedFilters) {
     this.setData({
@@ -165,7 +162,7 @@ Page({
     });
 
     my.setNavigationBar({
-      title: 'Book detail',
+      title: 'Blockscout',
     });
 
     showSearch();
