@@ -1,0 +1,8 @@
+<view class="px-medium pb-medium">
+  <block
+  tiki:for="{{Books.data}}"
+  tiki:key="id">
+    <my-read-item book="{{item}}"></my-read-item>
+  </block>
+  
+</view>

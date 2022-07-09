@@ -1,0 +1,47 @@
+<template name="loading">
+  <view class="flex">
+    <view class="flex w-50 py-2x-small border-right-gray">
+      <view class="skeleton size-40 skeleton-button-shape-circle" />
+      <view class="ml-2x-small skeleton-75-width">
+        <view class="mb-4x-small skeleton skeleton-50-width skeleton-font-regular"></view>
+        <view class="skeleton skeleton-25-width skeleton-font-regular"></view>
+      </view>
+    </view>
+    <view class="flex w-50 py-2x-small pl-medium">
+      <view class="skeleton size-40 skeleton-button-shape-circle" />
+      <view class="ml-2x-small skeleton-75-width">
+        <view class="mb-4x-small skeleton skeleton-50-width skeleton-font-regular"></view>
+        <view class="skeleton skeleton-25-width skeleton-font-regular"></view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="completed">
+  <view class="flex">
+    <view class="flex w-50 py-1x-small pl-medium">
+      <view class="ml-2x-small">
+        <view class="mb-1x-small">Read</view>
+        <view class="text-medium font-bold">{{bookDetail.read}}</view>
+      </view>
+    </view>
+    <view class="flex w-50 py-1x-small pl-medium">
+      <view class="ml-2x-small">
+        <view class="mb-1x-small">Pages</view>
+        <view class="text-medium font-bold">{{bookDetail.pages}}</view>
+      </view>
+    </view>
+    <view class="flex w-50 py-1x-small pl-medium">
+      <view class="ml-2x-small">
+        <view class="mb-1x-small">Reviews</view>
+        <view class="text-medium font-bold">{{bookDetail.reviews}}</view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<view class="bg-white p-medium radius-8px">
+  <template
+    is="{{isLoading ? 'loading' : 'completed'}}"
+    data="{{bookDetail}}" />
+</view>
