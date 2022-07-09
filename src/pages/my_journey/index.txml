@@ -1,37 +1,32 @@
 <view>
-  <carousel
-    arrows
-    indicator-dots
-    onChange="onChange"
-  >
-    <carousel-item>
-       <view class="container">
-         <text class="text_title">Total books</text>      
-         <text>35</text>
-       </view>
-    </carousel-item>
-    <carousel-item>
-      <view class="container">
-        <text>Total pages</text>
-        <text>35</text>
-      </view>
-    </carousel-item>
-    <carousel-item>
-      <view class="container">
-        <text>Total time</text>
-        <text>35</text>
-      </view>
-    </carousel-item>
-  </carousel>
-  
-  <view class="chart-center">
-    <text>Reading progress</text>
-    <image src="/assets/images/bar-chart.jpg"></image>
+<view class="container py-small">
+  <view class="text-center">
+    <view class=" text-bold text-14px">Total books</view>      
+    <text class="text-bold text-color-red text-24px">35</text>
   </view>
+ 
+ <view class="text-center">
+   <view class="text-bold">Total pages</view>
+   <text class="text-bold text-color-blue text-24px">35</text>
+ </view>
+
+ <view class="text-center">
+   <view class="text-bold">Total time</view>
+   <text class="text-bold text-color-green text-24px">35h</text>
+ </view>
+</view>
+<view class="section-divider"></view>
+       
+
   
-  <view class="chart-center">
-    <text>Reading genre</text>
-    <image src="/assets/images/pie-chart.jpg"></image>
+  <view class="px-small py-small">
+    <text class="text-bold text-italic text-18px">Reading progress</text>
+    <image class="width-100" src="/assets/images/card (3).png"></image>
+  </view>
+  <view class="section-divider"></view>
+  <view class="px-small py-small">
+    <text class="text-bold text-italic text-18px">Reading genre</text>
+    <image class="width-100 height" src="/assets/images/card (4).png"></image>
   </view>
 
 </view>  
