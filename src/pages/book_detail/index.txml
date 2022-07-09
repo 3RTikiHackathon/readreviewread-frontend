@@ -13,13 +13,13 @@
       
       <text class=" text-24px text-bold margin-left-4px">Confirm transaction?</text>
       <view class="display-flex">
-        <text>Book:</text> <text class="text-bold text-italic margin-left-4px">Những tù nhân của Địa lý</text>
+        <text>Book:</text> <text class="text-bold text-italic margin-left-4px">{{bookDetail.bookName}}</text>
       </view>
       <view class="display-flex">
         <text>Type:</text> <text class="text-bold text-italic margin-left-4px">E-Book</text>
       </view>
       <view class="display-flex">
-        <text>Price:</text> <text class="text-bold text-italic margin-left-4px">105.000 ₫</text>
+        <text>Price:</text> <text class="text-bold text-italic margin-left-4px">{{bookDetail.price}}</text>
       </view>
       <view class="display-flex justify-between align-center py-small">
         <button onTap="onConfirmTransaction" class="bg-blue border-12px">Confirm</button>    

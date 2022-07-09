@@ -56,21 +56,21 @@ Page({
               topId: 1,
               userId: 1,
               displayName: "Hoàng",
-              avaPath: "/assets/images/sample-avatar-1.jpg",
+              avaPath: "/assets/images/ava_hoang.jpg",
               point: 100
             },
             {
               topId: 2,
               userId: 2,
               displayName: "Khang",
-              avaPath: "/assets/images/sample-avatar-2.jpg",
+              avaPath: "/assets/images/ava_khang.jpg",
               point: 90
             },
             {
               topId: 3,
               userId: 3,
               displayName: "Trường",
-              avaPath: "/assets/images/sample-avatar-3.jpg",
+              avaPath: "/assets/images/ava_truong.jpg",
               point: 80
             }
           ]
@@ -82,21 +82,21 @@ Page({
               topId: 1,
               userId: 2,
               displayName: "Khang",
-              avaPath: "/assets/images/sample-avatar-2.jpg",
+              avaPath: "/assets/images/ava_khang.jpg",
               point: 80
             },
             {
               topId: 2,
               userId: 3,
               displayName: "Trường",
-              avaPath: "/assets/images/sample-avatar-3.jpg",
+              avaPath: "/assets/images/ava_truong.jpg",
               point: 50
             },
             {
               topId: 3,
               userId: 1,
               displayName: "Hoàng",
-              avaPath: "/assets/images/sample-avatar-1.jpg",
+              avaPath: "/assets/images/ava_hoang.jpg",
               point: 40
             }
           ]

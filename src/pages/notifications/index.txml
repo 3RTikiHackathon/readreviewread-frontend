@@ -1,0 +1,144 @@
+<view class="">
+  <view class="py-small">
+    <view class="px-medium display-flex justify-between">
+      <text class="text-14px text-bold margin-right-4px text-color-red ">Challenge</text> 
+      <text class="text-12px text-gray">15m</text>
+    </view>
+  
+    <view class="line-divider"></view>
+    <view class="px-medium pt-small">
+      <view>
+        <text class="text-12px text-bold margin-right-4px">500 Astra</text> 
+        <text class=" text-12px margin-right-4px">
+          has sent to your wallet from
+        </text>
+        <text class="text-12px text-bold margin-right-4px">Bố già Challenge. </text> 
+        
+      </view>
+      <view>
+        <text class=" text-12px margin-right-4px">
+          Transaction Hash: 
+        </text>
+        <text class="text-12px text-bold margin-right-4px text-blue text-underline">0x738278c1a260ff11a308698988...</text> 
+      </view>
+      
+      </view>
+  </view>
+    <view class="section-divider"></view>
+    <view class="py-small">
+      <view class="px-medium display-flex justify-between">
+        <text class="text-14px text-bold margin-right-4px text-color-green ">Your Post</text> 
+        <text class="text-12px text-gray">47m</text>
+      </view>
+    
+      <view class="line-divider"></view>
+      <view class="px-medium pt-small">
+        <view>
+          <text class="text-12px text-bold margin-right-4px">Hoàng Dương</text> 
+          <text class=" text-12px margin-right-4px">
+            commented on your
+          </text>
+          <text class="text-12px text-bold margin-right-4px">post </text> 
+          <text class=" text-12px margin-right-4px">
+            : "Cảm ơn về những chia sẻ của bạn nhé. Mình rất lấy làm tiếc..."
+          </text>
+        </view>
+        
+        
+        </view>
+    </view>
+      <view class="section-divider"></view>
+      <view class="py-small">
+        <view class="px-medium display-flex justify-between">
+          <text class="text-14px text-bold margin-right-4px text-color-green ">Your Post</text> 
+          <text class="text-12px text-gray">47m</text>
+        </view>
+      
+        <view class="line-divider"></view>
+        <view class="px-medium pt-small">
+          <view>
+            <text class="text-12px text-bold margin-right-4px">Khang Nguyễn and 15 other people</text> 
+            <text class=" text-12px margin-right-4px">
+              liked your
+            </text>
+            <text class="text-12px text-bold margin-right-4px">post. </text> 
+            
+          </view>
+          
+          
+          </view>
+      </view>
+        <view class="section-divider"></view>
+
+        <view class="py-small">
+          <view class="px-medium display-flex justify-between">
+            <text class="text-14px text-bold margin-right-4px text-color-blue ">New Book</text> 
+            <text class="text-12px text-gray">5h</text>
+          </view>
+        
+          <view class="line-divider"></view>
+          <view class="px-medium pt-small">
+            <view>
+              <text class="text-12px text-bold margin-right-4px">Hoàng Dương</text> 
+              <text class=" text-12px margin-right-4px">
+                published a new book
+              </text>
+              <text class="text-12px text-bold margin-right-4px">My Black Book </text> 
+              <text class=" text-12px margin-right-4px">
+                : "Đây là cuốn sách thực sự tâm huyết của tôi..."
+              </text>
+            </view>
+            
+            
+            </view>
+        </view>
+          <view class="section-divider"></view>
+
+          <view class="py-small">
+            <view class="px-medium display-flex justify-between">
+              <text class="text-14px text-bold margin-right-4px text-color-purple ">Recommend for you</text> 
+              <text class="text-12px text-gray">5h</text>
+            </view>
+          
+            <view class="line-divider"></view>
+            <view class="px-medium pt-small">
+              <view>
+                <text class=" text-12px margin-right-4px">
+                  We have some new books you might want to read: 
+                </text>
+                <text class="text-12px text-bold margin-right-4px">My Black Book, Đắc nhân tâm, Quốc gia khởi nghiệp </text> 
+                <text class=" text-12px margin-right-4px">
+                  and more.
+                </text>
+              </view>
+              
+              
+              </view>
+          </view>
+            <view class="section-divider"></view>
+
+            <view class="py-small">
+              <view class="px-medium display-flex justify-between">
+                <text class="text-14px text-bold margin-right-4px text-color-red ">Challenge</text> 
+                <text class="text-12px text-gray">15m</text>
+              </view>
+            
+              <view class="line-divider"></view>
+              <view class="px-medium pt-small">
+                <view>
+                  <text class=" text-12px margin-right-4px">
+                    You have received a
+                  </text>
+                  <text class="text-12px text-bold margin-right-4px">50% discount voucher</text> 
+                  <text class=" text-12px margin-right-4px">
+                    from
+                  </text>
+                  <text class="text-12px text-bold margin-right-4px">Tôi tài giỏi bạn cũng thế Challenge. </text> 
+                  
+                </view>
+                
+                
+                </view>
+            </view>
+</view>
+

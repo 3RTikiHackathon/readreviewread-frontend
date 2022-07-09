@@ -41,10 +41,7 @@
   margin-left: 30px;
   margin-right: 70px;
 }
-.big_button {
-  border-radius: 24px;
-  width: 100%;
-}
+
 .ava-icon {
   width: 40px;
   height: 40px;

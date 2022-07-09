@@ -1,17 +1,19 @@
-<view>
-  <view class="mt-2x-small px-small mb-2x-small">
+<view class = "bg-white">
+  <view class=" px-small mb-2x-small">
     <view class="bg-white px-medium py-2x-small radius-16px">
+      <view class="text-medium font-bold text-blue">Rules</view>
       <view class="flex justify-between items-center">
+        
         <view class="flex">
-          <view>
-            <view class="text-medium font-bold text-blue">Rules</view>
+          <view class="flex-8">
+            
             <text class="text-small">{{detail.rule}}</text>
             <view class="">
               <text class="">Deadline: </text>
               <text class="font-bold ml-2x-small">{{detail.finishTime}}</text>
             </view>    
           </view>
-          <view class="center-view justify-center text-center">
+          <view class="flex-1 center-view justify-center text-center">
             <image class="book-cover" mode="aspectFill" src={{detail.bookCover}} />
             <view class="text-medium text-blue font-bold">{{detail.title}}</view>
             <view class="text-small">{{detail.author}}</view>
@@ -22,7 +24,7 @@
   </view>
 
   <view class="mt-2x-small px-small mb-2x-small flex items-center display-flex justify-center center-view">
-    <view tiki:if="{{isJoined}}">
+    <view class="margin-bottom-8px" tiki:if="{{isJoined}}">
       <view tiki:if="{{isSubmitted}}">
         <button disabled="true" class="radius-8px display-flex justify-center text-center center-view">Submitted</button>
       </view>
@@ -36,13 +38,13 @@
           class="radius-8px display-flex justify-center text-center center-view">Submit</button>
       </view>
     </view>
-    <view tiki:else>
+    <view class="margin-bottom-8px" tiki:else>
         <button 
           onTap="onJoin"  
-          class="radius-8px display-flex justify-center text-center center-view">Join</button>
+          class="big_button ">Join</button>
     </view>
   </view>
-
+  <view class="section-divider "></view>
   <view class="mt-2x-small px-small mb-2x-small">
     <view class="bg-white px-medium py-2x-small radius-16px">
       <view class="center-view justify-center text-center">
@@ -73,7 +75,7 @@
       </view>
     </view>    
   </view>
-
+  <view class="section-divider "></view>
   <view tiki:if="{{isSubmitted}}" class="mt-2x-small px-small mb-2x-small">
     <view class="bg-white px-medium py-2x-small radius-16px">     
       <review review="{{mySubmit}}"/>
