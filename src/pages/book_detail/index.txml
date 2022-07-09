@@ -1,0 +1,184 @@
+<view class="px-medium pb-medium">
+  
+<view class="text-center">
+  <popup
+     position="bottom"
+     show="{{show}}"
+     mask="{{mask}}"
+     disableScroll = true
+     zIndex="10"
+     onClose="onCancel"
+   >
+   <view class="border-12px py-medium view-pop">
+      
+      <text class=" text-24px text-bold margin-left-4px">Confirm transaction?</text>
+      <view class="display-flex">
+        <text>Book:</text> <text class="text-bold text-italic margin-left-4px">Những tù nhân của Địa lý</text>
+      </view>
+      <view class="display-flex">
+        <text>Type:</text> <text class="text-bold text-italic margin-left-4px">E-Book</text>
+      </view>
+      <view class="display-flex">
+        <text>Price:</text> <text class="text-bold text-italic margin-left-4px">105.000 ₫</text>
+      </view>
+      <view class="display-flex justify-between align-center py-small">
+        <button onTap="onConfirmTransaction" class="bg-blue border-12px">Confirm</button>    
+        <button onTap="onCancel" class="bg-red border-12px margin-left-12px">Cancel</button>   
+      </view> 
+    </view>
+  </popup>
+  <popup
+     position="bottom"
+     show="{{showSuccess}}"
+     mask="{{mask}}"
+     disableScroll = true
+     zIndex="10"
+     onClose="onConfirmCancel"
+   > 
+   <view class="border-12px py-medium view-pop">
+      <view class = "">
+        <view class="text-bold text-24px text-color-red">Congrats</view>
+        <view class="text-bold text-14px">
+          <text>You have earn a new book</text>
+          <text class="text-color-blue margin-left-4px">Certificate</text>
+        </view>
+        <view catchTap='onBlockScout' class="text-12px text-underline text-gray">
+          View on Blockscout
+        </view>
+      </view>
+       <image class="block avatar py-small" mode="widthFix" src="{{bookDetail.bookCover}}" />
+      <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.bookName}}</view>
+      <view class=" text-14px">{{bookDetail.author}}</view>
+    </view>
+  </popup>
+</view>
+  <view tiki:if="{{isLoading}}" class="flex flex-col items-center">
+    <view class="skeleton avatar skeleton-button-shape-circle">
+    </view>
+    <view class="mt-2x-small skeleton skeleton-font-medium skeleton-25-width">
+    </view>
+  </view>
+
+  <view tiki:else class="flex flex-col items-center margin-top-8px">
+    <image class="block avatar" mode="widthFix" src="{{bookDetail.bookCover}}" />
+    <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.bookName}}</view>
+    <view class=" text-14px">{{bookDetail.author}}</view>
+  </view>
+  <view class="line-divider " />
+  <view class="px-medium mt-medium">
+    <book_reviews bookDetail="{{bookDetail}}" isLoading="{{isLoading}}" />
+  </view>
+  <view class="flex flex-col items-center">
+    <image class="block avatar" mode="widthFix" src="{{bookDetail.rateImage}}" />
+  </view>
+  <view class="line-divider " />
+  <view class="mt-20x flex flex-col items-center">
+    <text class="text-small text-center">
+     {{ bookDetail.detail}}
+    </text>
+  </view>
+  <view class="mt-10x items-center display-flex ">
+    <button class="background_button margin_button">
+      <text class="text-bold">Preview</text>
+    </button>
+    <button class="background_button text-bold">Review</button>
+  </view>
+  <view class="line-divider " />
+  <radio-group class="px-small mt-20x ml-10x mb-20x align-center justify-between display-flex ">
+    <view class="component-item display-flex ">
+      <radio onChange="onChange" />
+      <text class="margin-left-8px ">Paper book</text>
+    </view>
+    <view class="component-item display-flex ">
+      <radio checked="true" onChange="onChange" />
+      <text class="margin-left-8px">Digital book ⓘ </text>
+    </view>
+  </radio-group>
+  <view class="mt-10x items-center">
+    <button tiki:if = "{{!isBought}}" class="big_button text-bold" data-popup="{{
+      show:true,
+      position:'top',
+      mask:true,
+      disableScroll:true
+    }}"
+      onTap="onTap">
+      {{bookDetail.price}}
+    </button>
+    <button tiki:else class="big_button text-gray bg-gray" >
+      You bought this book!
+    </button>
+  </view>
+  <view class="line-divider " />
+  <view class="display-flex mt-20x ml-10x ">
+    <image class="ava-icon margin-right-8px" src="/assets/images/ava_hoang.jpg"></image>
+    <view class="margin-left-4px">
+      <view class="display-flex text-13px">
+        <view>
+          <text class="text-bold margin-right-12px">Nhà sách Minh Hoàng</text>
+          <view class=" text-12px text-gray">
+            Online 2 hours ago
+          </view>
+        </view>
+        <button class="button_view ml-20x text-bold">View Shop</button>
+      </view>
+      <view class="">
+        <book_store bookDetail="{{bookDetail}}" isLoading="{{isLoading}}" />
+      </view>
+    </view>
+  </view>
+  <view class="line-divider " />
+  <view class=" mt-20x ml-20x">
+    <text class="text-bold text-14px">
+      New Reader
+    </text>
+  </view>
+  <view tiki:if="{{isBought}}" class="display-flex mt-2x ml-20x">
+    <image class="ava-reader margin-right-8px" src="/assets/images/ava_truong.jpg"></image>
+    <view class="margin-left-4px">
+      <view class="display-flex text-13px">
+        <view>
+          <text class="text-bold margin-right-12px">Đình Trường</text>
+          <view class=" text-12px">
+            tx:
+            <text class="margin-left0.-4px blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
+          </view>
+        </view>
+        <button class="button_view button_right_truong text-bold ">View Profile</button>
+      </view>
+    </view>
+  </view>
+  <view class="display-flex mt-10x ml-20x">
+    <image class="ava-reader margin-right-8px" src="/assets/images/ava_khang.jpg"></image>
+    <view class="margin-left-4px">
+      <view class="display-flex text-13px">
+        <view>
+          <text class="text-bold margin-right-12px">Trần Khang</text>
+          <view class=" text-12px">
+            tx:
+            <text class=" margin-left-4px blue-50 text-underline text-13px">0xd657ffb0a12a2...</text>
+          </view>
+        </view>
+        <button class="button_view button_right_khang text-bold">View Profile</button>
+      </view>
+    </view>
+  </view>
+  <view tiki:if="{{!isBought}}" class="display-flex mt-10x ml-20x">
+    <image class="ava-reader margin-right-8px" src="/assets/images/ava_thai.jpg"></image>
+    <view class="margin-left-4px">
+      <view class="display-flex text-13px">
+        <view>
+          <text class="text-bold margin-right-12px">Đình Thái</text>
+          <view class=" text-12px">
+            tx:
+            <text class="margin-left-4px blue-50 text-underline text-13px"> 0xe9ce5c0b2d6bf...</text>
+          </view>
+          
+        </view>
+        <button class="button_view button_right_thai text-bold">View Profile</button>
+      </view>
+    </view>
+  </view>
+  <view class=" mt-2x ml-20x">
+    <text class="blue-50 text-underline text-13px"> See more reader</text>
+  </view>
+</view>

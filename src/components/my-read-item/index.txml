@@ -1,0 +1,32 @@
+<import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
+<view catchTap="onItemTap" class="py-medium book display-flex">
+  <view class="display-flex flex-3">
+    <image class="book-cover" src={{book.book.bookCover}}></image>
+    <view class="margin-left-12px">
+      <view class=" text-14px">
+        <text class="text-bold text-italic">{{book.book.bookName}}</text>
+      </view>
+      <view class=" text-12px">
+        {{book.book.author}}
+      </view>
+      <view class="display-flex">
+        <image class="rate-image margin-right-8px" src="{{book.book.rateImage}}"></image>
+        <text class="text-12px text-bold">{{book.book.rate}}</text> <text class="text-12px">/5.0</text>
+      </view>
+      <view class=" text-12px">
+        <text class="text-bold">{{numberFormatter(book.book.read)}}</text> <text class="margin-left-4px">people read this book</text>
+      </view>
+      <view class=" text-12px">
+        <text class="text-bold">{{numberFormatter(book.book.reviews)}}</text> <text class="margin-left-4px">reviews</text>
+      </view>
+    </view>
+   
+    
+  </view>
+  
+  <view tiki:if="{{book.list == 'Currently'}}" class="display-flex justify-center align-center flex-1">
+    <view class="text-24px text-bold text-gray">
+      <text >{{book.percent}}</text> <text>%</text>
+    </view>
+  </view>
+</view>

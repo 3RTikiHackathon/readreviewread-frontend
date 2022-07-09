@@ -1,0 +1,15 @@
+
+
+  <view class="px-medium pt-medium flex justify-around">
+    <order-icon
+      tiki:for="{{orderIcons}}"
+      isLoading="{{isLoading}}"
+      tab="{{index}}"
+      onTap="onItemTap" 
+      catchTap = "onItemTap"
+      value="{{numOrders[item.key]}}"
+      src="{{item.src}}" 
+      text="{{item.value}}"
+      author="{{item.author}}"/>
+  </view>
+

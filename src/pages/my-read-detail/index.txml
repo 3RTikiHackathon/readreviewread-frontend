@@ -1,0 +1,177 @@
+<view class="px-medium pb-medium">
+
+  <popup
+     position="bottom"
+     show="{{show}}"
+     mask="{{mask}}"
+     disableScroll = true
+     zIndex="10"
+     onClose="onCancel"
+   >
+   <view class="border-12px py-medium view-pop">
+      
+      <text class=" text-24px text-bold margin-left-4px">Update your progress</text>
+      <form onSubmit="onConfirm">
+        <view class="display-flex py-large align-center">
+          <text>Page read</text> 
+          <input
+          onInput="onInputProgress"
+          class = "margin-left-8px"
+          placeholder = "{{(bookDetail.book.pages * bookDetail.percent - (bookDetail.book.pages * bookDetail.percent % 100))/100}}"
+          type="numer"
+        />
+        </view>
+        
+        <view class="display-flex justify-between align-center py-small">
+          <button form-type="submit" class="bg-blue border-12px">Confirm</button>    
+          <button onTap="onCancel" class="bg-red border-12px margin-left-12px">Cancel</button>   
+        </view> 
+      </form>
+      
+    </view>
+  </popup>
+  <popup
+     position="bottom"
+     show="{{showNote}}"
+     mask="{{mask}}"
+     disableScroll = true
+     zIndex="10"
+     onClose="onCancel"
+   >
+   <view class="border-12px py-medium view-pop">
+      
+      <text class=" text-24px text-bold margin-left-4px">Take a note</text>
+      <form onSubmit="onConfirmNote">
+        <view class="display-flex py-medium align-center">
+          <text>Page </text> 
+          <input
+          onInput = "onInputPageNote"
+          class = "margin-left-8px"
+          type="numer"
+        />
+        </view>
+        <view class="display-flex py-medium align-center">
+          <text>Note</text> 
+          <input
+          onInput = "onInputNote"
+          class = "margin-left-8px"
+          type="text"
+        />
+        </view>
+        <view class="display-flex justify-between align-center py-small">
+          <button form-type="submit" class="bg-blue border-12px">Confirm</button>    
+          <button onTap="onCancelNote" class="bg-red border-12px margin-left-12px">Cancel</button>   
+        </view> 
+      </form>
+      
+    </view>
+  </popup>
+  <view tiki:if="{{isLoading}}" class="flex flex-col items-center">
+    <view class="skeleton avatar skeleton-button-shape-circle">
+    </view>
+    <view class="mt-2x-small skeleton skeleton-font-medium skeleton-25-width">
+    </view>
+  </view>
+
+  <view tiki:else class="flex flex-col items-center margin-top-8px">
+    <image class="block avatar" mode="widthFix" src="{{bookDetail.book.bookCover}}" />
+    <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.book.bookName}}</view>
+    <view class=" text-14px">{{bookDetail.book.author}}</view>
+  </view>
+  <view class="line-divider " />
+  <view class="px-medium mt-medium display-flex justify-between margin-top-4x">
+   
+    <view>
+      <text class="text-14px">{{bookDetail.book.read}}</text>
+      <text class="margin-left-4px text-bold">read</text>
+    </view>
+    <view>
+      <text>{{bookDetail.book.pages}}</text>
+      <text class="margin-left-4px text-bold">pages</text>
+    </view>
+    <view>
+      <text>{{bookDetail.book.reviews}}</text>
+      <text class="margin-left-4px text-bold">reviews</text>
+    </view>
+  </view>
+  <view class="margin-top-8px justify-center align-center items-center display-flex">
+    <image class="block avatar" mode="widthFix" src="{{bookDetail.book.rateImage}}" />
+    <text class =" margin-left-8px text-bold">{{bookDetail.book.rate}}</text><text>/5.0</text>
+  </view>
+  <view class="line-divider " />
+  <view class="mt-20x items-center">
+    <dropdown bottomSheetTitle="Custom" labelKey="label" items="{{items}}" idKey="key" value="{{selected}}" onSelect="onSelect"
+      placeholder="Currently" className="drop_down" >
+    </dropdown>
+  </view>
+  <view class="mt-20x flex flex-col items-center">
+    <text class="text-14px align-center text-bold">
+      Rate it!
+    </text>
+  </view>
+  <view class="flex flex-col items-center">
+    <image class="star_icon" mode="widthFix" src="/assets/images/voting_star.svg" />
+  </view>
+  <progress percent="{{bookDetail.percent}}" active="true" show-info="true" />
+  <view class="flex flex-col items-center">
+    <button class="background_button text-bold" onTap = "onOk">Update your progress</button>
+  </view>
+  <view class="line-divider " />
+  <view class="mt-20x flex flex-col ml-10x">
+    <text class="font-bold text-16px">My Notes</text>
+  </view>
+  <view tiki:for="{{bookDetail.notes}}"> 
+    <view class="display-flex ml-10x">
+      <view class="display-flex flex-1">
+        <text class="font-bold text-12px margin-right-4px">Page</text>
+        <text class="font-bold text-12px">{{item.page}}</text>
+      </view>
+      <view class="display-flex flex-8">
+
+        <text class="text-12px margin_note">{{item.note}}</text>
+      </view>
+      
+      
+    </view>
+  </view>
+  
+  <view class="flex flex-col items-center margin-top-8px">
+    <button onTap="onNote" class="background_button text-bold">
+      <text class="text-14px">
+        Take a note
+      </text>
+    </button>
+  </view>
+  <view class="line-divider " />
+  <view class="mt-20x flex flex-col ml-10x">
+    <text class="font-bold text-16px">Book Description</text>
+  </view>
+  <view class="flex flex-col items-center">
+    <text class="text-small text-left ml-10x">
+      Cuốn sách Những Tù Nhân Của Địa Lý nói về sự liên quan giữa địa lý và chính trị. Cho chúng ta thấy hai thành phần
+      này không thể tách rời mà ảnh hưởng...
+      <text class="blue-50 text-underline"> Read more</text>
+    </text>
+  </view>
+  <view class="mt-10x items-center display-flex ">
+    <button class="background_button margin_button">
+      <text class="text-bold">Preview</text>
+    </button>
+    <button class="background_button text-bold">Review</button>
+  </view>
+  <view class="line-divider " />
+    <view class="mt-10x items-center">
+    <button class="big_button" data-popup="{{
+        show:true,
+        position:'top',
+        mask:true,
+  
+        disableScroll:true
+      }}" onTap="onBuy">
+      Buy this book
+    </button>
+  </view>
+  <view class="line-divider " />
+  
+  
+</view>

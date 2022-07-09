@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "book_reviews":"components/book_reviews/index",
+    "book_store":"components/book_store/index",
+    "popup": "@tiki.vn/tini-ui/es/popup/index",
+    "dropdown": "@tiki.vn/tini-ui/es/dropdown/index"
+  }
+}

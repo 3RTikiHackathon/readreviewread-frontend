@@ -76,3 +76,15 @@ export const showCart = (icon = '') => {
     padding: 8,
   });
 };
+export const showSearch = (icon = '') => {
+  my.addIconsToNavigationBar({
+    icons: [
+      {
+        image: icon || '/assets/icons/tab-search.png',
+        width: 24,
+        height: 24,
+      },
+    ],
+    padding: 8,
+  });
+};

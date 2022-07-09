@@ -1,0 +1,1 @@
+<web-view id="web-view1" src="https://blockscout.astranaut.network/tx/0x3ce29b484f81b4c173999639a36447479c88918cc740b7b78a4971751f55047f/internal-transactions" onMessage="onMessage" />

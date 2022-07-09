@@ -49,6 +49,15 @@ image {
   background-color: var(--gray10);
 }
 
+.line-divider {
+  height: 1px;
+  background-color: var(--gray40);
+  margin-top: 10px;
+  margin-bottom: -15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .navigation-bar {
   position: fixed;
   top: 0;
@@ -129,7 +138,10 @@ image {
   width: 120px;
   height: 120px;
 }
-
+.size-130 {
+  width: 130px;
+  height: 130px;
+}
 .w-50 {
   width: 50%;
 }
@@ -198,4 +210,158 @@ image {
 }
 .page {
   background-color: var(--gray10);
+}
+
+.blue-50{
+  color: #5cb3ff;
+}
+.blue-50-fill{
+  fill: #5cb3ff;
+}
+.display-flex{
+  display: flex;
+}
+
+.margin-top-12px{
+  margin-top: 12px;
+}
+.margin-left-12px{
+  margin-left: 12px;
+}
+.margin-right-12px{
+  margin-right: 12px;
+}
+
+.margin-bottom-12px{
+  margin-bottom: 12px;
+}
+
+
+.margin-top-8px{
+  margin-top: 8px;
+}
+.margin-left-8px{
+  margin-left: 8px;
+}
+.margin-right-8px{
+  margin-right: 8px;
+}
+
+.margin-bottom-8px{
+  margin-bottom: 8px;
+}
+
+.margin-top-4px{
+  margin-top: 4px;
+}
+.margin-left-4px{
+  margin-left: 4px;
+}
+.margin-right-4px{
+  margin-right: 4px;
+}
+
+.margin-bottom-4px{
+  margin-bottom: 4px;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+.text-italic{
+  font-style: italic;
+}
+.text-10px{
+  font-size: 10px;
+}
+.text-12px{
+  font-size: 12px;
+}
+
+.text-13px{
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+.text-18px{
+  font-size: 18px;
+
+}
+.text-14px{
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+.text-16px{
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+.text-24px{
+  font-size: 24px;
+}
+.text-gray{                
+  color: #9c9c9c;
+}
+.width-100{
+  width: 100%;
+}
+.align-center{
+  align-items: center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+}
+.icon-16px{
+  width: 16px;
+  height: 16px;
+}
+
+.rate-image{
+  width: 80px;
+  height: 16px;
+}
+.flex-8{
+  flex: 5;
+}
+.flex-3{
+  flex: 3;
+}
+.flex-1{
+  flex:1;
+}
+
+.fixed-position{
+  position: fixed;
+}
+
+.border-12px{
+  border-radius: 12px;
+}
+
+.text-color-red{
+  color: #FF647C;
+}
+.text-color-blue{
+  color:  #5cb3ff;
+}
+.text-color-green{
+  color:  #00C48C;
+}
+
+.bg-red{
+  background-color: #FF647C;
+  border: #FF647C;
+}
+.bg-gray{
+  background-color:var(--gray20);
+  border: gray;
+}
+.bg-green{
+  background-color: #00C48C;
+  border: #00C48C;
+}
+.bg-blue{
+  background-color: #5cb3ff;
+  border: #5cb3ff;
 }

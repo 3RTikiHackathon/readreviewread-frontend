@@ -1,8 +1,22 @@
 {
-  "pages": ["pages/home/index", "pages/product/index", "pages/search/index","pages/profile/index", "pages/new-challenge/index", "pages/challenge-detail/index"],
+  "pages": [
+    "pages/feed/index",
+    "pages/product/index",
+    "pages/my-read/index",
+    "pages/my_journey/index",
+    "pages/profile/index",
+    "pages/blockscout/index",
+    "pages/store/index",
+    "pages/book_detail/index",
+    "pages/comments/index",
+    "pages/my-read-detail/index",
+    "pages/book_detail/index",
+    "pages/new-challenge/index",
+    "pages/challenge-detail/index"
+  ],
   "window": {
     "defaultTitle": "",
-    "backgroundColor": "#fff"
+    "backgroundColor": "rgba(255, 255, 255, 0.6)"
   },
   "tabBar": {
     "borderTopActiveColor": "#1A94FF",
@@ -17,13 +31,13 @@
       },
       {
         "name": "Store",
-        "pagePath": "pages/home/index",
+        "pagePath": "pages/store/index",
         "icon": "/assets/icons/tab-store.svg",
         "activeIcon": "assets/icons/tab-store-active.svg"
       },
       {
         "name": "My Read",
-        "pagePath": "pages/search/index",
+        "pagePath": "pages/my-read/index",
         "icon": "/assets/icons/tab-read.svg",
         "activeIcon": "assets/icons/tab-read-active.svg"
       },
@@ -39,6 +53,7 @@
         "icon": "/assets/icons/tab-account.png",
         "activeIcon": "assets/icons/tab-account-active.png"
       }
+
     ]
   }
 }

@@ -1,0 +1,8 @@
+<view class="relative p-md mb-4x-small">
+  <image class="block size-120" src="{{src}}" />
+  <view tiki:if="{{value}}">
+    {{value}}
+  </view>
+  <view class="text-center text-bold">{{text}}</view>
+  <view class="text-center text-12px">{{author}}</view>
+</view>

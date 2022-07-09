@@ -68,7 +68,7 @@ export const getBannersAPI = async () => {
 
 export const getUserInfo = () => {
   let user = require('./mock/user.json');
-  return user;
+  return user[0];
 };
 
 export const getNumOrders = () => {
@@ -85,6 +85,115 @@ export const getCouponsAPI = () => {
   let coupons = require('./mock/coupons.json')
   return coupons;
 };
+
+export const getBook = () =>  {
+  let book = require('./mock/book_detail.json')
+  return book;
+}
+
+export const getPosts = () =>{
+  let posts = require('./mock/post.json');
+  let books = require('./mock/books.json');
+  let users = require('./mock/user.json');
+  posts.map(post => {
+    books.map(book => {
+      if (book.id == post.bookId){
+        post.book = book;
+      }
+    })
+    users.map(user => {
+      if(user.id == post.userId){
+        post.user = user;
+      }
+    })
+  })
+  return {
+    data : posts,
+    paging: {
+      current_page: 1,
+      last_page: 1,
+    }
+  };
+}
+export const getMyRead = (listName) =>{
+  let myRead = require('./mock/my-read.json');
+  let books = require('./mock/books.json');
+  let booksToReturn = [];
+  myRead.map(read => {
+    if(read.list == listName){
+      books.map(book => {
+        if(read.bookId == book.id){
+          read.book = book;
+        }
+      })
+      booksToReturn.push(read)
+    }
+  })
+  return {
+    data : booksToReturn,
+    paging: {
+      current_page: 0,
+      last_page: 0,
+    }
+  };
+}
+
+export const getMyReadDetail = (myReadId) =>{
+  let myRead = require('./mock/my-read.json');
+  let books = require('./mock/books.json');
+  let readToReturn;
+  myRead.map(read => {
+    
+    if(read.id == myReadId){
+      books.map(book => {
+        if(book.id == read.bookId){
+          read.book = book;
+          readToReturn = read;
+        }
+        
+      })
+    }
+    
+  })
+    return readToReturn;
+}
+
+export const getComments = (postId) =>{
+  let comments = require('./mock/comment.json');
+  let users = require('./mock/user.json')
+  let commentsToReturn =[];
+  comments.map(comment => {
+    if (comment.postId == postId){
+      users.map(user => {
+        if (comment.userId == user.id)
+        {
+          comment.userName = user.userName;
+          comment.userAvatar = user.userAvatar;
+        } 
+      })
+      commentsToReturn.push(comment);
+    }
+  })
+  return {
+    data : commentsToReturn,
+    paging: {
+      current_page: 1,
+      last_page: 1,
+    }
+  };
+}
+
+
+export const getBookDetail = (bookId) => {
+  let BookDetail = require('./mock/books.json');
+  let bookToReturn;
+  BookDetail.map(book => {
+    if (book.id == bookId){
+      bookToReturn = book;
+    }
+  })
+  return bookToReturn;
+}
 
 export const getChallenges = () => {
   let challenges = require('./mock/challenges.json');

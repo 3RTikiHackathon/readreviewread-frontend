@@ -1,0 +1,21 @@
+.container {
+
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chart-center {
+  display: inline-block;
+  text-align: center;
+}
+
+.text-color-red{
+  color: #FF647C;
+}
+.text-color-blue{
+  color:  #5cb3ff;
+}
+.text-color-green{
+  color:  #00C48C;
+}

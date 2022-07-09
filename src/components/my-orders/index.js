@@ -4,18 +4,21 @@ Component({
     orderIcons: [
       {
         key: 'waiting',
-        value: 'Harry Potter',
+        value: 'Đắc nhân tâm',
         src: '/assets/icons/book1.svg',
+        author: 'Dale Caanegie',
       },
       {
         key: 'processing',
-        value: 'Matering Bitcoin',
+        value: 'Truyên Kiều',
         src: '/assets/icons/book2.svg',
+        author: 'Nguyễn Du',
       },
       {
         key: 'shipping',
-        value: 'Normal People',
+        value: 'Ngồi khóc tr...',
         src: '/assets/icons/book3.svg',
+        author: 'Nguyễn Nhật...'
       },
     ],
     numOrders: {
