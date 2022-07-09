@@ -17,19 +17,19 @@
   padding-bottom: 8px;
 }
 
-.background_button{
+.background_button {
   background-color: white;
   border-radius: 32px;
   color: rgb(96, 96, 228);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   /* border-color: red; */
 }
-.margin_button{
+.margin_button {
   margin-left: 40px;
   margin-right: 100px;
 }
-.button_image{
+.button_image {
   width: 10%;
   height: 10%;
 }
@@ -37,7 +37,7 @@
   flex-direction: row;
   align-items: center;
 }
-.margin_checkbox{
+.margin_checkbox {
   margin-left: 30px;
   margin-right: 70px;
 }
@@ -45,30 +45,70 @@
   border-radius: 24px;
   width: 100%;
 }
-.ava-icon{
+.ava-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
-.button_view{
+.button_view {
   background-color: white;
   border-radius: 32px;
   color: rgb(96, 96, 228);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 10%;
   border-radius: 24px;
   font-size: 11px;
 }
-.ava-reader{
+.ava-reader {
   width: 35px;
   height: 35px;
   border-radius: 50%;
 }
-.button_right_thai{
+.button_right_truong {
   align-items: right;
-  margin-left: 20px;
+  margin-left: 45px;
 }
-.button_right_khang{
+.button_right_thai {
   align-items: right;
-  margin-left: 55px;
+  margin-left: 40px;
+}
+.button_right_khang {
+  align-items: right;
+  margin-left: 42px;
+}
+
+.view-pop {
+  background: #fff;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.drop_down {
+  border-radius: 100%;
+  width: 50%;
+  margin-left: 80px;
+}
+
+.progress {
+  margin-bottom: 32px;
+}
+.star_icon{
+  width: 70%;
+  height: 70%;
+}
+.vertical_line{
+  width: 1.5px;
+  height: 15px;
+  margin-left: 24px;
+}
+.vertical_line_2{
+  width: 1.5px;
+  height: 15px;
+  margin-left: 17px;
+}
+.margin_note{
+  margin-left: 22px;
 }
