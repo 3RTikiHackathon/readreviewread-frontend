@@ -46,8 +46,8 @@
           View on Blockscout
         </view>
       </view>
-       <image class="block avatar py-small" mode="widthFix" src="{{bookDetail.avt}}" />
-      <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.name}}</view>
+       <image class="block avatar py-small" mode="widthFix" src="{{bookDetail.bookCover}}" />
+      <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.bookName}}</view>
       <view class=" text-14px">{{bookDetail.author}}</view>
     </view>
   </popup>
@@ -60,8 +60,8 @@
   </view>
 
   <view tiki:else class="flex flex-col items-center margin-top-8px">
-    <image class="block avatar" mode="widthFix" src="{{bookDetail.avt}}" />
-    <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.name}}</view>
+    <image class="block avatar" mode="widthFix" src="{{bookDetail.bookCover}}" />
+    <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.bookName}}</view>
     <view class=" text-14px">{{bookDetail.author}}</view>
   </view>
   <view class="line-divider " />
@@ -69,13 +69,12 @@
     <book_reviews bookDetail="{{bookDetail}}" isLoading="{{isLoading}}" />
   </view>
   <view class="flex flex-col items-center">
-    <image class="block avatar" mode="widthFix" src="{{bookDetail.bookStar}}" />
+    <image class="block avatar" mode="widthFix" src="{{bookDetail.rateImage}}" />
   </view>
   <view class="line-divider " />
   <view class="mt-20x flex flex-col items-center">
     <text class="text-small text-center">
-      Cuốn sách Những Tù Nhân Của Địa Lý nói về sự liên quan giữa địa lý và chính trị. Cho chúng ta thấy hai thành phần này không thể tách rời mà ảnh hưởng... 
-      <text class="blue-50 text-underline"> Read more</text>
+     {{ bookDetail.detail}}
     </text>
   </view>
   <view class="mt-10x items-center display-flex ">

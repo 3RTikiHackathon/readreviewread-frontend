@@ -3,91 +3,118 @@
     "id": "1",
     "bookName": "Những tù nhân của Địa lý",
     "bookCover": "/assets/images/tu-nhan-dia-ly.svg",
-    
+    "items":"35",
+  "solds":"4,2K",
+  "reply":"100%",
     "author": "Tim Marshall",
     "reviews": 2,
     "read": 1023,
+    "pages":156,
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
-    "price":"105.000 ₫"
-   
+    "price":"105.000 ₫",
+    "detail": "Cuốn sách Những Tù Nhân Của Địa Lý nói về sự liên quan giữa địa lý và chính trị. Cho chúng ta thấy hai thành phần này không thể tách rời."
   },
   {
     "id": "2",
     "bookName": "Tôi tài giỏi bạn cũng thế",
     "bookCover": "/assets/images/ebook-toi-tai-gioi-ban-cung-the-adam-khoo-1483074548.jpg",
-    
+    "pages":156,
+    "items":"35",
+  "solds":"4,2K",
+  "reply":"100%",
     "author": "Adam Khoo",
     "reviews": 2,
     "read": 1023,
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
-    "price":"54.310 ₫"
+    "price":"54.310 ₫",
+    "detail": "Đây là cuốn sách Tôi tài giỏi bạn cũng thế"
    
   },
   {
     "id": "3",
     "bookName": "My Black Book",
     "bookCover": "/assets/images/31joNDvZOaL.jpg",
-    
+    "pages":156,
+    "items":"35",
+  "solds":"4,2K",
+  "reply":"100%",
     "author": "Hoàng Dương",
     "reviews": 2,
     "read": 1023,
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
-    "price":"312.123 ₫"
+    "price":"312.123 ₫",
+    "detail": "Đây là cuốn sách My Black Book"
    
   },
   {
     "id": "4",
     "bookName": "Truyện Kiều",
     "bookCover": "/assets/icons/book2.svg",
-    
+    "pages":156,
+    "items":"35",
+  "solds":"4,2K",
+  "reply":"100%",
     "author": "Nguyễn Du",
     "reviews": 2,
     "read": 1023,
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
-    "price":"142.321 ₫"
+    "price":"142.321 ₫",
+    "detail": "Đây là cuốn sách Truyện Kiều"
    
   },
   {
     "id": "5",
     "bookName": "Ngồi khóc trên cây",
     "bookCover": "/assets/icons/book3.svg",
-    
+    "pages":156,
+    "items":"35",
+  "solds":"4,2K",
+  "reply":"100%",
     "author": "Nguyễn Nhật Ánh",
     "reviews": 2,
     "read": 1023,
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
-    "price":"123.310 ₫"
+    "price":"123.310 ₫",
+    "detail": "Đây là cuốn sách Ngồi khóc trên cây"
    
   },
   {
     "id": "6",
     "bookName": "Biên bản chiến tranh",
     "bookCover": "/assets/images/noibuonchientranh.jpg",
-    
+    "pages":156,
+    "items":"35",
+  "solds":"4,2K",
+  "reply":"100%",
     "author": "Trần Mai Hạnh",
     "reviews": 2,
     "read": 1023,
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
-    "price":"223.123 ₫"
+    "price":"223.123 ₫",
+    "detail": "Đây là cuốn sách Biên bản chiến tranh"
    
   },
   {
     "id": "7",
     "bookName": "Nỗi buồn chiến tranh",
     "bookCover": "/assets/images/noibuonchientranh.jpg",
-    
+    "pages":156,
+    "items":"35",
+  "solds":"4,2K",
+  "reply":"100%",
     "author": "Bảo Ninh",
     "reviews": 2,
     "read": 1023,
     "rate": 4.5,
     "rateImage": "/assets/icons/rating - 4.5.png",
-    "price":"543.643 ₫"
+    "price":"543.643 ₫",
+    "detail": "Đây là cuốn sách Nối buồn chiến tranh"
    
   }
   

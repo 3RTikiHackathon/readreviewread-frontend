@@ -26,6 +26,7 @@ Component({
 
   // các methods
   methods: {
+    
     onItemTap(){
       navigate({
         page: 'book_detail',

@@ -163,8 +163,14 @@ export const getComments = (postId) =>{
 }
 
 
-export const getBookDetail = () => {
-  let BookDetail = require('./mock/book_detail.json')
-  return BookDetail;
+export const getBookDetail = (bookId) => {
+  let BookDetail = require('./mock/books.json');
+  let bookToReturn;
+  BookDetail.map(book => {
+    if (book.id == bookId){
+      bookToReturn = book;
+    }
+  })
+  return bookToReturn;
 }
 

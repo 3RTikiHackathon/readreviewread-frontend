@@ -29,7 +29,7 @@ Page({
     zIndex: 10,
     isBought: false,
     disableScroll: true,
-    
+    bookId: '1'
   },
 
   async loadData() {
@@ -38,7 +38,8 @@ Page({
     });
 
     try {
-      const [bookDetail] = await Promise.all([getBookDetail()]);
+    
+      const bookDetail = getBookDetail(this.data.bookId.toString());
 
       this.setData({
         bookDetail,
@@ -151,9 +152,9 @@ Page({
       showCategory = true,
       showActions = true,
     } = parseQuery(query);
-    console.log(bookId)
+    this.setData({bookId});
     const data = { ...this.data };
-
+    
     if (sort) {
       const sortObject = defaultSorts.find((item) => item.value === sort);
       if (sortObject) data.selectedSort = sortObject;
@@ -172,7 +173,7 @@ Page({
     my.setNavigationBar({
       title: "Book detail",
     });
-
+    this.loadData();
     showSearch();
   },
 
