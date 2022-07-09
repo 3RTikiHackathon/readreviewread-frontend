@@ -6,10 +6,10 @@
     </view>
   </view>
 
-  <view tiki:else class="flex flex-col items-center">
+  <view tiki:else class="flex flex-col items-center margin-top-8px">
     <image class="block avatar" mode="widthFix" src="{{bookDetail.avt}}" />
     <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.name}}</view>
-    <view class="mt-2x-small text-14px">{{bookDetail.author}}</view>
+    <view class=" text-14px">{{bookDetail.author}}</view>
   </view>
   <view class="line-divider " />
   <view class="px-medium mt-medium">
@@ -21,36 +21,42 @@
   <view class="line-divider " />
   <view class="mt-20x flex flex-col items-center">
     <text class="text-small text-center">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim...
+      Cuốn sách Những Tù Nhân Của Địa Lý nói về sự liên quan giữa địa lý và chính trị. Cho chúng ta thấy hai thành phần này không thể tách rời mà ảnh hưởng... 
       <text class="blue-50 text-underline"> Read more</text>
     </text>
   </view>
   <view class="mt-10x items-center display-flex ">
     <button class="background_button margin_button">
-      <text>Preview</text>
+      <text class="text-bold">Preview</text>
     </button>
-    <button class="background_button">Review</button>
+    <button class="background_button text-bold">Review</button>
   </view>
   <view class="line-divider " />
-  <view class="mt-20x ml-10x mb-20x items-center display-flex ">
-    <view class="component-item margin_checkbox">
-      <checkbox onChange="onChange" />
-      <text>Paper book</text>
+  <radio-group class="px-small mt-20x ml-10x mb-20x align-center justify-between display-flex ">
+    <view class="component-item display-flex ">
+      <radio onChange="onChange" />
+      <text class="margin-left-8px ">Paper book</text>
     </view>
-    <view class="component-item ">
-      <checkbox onChange="onChange" />
-      <text>Digital book ⓘ </text>
+    <view class="component-item display-flex ">
+      <radio checked="true" onChange="onChange" />
+      <text class="margin-left-8px">Digital book ⓘ </text>
     </view>
-  </view>
+  </radio-group>
   <view class="mt-10x items-center">
-    <button class="big_button">
-      105.000 ₫
+    <button class="big_button" data-popup="{{
+      show:true,
+      position:'top',
+      mask:true,
+      title: 'Click on mask to close popup',
+      disableScroll:true
+    }}"
+      onTap="onTap">
+      Buy 105.000 ₫
     </button>
   </view>
   <view class="line-divider " />
-  <view class="display-flex mt-20x ml-10x">
-    <image class="ava-icon " src="/assets/images/ava_hoang.jpg"></image>
+  <view class="display-flex mt-20x ml-10x ">
+    <image class="ava-icon margin-right-8px" src="/assets/images/ava_hoang.jpg"></image>
     <view class="margin-left-4px">
       <view class="display-flex text-13px">
         <view>
@@ -59,7 +65,7 @@
             Online 2 hours ago
           </view>
         </view>
-        <button class="button_view ml-20x">View Shop</button>
+        <button class="button_view ml-20x text-bold">View Shop</button>
       </view>
       <view class="">
         <book_store bookDetail="{{bookDetail}}" isLoading="{{isLoading}}" />
@@ -73,7 +79,7 @@
     </text>
   </view>
   <view class="display-flex mt-2x ml-20x">
-    <image class="ava-reader" src="/assets/images/ava_truong.jpg"></image>
+    <image class="ava-reader margin-right-8px" src="/assets/images/ava_truong.jpg"></image>
     <view class="margin-left-4px">
       <view class="display-flex text-13px">
         <view>
@@ -83,37 +89,38 @@
             <text class="blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
           </view>
         </view>
-        <button class="button_view ml-20x">View Profile</button>
+        <button class="button_view button_right_truong text-bold ">View Profile</button>
       </view>
     </view>
   </view>
   <view class="display-flex mt-10x ml-20x">
-    <image class="ava-reader" src="/assets/images/ava_khang.jpg"></image>
+    <image class="ava-reader margin-right-8px" src="/assets/images/ava_khang.jpg"></image>
     <view class="margin-left-4px">
       <view class="display-flex text-13px">
         <view>
           <text class="text-bold margin-right-12px">Trần Khang</text>
-          <view class=" text-12px text-yellow">
-            Online
+          <view class=" text-12px">
+            tx:
+            <text class="blue-50 text-underline text-13px">0xd657ffb0a12a2...</text>
           </view>
         </view>
-        <button class="button_view button_right_khang">View Profile</button>
+        <button class="button_view button_right_khang text-bold">View Profile</button>
       </view>
     </view>
   </view>
   <view class="display-flex mt-10x ml-20x">
-    <image class="ava-reader" src="/assets/images/ava_thai.jpg"></image>
+    <image class="ava-reader margin-right-8px" src="/assets/images/ava_thai.jpg"></image>
     <view class="margin-left-4px">
       <view class="display-flex text-13px">
         <view>
           <text class="text-bold margin-right-12px">Đình Thái</text>
           <view class=" text-12px">
             tx:
-            <text class="blue-50 text-underline text-13px"> 0x3ce29b484f81...</text>
+            <text class="blue-50 text-underline text-13px"> 0xe9ce5c0b2d6bf...</text>
           </view>
           
         </view>
-        <button class="button_view button_right_thai">View Profile</button>
+        <button class="button_view button_right_thai text-bold">View Profile</button>
       </view>
     </view>
   </view>

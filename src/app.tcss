@@ -281,7 +281,7 @@ image {
 .text-13px{
   font-size: 13px;
   font-family: Arial, sans-serif;
-
+}
 .text-18px{
   font-size: 18px;
 
@@ -302,7 +302,9 @@ image {
 .align-center{
   align-items: center;
 }
-
+.justify-between{
+  justify-content: space-between;
+}
 .justify-center{
   justify-content: center;
 }

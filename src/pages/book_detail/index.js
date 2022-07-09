@@ -19,9 +19,16 @@ Page({
   data: {
     isLoading: false,
     bookDetail: {},
-   
+    paperPrice: "105.000 đ",
+    ePrice: "70.000 đ",
     isStickButtons: false,
     isScrollUp: false,
+    show: false,
+    position: 'top',
+    animation: true,
+    mask: true,
+    zIndex: 10,
+    disableScroll: true
   },
 
   async loadData() {
@@ -43,6 +50,16 @@ Page({
         isLoading: false,
       });
     }
+  },
+
+  onOk() {
+    this.setData({ show: false });
+  },
+  onCancel() {
+    this.setData({ show: false });
+  },
+  onTap(e) {
+    this.setData({ ...e.target.dataset.popup });
   },
 
   onSelectFilter(selectedFilters) {
