@@ -1,4 +1,4 @@
-<view class="relative p-md mb-4x-small">
+<view class="relative p-md mb-4x-small padding_book">
   <image class="block size-120" src="{{src}}" />
   <view tiki:if="{{value}}">
     {{value}}
