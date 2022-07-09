@@ -28,7 +28,7 @@ Component({
   methods: {
     onItemTap(){
       navigate({
-        page: 'my-read-detail',
+        page: 'book_detail',
       });
     }
   },
