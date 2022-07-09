@@ -3,6 +3,7 @@ import {
   navigate,
   showCart,
   openDeeplink,
+  showSearch
 } from '../../utils/navigate';
 import { getMyRead } from '../../services/index';
 import { systemInfo } from '../../utils/system';
@@ -295,9 +296,9 @@ Page({
   onLoad() {
     this.loadData();
     my.setNavigationBar({
-      title: 'My Read',
+      title: 'Store',
     });
-    
+    showSearch();
   },
 
   onPageScroll(event) {

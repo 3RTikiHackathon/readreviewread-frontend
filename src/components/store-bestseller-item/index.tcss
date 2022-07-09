@@ -1,0 +1,41 @@
+.book-cover{
+  width: 60px;
+  height: 90px;
+  
+}
+.product-section-horizontal {
+  overflow-x: auto;
+}
+
+
+
+.line-height{
+  line-height:1.4;
+}
+
+.post{
+  background-color: white;
+}
+
+.icon{
+  width: 24px;
+  height: 24px;
+}
+
+.post-interaction{
+  justify-content: space-between;
+}
+
+.icon-20px{
+  width: 20px;
+  height: 20px;
+}
+
+.text-justify{
+  text-align: justify;
+}
+.price-align{
+  align-items: right;
+  margin-left: 60px;
+}
+

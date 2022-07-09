@@ -1,8 +1,23 @@
 <view class="px-medium pb-medium">
-  <block
-  tiki:for="{{Books.data}}"
-  tiki:key="id">
-    <my-read-item book="{{item}}"></my-read-item>
+
+  <view class="bg-white radius-8px">
+    <view class="flex justify-between">
+      <view class="text-medium font-bold">New releases</view>
+      <view class="flex items-center">
+        <view class="text-blue mr-2x-small" onTap="onMoveOrderManagement">View More</view>
+        <icon type="arrow_right" color="#1A94FF" />
+      </view>
+    </view>
+  </view>
+  <view class="mt-medium px-medium">
+    <book-release numOrders="1" isLoading="{{isLoading}}" />
+  </view>
+  <view class="line-divider " />
+  <view class="font-bold text-16px mt-20x">
+    Best seller
+  </view>
+  <block tiki:for="{{Books.data}}" tiki:key="id">
+    <store-bestseller-item book="{{item}}"></store-bestseller-item>
   </block>
-  
+
 </view>

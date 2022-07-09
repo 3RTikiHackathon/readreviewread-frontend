@@ -11,7 +11,9 @@
     "search-bar": "components/search-bar/index",
     "tabs": "@tiki.vn/tini-ui/es/tabs/index",
     "tab-content": "@tiki.vn/tini-ui/es/tabs/tab-content/index",
-    "my-read-item" : "components/my-read-item/index"
-
+    "my-read-item" : "components/my-read-item/index",
+    "my-orders": "/components/my-orders/index",
+    "book-release": "/components/book-release/index",
+    "store-bestseller-item":  "/components/store-bestseller-item/index"
   }
 }

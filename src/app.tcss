@@ -290,6 +290,10 @@ image {
   font-size: 14px;
   font-family: Arial, sans-serif;
 }
+.text-16px{
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
 .text-24px{
   font-size: 24px;
 }
