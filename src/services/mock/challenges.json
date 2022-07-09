@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "title": "Bố già",
+    "bookCover": "assets/images/book-cover-bo-gia.jpg",
+    "content": "Express your feeling about Bố già by Mario Puzo.",
+    "startTime": "",
+    "finishTime": "",
+    "isJoined": true,
+    "isSubmitted": false,
+    "timeRemaining": "1 day"
+  },
+  {
+    "id": "2",
+    "title": "Sapiens",
+    "bookCover": "assets/images/book-cover-bo-gia.jpg",
+    "content": "Express your feeling about Sapiens by Mario Puzo.",
+    "startTime": "",
+    "finishTime": "",
+    "isJoined": true,
+    "isSubmitted": false,
+    "timeRemaining": "12 hours"
+  }
+]

@@ -1,24 +1,71 @@
 <view class="px-medium pb-medium">
 
-  <view class="text-center">
-    <popup position="top" show="{{show}}" mask="{{mask}}" disableScroll=true zIndex="10" onClose="onCancel">
-      <view class="py-medium view-pop margin-bottom-8px">
-        <view class="">
-          <view class="text-bold text-24px text-color-red">Congrats</view>
-          <view class="text-bold text-14px">
-            <text>You have earn a new book</text>
-            <text class="text-color-blue margin-left-4px">Certificate</text>
-          </view>
-          <view catchTap='onBlockScout' class="text-12px text-underline text-gray">
-            View on Blockscout
-          </view>
+  <popup
+     position="bottom"
+     show="{{show}}"
+     mask="{{mask}}"
+     disableScroll = true
+     zIndex="10"
+     onClose="onCancel"
+   >
+   <view class="border-12px py-medium view-pop">
+      
+      <text class=" text-24px text-bold margin-left-4px">Update your progress</text>
+      <form onSubmit="onConfirm">
+        <view class="display-flex py-large align-center">
+          <text>Page read</text> 
+          <input
+          onInput="onInputProgress"
+          class = "margin-left-8px"
+          placeholder = "{{(bookDetail.book.pages * bookDetail.percent - (bookDetail.book.pages * bookDetail.percent % 100))/100}}"
+          type="numer"
+        />
         </view>
-        <image class="block avatar py-small" mode="widthFix" src="{{bookDetail.avt}}" />
-        <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.name}}</view>
-        <view class=" text-14px">{{bookDetail.author}}</view>
-      </view>
-    </popup>
-  </view>
+        
+        <view class="display-flex justify-between align-center py-small">
+          <button form-type="submit" class="bg-blue border-12px">Confirm</button>    
+          <button onTap="onCancel" class="bg-red border-12px margin-left-12px">Cancel</button>   
+        </view> 
+      </form>
+      
+    </view>
+  </popup>
+  <popup
+     position="bottom"
+     show="{{showNote}}"
+     mask="{{mask}}"
+     disableScroll = true
+     zIndex="10"
+     onClose="onCancel"
+   >
+   <view class="border-12px py-medium view-pop">
+      
+      <text class=" text-24px text-bold margin-left-4px">Take a note</text>
+      <form onSubmit="onConfirmNote">
+        <view class="display-flex py-medium align-center">
+          <text>Page </text> 
+          <input
+          onInput = "onInputPageNote"
+          class = "margin-left-8px"
+          type="numer"
+        />
+        </view>
+        <view class="display-flex py-medium align-center">
+          <text>Note</text> 
+          <input
+          onInput = "onInputNote"
+          class = "margin-left-8px"
+          type="text"
+        />
+        </view>
+        <view class="display-flex justify-between align-center py-small">
+          <button form-type="submit" class="bg-blue border-12px">Confirm</button>    
+          <button onTap="onCancelNote" class="bg-red border-12px margin-left-12px">Cancel</button>   
+        </view> 
+      </form>
+      
+    </view>
+  </popup>
   <view tiki:if="{{isLoading}}" class="flex flex-col items-center">
     <view class="skeleton avatar skeleton-button-shape-circle">
     </view>
@@ -27,21 +74,34 @@
   </view>
 
   <view tiki:else class="flex flex-col items-center margin-top-8px">
-    <image class="block avatar" mode="widthFix" src="{{bookDetail.avt}}" />
-    <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.name}}</view>
-    <view class=" text-14px">{{bookDetail.author}}</view>
+    <image class="block avatar" mode="widthFix" src="{{bookDetail.book.bookCover}}" />
+    <view class="mt-2x-small text-medium-2x-small font-bold">{{bookDetail.book.bookName}}</view>
+    <view class=" text-14px">{{bookDetail.book.author}}</view>
   </view>
   <view class="line-divider " />
-  <view class="px-medium mt-medium">
-    <book_reviews bookDetail="{{bookDetail}}" isLoading="{{isLoading}}" />
+  <view class="px-medium mt-medium display-flex justify-between margin-top-4x">
+   
+    <view>
+      <text class="text-14px">{{bookDetail.book.read}}</text>
+      <text class="margin-left-4px text-bold">read</text>
+    </view>
+    <view>
+      <text>{{bookDetail.book.pages}}</text>
+      <text class="margin-left-4px text-bold">pages</text>
+    </view>
+    <view>
+      <text>{{bookDetail.book.reviews}}</text>
+      <text class="margin-left-4px text-bold">reviews</text>
+    </view>
   </view>
-  <view class="flex flex-col items-center">
-    <image class="block avatar" mode="widthFix" src="{{bookDetail.bookStar}}" />
+  <view class="margin-top-8px justify-center align-center items-center display-flex">
+    <image class="block avatar" mode="widthFix" src="{{bookDetail.book.rateImage}}" />
+    <text class =" margin-left-8px text-bold">{{bookDetail.book.rate}}</text><text>/5.0</text>
   </view>
   <view class="line-divider " />
   <view class="mt-20x items-center">
-    <dropdown bottomSheetTitle="Custom" labelKey="label" idKey="key" value="{{selected}}" onSelect="onSelect"
-      placeholder="Currently" className="drop_down">
+    <dropdown bottomSheetTitle="Custom" labelKey="label" items="{{items}}" idKey="key" value="{{selected}}" onSelect="onSelect"
+      placeholder="Currently" className="drop_down" >
     </dropdown>
   </view>
   <view class="mt-20x flex flex-col items-center">
@@ -52,31 +112,31 @@
   <view class="flex flex-col items-center">
     <image class="star_icon" mode="widthFix" src="/assets/images/voting_star.svg" />
   </view>
-  <progress percent="69" active="true" show-info="true" />
+  <progress percent="{{bookDetail.percent}}" active="true" show-info="true" />
   <view class="flex flex-col items-center">
-    <button class="background_button text-bold">Update your progress</button>
+    <button class="background_button text-bold" onTap = "onOk">Update your progress</button>
   </view>
   <view class="line-divider " />
   <view class="mt-20x flex flex-col ml-10x">
     <text class="font-bold text-16px">My Notes</text>
   </view>
-  <view class="items-center display-flex ml-10x">
-    <text class="font-bold text-12px">Page 20</text>
-    <image class="vertical_line" mode="widthFix" src="/assets/images/vertical_line.svg" />
-    <text class="text-12px margin_note">Chỗ này quá hay thật xinh đẹp tuyệt vời.</text>
+  <view tiki:for="{{bookDetail.notes}}"> 
+    <view class="display-flex ml-10x">
+      <view class="display-flex flex-1">
+        <text class="font-bold text-12px margin-right-4px">Page</text>
+        <text class="font-bold text-12px">{{item.page}}</text>
+      </view>
+      <view class="display-flex flex-8">
+
+        <text class="text-12px margin_note">{{item.note}}</text>
+      </view>
+      
+      
+    </view>
   </view>
-  <view class="items-center display-flex ml-10x">
-    <text class="font-bold text-12px">Page 105</text>
-    <image class="vertical_line_2" mode="widthFix" src="/assets/images/vertical_line.svg" />
-    <text class="text-12px margin_note">Thanh niên nhân vật này có vẻ non.</text>
-  </view>
-  <view class="items-center display-flex ml-10x">
-    <text class="font-bold text-12px">Page 203</text>
-    <image class="vertical_line_2" mode="widthFix" src="/assets/images/vertical_line.svg" />
-    <text class="text-12px margin_note">Haha chuyện thật là lực cười.</text>
-  </view>
-  <view class="flex flex-col items-center mt-20x">
-    <button class="background_button text-bold">
+  
+  <view class="flex flex-col items-center margin-top-8px">
+    <button onTap="onNote" class="background_button text-bold">
       <text class="text-14px">
         Take a note
       </text>
@@ -100,44 +160,18 @@
     <button class="background_button text-bold">Review</button>
   </view>
   <view class="line-divider " />
-  <radio-group class="px-small mt-20x ml-10x mb-20x align-center justify-between display-flex ">
-    <view class="component-item display-flex ">
-      <radio onChange="onChange" />
-      <text class="margin-left-8px ">Paper book</text>
-    </view>
-    <view class="component-item display-flex ">
-      <radio checked="true" onChange="onChange" />
-      <text class="margin-left-8px">Digital book ⓘ </text>
-    </view>
-  </radio-group>
-  <view class="mt-10x items-center">
+    <view class="mt-10x items-center">
     <button class="big_button" data-popup="{{
         show:true,
         position:'top',
         mask:true,
   
         disableScroll:true
-      }}" onTap="onTap">
+      }}" onTap="onBuy">
       Buy this book
     </button>
   </view>
   <view class="line-divider " />
-  <view class="display-flex mt-20x ml-10x ">
-    <image class="ava-icon margin-right-8px" src="/assets/images/ava_hoang.jpg"></image>
-    <view class="margin-left-4px">
-      <view class="display-flex text-13px">
-        <view>
-          <text class="text-bold margin-right-12px">Nhà sách Minh Hoàng</text>
-          <view class=" text-12px text-gray">
-            Online 2 hours ago
-          </view>
-        </view>
-        <button class="button_view ml-20x text-bold">View Shop</button>
-      </view>
-      <view class="">
-        <book_store bookDetail="{{bookDetail}}" isLoading="{{isLoading}}" />
-      </view>
-    </view>
-  </view>
+  
   
 </view>

@@ -22,11 +22,14 @@ Page({
     isStickButtons: false,
     isScrollUp: false,
     show: false,
+    showSuccess: false,
     position: 'top',
     animation: true,
     mask: true,
     zIndex: 10,
-    disableScroll: true
+    isBought: false,
+    disableScroll: true,
+    bookId: '1'
   },
 
   async loadData() {
@@ -35,7 +38,8 @@ Page({
     });
 
     try {
-      const [bookDetail] = await Promise.all([getBookDetail()]);
+    
+      const bookDetail = getBookDetail(this.data.bookId.toString());
 
       this.setData({
         bookDetail,
@@ -56,6 +60,12 @@ Page({
   },
   onTap(e) {
     this.setData({ ...e.target.dataset.popup });
+  },
+  onConfirmTransaction(){
+    this.setData({show:false, showSuccess: true})
+  },
+  onConfirmCancel(){
+    this.setData({ showSuccess: false, isBought: true });
   },
   onBlockScout(){
     navigate({
@@ -136,15 +146,15 @@ Page({
   // Life cycle
   onLoad(query) {
     const {
-      title,
+      bookId,
       sort,
       category,
       showCategory = true,
       showActions = true,
     } = parseQuery(query);
-
+    this.setData({bookId});
     const data = { ...this.data };
-
+    
     if (sort) {
       const sortObject = defaultSorts.find((item) => item.value === sort);
       if (sortObject) data.selectedSort = sortObject;
@@ -163,7 +173,7 @@ Page({
     my.setNavigationBar({
       title: "Book detail",
     });
-
+    this.loadData();
     showSearch();
   },
 
