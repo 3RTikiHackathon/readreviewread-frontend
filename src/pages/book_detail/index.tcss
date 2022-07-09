@@ -64,11 +64,25 @@
   height: 35px;
   border-radius: 50%;
 }
+.button_right_truong{
+  align-items: right;
+  margin-left: 45px;
+}
 .button_right_thai{
   align-items: right;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 .button_right_khang{
   align-items: right;
-  margin-left: 55px;
+  margin-left: 42px;
+}
+
+.view-pop{
+  background:#fff;
+     display:flex;
+     width:100%;
+     height:100%;
+     justify-content:center;
+     flex-direction:column;
+     align-items:center
 }

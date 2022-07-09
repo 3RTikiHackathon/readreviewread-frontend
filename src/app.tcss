@@ -306,7 +306,9 @@ image {
 .align-center{
   align-items: center;
 }
-
+.justify-between{
+  justify-content: space-between;
+}
 .justify-center{
   justify-content: center;
 }
@@ -333,4 +335,14 @@ image {
 
 .border-12px{
   border-radius: 12px;
+}
+
+.text-color-red{
+  color: #FF647C;
+}
+.text-color-blue{
+  color:  #5cb3ff;
+}
+.text-color-green{
+  color:  #00C48C;
 }

@@ -4,13 +4,13 @@ import {
   navigate,
   openDeeplink,
   showCart,
-  showSearch,
-} from "../../utils/navigate";
-import { getPosts, getBookDetail } from "../../services/index";
-import { systemInfo } from "../../utils/system";
-import { defaultSorts } from "../../utils/constant";
-import { filters, formatFiltersToQuery } from "../../utils/filter";
-import { group } from "../../utils/common";
+  showSearch
+} from '../../utils/navigate';
+import { getPosts, getBookDetail } from '../../services/index';
+import { systemInfo } from '../../utils/system';
+import { defaultSorts } from '../../utils/constant';
+import { filters, formatFiltersToQuery } from '../../utils/filter';
+import { group } from '../../utils/common';
 
 Page({
   hasMore: false,
@@ -19,6 +19,8 @@ Page({
   data: {
     isLoading: false,
     bookDetail: {},
+    paperPrice: "105.000 đ",
+    ePrice: "70.000 đ",
     isStickButtons: false,
     isScrollUp: false,
     show: false,
@@ -35,7 +37,9 @@ Page({
     });
 
     try {
-      const [bookDetail] = await Promise.all([getBookDetail()]);
+      const [bookDetail] = await Promise.all([
+        getBookDetail(),
+      ]);
 
       this.setData({
         bookDetail,
@@ -58,10 +62,7 @@ Page({
     this.setData({ ...e.target.dataset.popup });
   },
   onBlockScout(){
-    navigate({
-      page:'blockscout',
-      params:''
-    })
+    navigate({page:"blockscout"})
   },
   onSelectFilter(selectedFilters) {
     this.setData({
@@ -80,7 +81,7 @@ Page({
   removeFilter(item) {
     const data = { ...this.data };
 
-    if (item.key === "priceRange") {
+    if (item.key === 'priceRange') {
       data.selectedFilters[item.key] = {
         start: null,
         end: null,
@@ -95,10 +96,10 @@ Page({
     const servicePos =
       data.selectedFilters.service &&
       data.selectedFilters.service.findIndex(
-        (serv) => serv.query_name === item.key
+        (serv) => serv.query_name === item.key,
       );
 
-    if (typeof servicePos === "number" && servicePos !== -1) {
+    if (typeof servicePos === 'number' && servicePos !== -1) {
       data.selectedFilters.service[servicePos].checked = false;
 
       this.setData(data);
@@ -114,12 +115,12 @@ Page({
   },
 
   onTapPost(Post) {
-    goToPostDetail({ Post, page: "Post" });
+    goToPostDetail({ Post, page: 'Post' });
   },
 
   goToCategoryDetail(category) {
     navigate({
-      page: "Post",
+      page: 'Post',
       params: {
         title: category.display_value,
         category: category.query_value,
@@ -130,7 +131,7 @@ Page({
   },
 
   onCustomIconEvent() {
-    openDeeplink("tikivn://cart");
+    openDeeplink('tikivn://cart');
   },
 
   // Life cycle
@@ -161,7 +162,7 @@ Page({
     });
 
     my.setNavigationBar({
-      title: "Book detail",
+      title: 'Blockscout',
     });
 
     showSearch();
@@ -201,7 +202,7 @@ Page({
     });
 
     my.createSelectorQuery()
-      .select(".Post-action-buttons")
+      .select('.Post-action-buttons')
       .boundingClientRect()
       .exec(([actionButtons]) => {
         this.actionButtons =
