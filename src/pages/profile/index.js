@@ -230,7 +230,7 @@ Page({
     });
 
     my.setNavigationBar({
-      title: "Book detail",
+      title: "Profile",
     });
 
     showNotify();
