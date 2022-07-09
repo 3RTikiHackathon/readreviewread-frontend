@@ -137,6 +137,27 @@ export const getMyRead = (listName) =>{
     }
   };
 }
+
+export const getMyReadDetail = (myReadId) =>{
+  let myRead = require('./mock/my-read.json');
+  let books = require('./mock/books.json');
+  let readToReturn;
+  myRead.map(read => {
+    
+    if(read.id == myReadId){
+      books.map(book => {
+        if(book.id == read.bookId){
+          read.book = book;
+          readToReturn = read;
+        }
+        
+      })
+    }
+    
+  })
+    return readToReturn;
+}
+
 export const getComments = (postId) =>{
   let comments = require('./mock/comment.json');
   let users = require('./mock/user.json')

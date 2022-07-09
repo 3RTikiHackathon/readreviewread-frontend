@@ -321,7 +321,9 @@ image {
   width: 80px;
   height: 16px;
 }
-
+.flex-8{
+  flex: 5;
+}
 .flex-3{
   flex: 3;
 }

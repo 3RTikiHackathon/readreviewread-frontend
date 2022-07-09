@@ -1,6 +1,6 @@
 .avatar {
-  width: 42%;
-  height: 42%;
+  width: 30%;
+  height: 30%;
 }
 
 .my-account {

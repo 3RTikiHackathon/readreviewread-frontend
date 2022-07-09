@@ -3,6 +3,7 @@
     "pages/feed/index",
     "pages/product/index",
     "pages/my-read/index",
+    "pages/my_journey/index",
     "pages/profile/index",
     "pages/blockscout/index",
     "pages/store/index",
