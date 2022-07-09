@@ -19,5 +19,10 @@
   <block tiki:for="{{Books.data}}" tiki:key="id">
     <store-bestseller-item book="{{item}}"></store-bestseller-item>
   </block>
+  <!-- <tabs tabs="{{tabs}}" onTabClick="onTabClick" tabsName="activeTab" activeTab="{{activeTab}}" swipeable="{{true}}">
+  </tabs>
+  <block tiki:for="{{Books.data}}" tiki:key="id">
+    <my-read-item book="{{item}}"></my-read-item>
+  </block> -->
 
 </view>
