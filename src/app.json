@@ -7,7 +7,8 @@
     "pages/blockscout/index",
     "pages/store/index",
     "pages/book_detail/index",
-    "pages/comments/index"
+    "pages/comments/index",
+    "pages/my-read-detail/index"
   ],
   "window": {
     "defaultTitle": "",
@@ -39,6 +40,12 @@
       {
         "name": "My Read",
         "pagePath": "pages/my-read/index",
+        "icon": "/assets/icons/tab-read.svg",
+        "activeIcon": "assets/icons/tab-read-active.svg"
+      },
+      {
+        "name": "My Read Detail",
+        "pagePath": "pages/my-read-detail/index",
         "icon": "/assets/icons/tab-read.svg",
         "activeIcon": "assets/icons/tab-read-active.svg"
       },

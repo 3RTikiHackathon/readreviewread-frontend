@@ -1,14 +1,6 @@
 <view class="px-medium pb-medium">
-   
-  <block
-  tiki:for="{{Posts.data}}"
-  tiki:key="id">
-    <post post="{{item}}"/>
-    <view class="section-divider feed-section-divider"/>
+  <block tiki:for="{{Posts.data}}" tiki:key="id">
+    <post post="{{item}}" />
+    <view class="section-divider feed-section-divider" />
   </block>
-      
-
-    
-
-  
 </view>
