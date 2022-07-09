@@ -16,7 +16,7 @@ Page({
         avaPath: '/assets/images/sample-avatar-1.jpg',
         displayName: 'Hoàng',
         shortReview: 'Cuốn sách này rất hay, làm tôi đọc đêm quên ăn, ngày quên ngủ. Giá như tôi biết đến cuốn sách n...',
-        point: 100
+        point: 200
       },
       leaderboard: [
         {
@@ -66,6 +66,18 @@ Page({
     zIndex: 10,
     disableScroll: true,
     imgs: undefined,
+    submitInput: "",
+    mySubmit: {
+      userId: 3,
+      userName: 'Đạt',
+      userAvatar: '/assets/images/sample-avatar-3.jpg',
+      image: '',
+      content: '',
+      postedTime: '17:00 July 9, 2022',
+      likes: 0,
+      comments: 0,
+      isLiked: false
+    }
   },
 
   async loadData() {
@@ -103,10 +115,17 @@ Page({
   },
 
   onSubmit() {
-    this.setData({
-      show:false,
-      isSubmitted: true
-    });
+    if (this.data.submitInput !== "")
+    {
+      this.setData({
+        show:false,
+        isSubmitted: true,
+        mySubmit: {
+          ...this.data.mySubmit,
+          content: this.data.submitInput
+        }
+      });
+    }
   },
 
   onCancel() {
@@ -136,5 +155,11 @@ Page({
         my.alert({ title: 'Fail', content: JSON.stringify(e) });
       },
     });
+  },
+
+  onSubmitInput(e) {
+    this.setData({
+      submitInput: e.detail.value.toString()
+    })
   }
 })

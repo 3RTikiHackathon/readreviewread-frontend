@@ -12,7 +12,7 @@
       <image class="w-full carousel-item" mode="aspectFill" src="https://picsum.photos/714/327?random=3"/>
     </carousel-item>
   </carousel>
-  <block-header title="Incoming challenges" description=""/>
+  <block-header title="In-progress challenges" description=""/>
   <block tiki:for="{{Challanges.data}}" tiki:key="id">
     <challenge challenge="{{item}}"/>
   </block>  

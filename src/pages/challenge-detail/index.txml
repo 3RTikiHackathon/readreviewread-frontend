@@ -74,6 +74,11 @@
     </view>    
   </view>
 
+  <view tiki:if="{{isSubmitted}}" class="mt-2x-small px-small mb-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-16px">     
+      <review review="{{mySubmit}}"/>
+    </view>  
+  </view>
   <view class="mt-2x-small px-small mb-2x-small">
     <view class="bg-white px-medium py-2x-small radius-16px">     
       <block tiki:for="{{detail.reviews}}" tiki:key="userId">
@@ -91,11 +96,11 @@
        zIndex="10"
        onClose="onCancel"
     >
-    <view class="bg-white">
+    <view class="bg-white top-radius">
       <view>
         <view class="mt-small text-center text-blue font-bold text-medium">Submit your submission</view>
         <view class="block">
-          <textarea placeholder="Enter here" maxlength="600"/>
+          <textarea value="" placeholder="Enter here" maxlength="600" onInput="onSubmitInput"/>
         </view>
         <view style="
             display:flex;
@@ -120,7 +125,6 @@
         </block>
       </view>
     </view> 
-      
      </popup>
   </view>
 </view>
