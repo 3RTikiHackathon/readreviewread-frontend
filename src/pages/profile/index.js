@@ -5,7 +5,7 @@ import {
   navigate,
   openDeeplink,
   showCart,
-  showNotify,
+  showSearch,
 } from "../../utils/navigate";
 import {getPostsProfile } from '../../services/index';
 import { systemInfo } from '../../utils/system';
@@ -196,10 +196,8 @@ Page({
     });
   },
 
-  onCustomIconEvent(e) {
-    navigate({
-      page: "notifications",
-    });
+  onCustomIconEvent() {
+    openDeeplink("tikivn://cart");
   },
 
   // Life cycle
@@ -233,7 +231,7 @@ Page({
       title: "Profile",
     });
 
-    showNotify();
+    showSearch();
   },
 
   onPageScroll(event) {
