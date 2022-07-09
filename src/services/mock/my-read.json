@@ -29,5 +29,12 @@
     "bookId": "5",
     "userId": "1",
     "list": "Want"
+  },
+  {
+    "id": "6",
+    "bookId": "6",
+    "userId": "1",
+    "percent": "2",
+    "list": "Currently"
   }
 ]
