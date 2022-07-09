@@ -33,20 +33,20 @@
       {
         "name": "Store",
         "pagePath": "pages/store/index",
-        "icon": "/assets/icons/tab-store.svg",
-        "activeIcon": "assets/icons/tab-store-active.svg"
+        "icon": "/assets/icons/tab-store.png",
+        "activeIcon": "assets/icons/tab-store-active.png"
       },
       {
         "name": "My Read",
         "pagePath": "pages/my-read/index",
-        "icon": "/assets/icons/tab-read.svg",
-        "activeIcon": "assets/icons/tab-read-active.svg"
+        "icon": "/assets/icons/tab-read.png",
+        "activeIcon": "assets/icons/tab-read-active.png"
       },
       {
         "name": "Campaign",
         "pagePath": "pages/new-challenge/index",
-        "icon": "/assets/icons/tab-challenge.svg",
-        "activeIcon": "assets/icons/tab-challenge-active.svg"
+        "icon": "/assets/icons/tab-challenge.png",
+        "activeIcon": "assets/icons/tab-challenge-active.png"
       },
       {
         "name": "Profile",
