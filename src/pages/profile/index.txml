@@ -1,4 +1,4 @@
-<view class="px-medium pb-medium">
+<view class="px-small pb-medium">
   <view class="flex flex-col items-center">
     <image class="block avatar" mode="widthFix" src="/assets/images/profile.svg" />
     <view class="mt-1x-small">

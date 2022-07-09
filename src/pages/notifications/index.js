@@ -122,7 +122,12 @@ Page({
     });
     this.loadComments();
   },
-
+  onClickHash(){
+    navigate({
+      page:'blockscout',
+      params:''
+    })
+  },
   onSelectSort(selectedSort) {
     this.setData({
       selectedSort,
@@ -248,7 +253,9 @@ Page({
     this.setData({
       filters,
     });
-
+    my.setNavigationBar({
+      title: 'Notifications',
+    });
     my.createSelectorQuery()
       .select('.Comment-action-buttons')
       .boundingClientRect()

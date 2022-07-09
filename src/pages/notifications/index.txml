@@ -19,7 +19,7 @@
         <text class=" text-12px margin-right-4px">
           Transaction Hash: 
         </text>
-        <text class="text-12px text-bold margin-right-4px text-blue text-underline">0x738278c1a260ff11a308698988...</text> 
+        <text catchTap = "onClickHash" class="text-12px text-bold margin-right-4px text-blue text-underline">0x3ce29b484f81b4c173999639a3644...</text> 
       </view>
       
       </view>
