@@ -1,11 +1,6 @@
-<view class="bg-white px-medium py-medium radius-8px">
-  <view class="flex justify-between ">
-    <view class="text-medium font-bold align_left">My books</view>
-    <view class="flex items-center">
-      <view class="text-blue ">View More</view>
-      <icon type="arrow_right" color="#1A94FF"/>
-    </view>
-  </view>
+<view class="py-medium radius-8px">
+    <text class="text-medium font-bold align_right">My books</text>
+      <text class="text-blue ">View More</text>
 
   <view class="px-medium pt-medium flex justify-around">
     <order-icon
