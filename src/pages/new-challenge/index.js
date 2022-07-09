@@ -11,12 +11,12 @@ Page({
           id: 1,
           title: 'Bố già',
           bookCover: '/assets/images/book-cover-bo-gia.jpg',
-          content: 'Express your feeling about Bố già by Mario Puzo.',
+          content: 'Express your feeling about Bố già.',
           startTime: '',
           finishTime: '',
           isJoined: true,
           isSubmitted: false,
-          timeRemaining: '1 day'
+          timeRemaining: '12 hours'
         },
         {
           id: 2,
@@ -27,7 +27,18 @@ Page({
           finishTime: '',
           isJoined: true,
           isSubmitted: false,
-          timeRemaining: '12 hours'
+          timeRemaining: '2 days'
+        },
+        {
+          id: 3,
+          title: 'Sách Nhã Nam',
+          bookCover: '/assets/images/book-cover-tuoi-tre.jpg',
+          content: 'Take a photo with books by Nhã Nam.',
+          startTime: '',
+          finishTime: '',
+          isJoined: true,
+          isSubmitted: false,
+          timeRemaining: '5 days'
         }
       ],
     },
