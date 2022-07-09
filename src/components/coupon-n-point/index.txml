@@ -18,19 +18,19 @@
 </template>
 
 <template name="completed">
-  <view class="flex">
-    <view onTap="onMoveMyCoupon" class="flex w-50 py-2x-small border-right-gray">
-      <image class="block size-40" src="/assets/icons/ic-coupon.svg"/>
-      <view class="ml-2x-small">
-        <view class="mb-4x-small">Coin</view>
-        <view class="text-medium font-bold">{{user.coupons}}</view>
+  <view class="flex bounding_box">
+    <view class="flex w-20 py-2x-small border-right-gray align_left">
+      <image class="block size-40" src="/assets/images/astra.png"/>
+      <view class="ml-1x-small mr-10x">
+        <view class="mb-4x-small">Astra</view>
+        <view class="text-medium font-bold">10000</view>
       </view>
     </view>
-    <view onTap="onMoveMyPoint" class="flex w-50 py-2x-small pl-medium">
-      <image class="block size-40" src="/assets/icons/ic-point.svg"/>
+    <view class="flex w-100 py-2x-small pl-medium">
+      <image class="block size-40" src="/assets/icons/coin_wallet.png"/>
       <view class="ml-2x-small">
-        <view class="mb-4x-small">Point</view>
-        <view class="text-medium font-bold">{{user.points}}</view>
+        <view class="mb-4x-small">Wallet Address</view>
+        <view class="text-medium font-bold">0xe9ce5c0b2d6...</view>
       </view>
     </view>
   </view>

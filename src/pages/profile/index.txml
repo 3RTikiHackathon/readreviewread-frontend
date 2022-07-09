@@ -16,12 +16,13 @@
   <view class="px-medium mt-medium">
     <coupon-n-point user="{{user}}" isLoading="{{isLoading}}" />
   </view>
-
+  <view class="line-divider " />
   <view class="mt-medium px-medium">
     <my-orders numOrders="{{numOrders}}" isLoading="{{isLoading}}" />
   </view>
-
-
+</view>
+<view class="page">
+  <view class="section-divider" />
   <view class="mt-medium px-medium">
     <view class="bg-white px-medium py-2x-small radius-16px">
       <view class="flex justify-between items-center">
@@ -40,5 +41,5 @@
     <view class="mb-medium text-small text-blue text-underline font-medium">Terms and Conditions</view>
     <view class="text-x-small text-gray60">version: 1.0.0</view>
   </view>
-
 </view>
+  

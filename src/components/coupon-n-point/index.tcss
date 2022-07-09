@@ -7,3 +7,11 @@
 .ske-coupon-point {
   height: 96px;
 }
+.align_left{
+  align-items: left;
+  margin-left: -30px;
+}
+.bounding_box{
+  border-radius: 20%;
+  border-color: red;
+}
