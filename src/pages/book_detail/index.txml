@@ -95,14 +95,14 @@
     </view>
   </radio-group>
   <view class="mt-10x items-center">
-    <button tiki:if = "{{!isBought}}" class="big_button" data-popup="{{
+    <button tiki:if = "{{!isBought}}" class="big_button text-bold" data-popup="{{
       show:true,
       position:'top',
       mask:true,
       disableScroll:true
     }}"
       onTap="onTap">
-      Buy 105.000 ₫
+      {{bookDetail.price}}
     </button>
     <button tiki:else class="big_button text-gray bg-gray" >
       You bought this book!
