@@ -20,19 +20,19 @@
 <template name="completed">
   <view class="flex">
     <view class="flex w-50 py-1x-small pl-medium">
-      <view class="ml-2x-small">
+      <view class="ml-2x-small text-center">
         <view class="mb-1x-small">Read</view>
         <view class="text-medium font-bold">{{bookDetail.read}}</view>
       </view>
     </view>
     <view class="flex w-50 py-1x-small pl-medium">
-      <view class="ml-2x-small">
+      <view class="ml-2x-small text-center">
         <view class="mb-1x-small">Pages</view>
         <view class="text-medium font-bold">{{bookDetail.pages}}</view>
       </view>
     </view>
     <view class="flex w-50 py-1x-small pl-medium">
-      <view class="ml-2x-small">
+      <view class="ml-2x-small text-center">
         <view class="mb-1x-small">Reviews</view>
         <view class="text-medium font-bold">{{bookDetail.reviews}}</view>
       </view>

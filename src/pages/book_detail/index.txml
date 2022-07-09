@@ -2,14 +2,40 @@
   
 <view class="text-center">
   <popup
-     position="top"
+     position="bottom"
      show="{{show}}"
      mask="{{mask}}"
      disableScroll = true
      zIndex="10"
      onClose="onCancel"
    >
-   <view class="py-medium view-pop margin-bottom-8px">
+   <view class="border-12px py-medium view-pop">
+      
+      <text class=" text-24px text-bold margin-left-4px">Confirm transaction?</text>
+      <view class="display-flex">
+        <text>Book:</text> <text class="text-bold text-italic margin-left-4px">Những tù nhân của Địa lý</text>
+      </view>
+      <view class="display-flex">
+        <text>Type:</text> <text class="text-bold text-italic margin-left-4px">E-Book</text>
+      </view>
+      <view class="display-flex">
+        <text>Price:</text> <text class="text-bold text-italic margin-left-4px">105.000 ₫</text>
+      </view>
+      <view class="display-flex justify-between align-center py-small">
+        <button onTap="onConfirmTransaction" class="bg-blue border-12px">Confirm</button>    
+        <button onTap="onCancel" class="bg-red border-12px margin-left-12px">Cancel</button>   
+      </view> 
+    </view>
+  </popup>
+  <popup
+     position="bottom"
+     show="{{showSuccess}}"
+     mask="{{mask}}"
+     disableScroll = true
+     zIndex="10"
+     onClose="onConfirmCancel"
+   > 
+   <view class="border-12px py-medium view-pop">
       <view class = "">
         <view class="text-bold text-24px text-color-red">Congrats</view>
         <view class="text-bold text-14px">
@@ -70,15 +96,17 @@
     </view>
   </radio-group>
   <view class="mt-10x items-center">
-    <button class="big_button" data-popup="{{
+    <button tiki:if = "{{!isBought}}" class="big_button" data-popup="{{
       show:true,
       position:'top',
       mask:true,
-
       disableScroll:true
     }}"
       onTap="onTap">
       Buy 105.000 ₫
+    </button>
+    <button tiki:else class="big_button text-gray bg-gray" >
+      You bought this book!
     </button>
   </view>
   <view class="line-divider " />
@@ -105,7 +133,7 @@
       New Reader
     </text>
   </view>
-  <view class="display-flex mt-2x ml-20x">
+  <view tiki:if="{{isBought}}" class="display-flex mt-2x ml-20x">
     <image class="ava-reader margin-right-8px" src="/assets/images/ava_truong.jpg"></image>
     <view class="margin-left-4px">
       <view class="display-flex text-13px">
@@ -135,7 +163,7 @@
       </view>
     </view>
   </view>
-  <view class="display-flex mt-10x ml-20x">
+  <view tiki:if="{{!isBought}}" class="display-flex mt-10x ml-20x">
     <image class="ava-reader margin-right-8px" src="/assets/images/ava_thai.jpg"></image>
     <view class="margin-left-4px">
       <view class="display-flex text-13px">

@@ -22,11 +22,14 @@ Page({
     isStickButtons: false,
     isScrollUp: false,
     show: false,
+    showSuccess: false,
     position: 'top',
     animation: true,
     mask: true,
     zIndex: 10,
-    disableScroll: true
+    isBought: false,
+    disableScroll: true,
+    
   },
 
   async loadData() {
@@ -56,6 +59,12 @@ Page({
   },
   onTap(e) {
     this.setData({ ...e.target.dataset.popup });
+  },
+  onConfirmTransaction(){
+    this.setData({show:false, showSuccess: true})
+  },
+  onConfirmCancel(){
+    this.setData({ showSuccess: false, isBought: true });
   },
   onBlockScout(){
     navigate({
@@ -136,13 +145,13 @@ Page({
   // Life cycle
   onLoad(query) {
     const {
-      title,
+      bookId,
       sort,
       category,
       showCategory = true,
       showActions = true,
     } = parseQuery(query);
-
+    console.log(bookId)
     const data = { ...this.data };
 
     if (sort) {

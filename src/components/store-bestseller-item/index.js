@@ -29,6 +29,9 @@ Component({
     onItemTap(){
       navigate({
         page: 'book_detail',
+        params: {
+          bookId: this.props.book.id
+        }
       });
     }
   },
