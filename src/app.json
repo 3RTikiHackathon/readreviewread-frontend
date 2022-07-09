@@ -10,7 +10,9 @@
     "pages/book_detail/index",
     "pages/comments/index",
     "pages/my-read-detail/index",
-    "pages/book_detail/index"
+    "pages/book_detail/index",
+    "pages/new-challenge/index",
+    "pages/challenge-detail/index"
   ],
   "window": {
     "defaultTitle": "",
@@ -41,7 +43,7 @@
       },
       {
         "name": "Challenge",
-        "pagePath": "pages/product/index",
+        "pagePath": "pages/new-challenge/index",
         "icon": "/assets/icons/tab-challenge.svg",
         "activeIcon": "assets/icons/tab-challenge-active.svg"
       },

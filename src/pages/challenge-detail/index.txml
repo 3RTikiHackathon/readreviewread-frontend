@@ -1,0 +1,131 @@
+<view>
+  <view class="mt-2x-small px-small mb-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-16px">
+      <view class="flex justify-between items-center">
+        <view class="flex">
+          <view>
+            <view class="text-medium font-bold text-blue">Rules</view>
+            <text class="text-small">{{detail.rule}}</text>
+            <view class="">
+              <text class="">Deadline: </text>
+              <text class="font-bold ml-2x-small">{{detail.finishTime}}</text>
+            </view>    
+          </view>
+          <view class="center-view display-flex justify-center text-center">
+            <image class="book-cover" mode="aspectFill" src={{detail.bookCover}} />
+            <view class="text-medium text-blue font-bold">{{detail.title}}</view>
+            <view class="text-small">{{detail.author}}</view>
+          </view>
+        </view>
+      </view>
+    </view>    
+  </view>
+
+  <view class="mt-2x-small px-small mb-2x-small flex items-center display-flex justify-center center-view">
+    <view tiki:if="{{isJoined}}">
+      <view tiki:if="{{isSubmitted}}">
+        <button disabled="true" class="radius-8px display-flex justify-center text-center center-view">Submitted</button>
+      </view>
+      <view tiki:else>
+        <button 
+          onTap="onOpenSubmit" 
+          data-popup="{{
+            show:true,
+            position:'bottom',
+          }}" 
+          class="radius-8px display-flex justify-center text-center center-view">Submit</button>
+      </view>
+    </view>
+    <view tiki:else>
+        <button 
+          onTap="onJoin"  
+          class="radius-8px display-flex justify-center text-center center-view">Join</button>
+    </view>
+  </view>
+
+  <view class="mt-2x-small px-small mb-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-16px">
+      <view class="center-view display-flex justify-center text-center">
+        <view class="text-medium text-blue font-bold">Leaderboard</view>
+        <view>
+          <image class="center-view ava-first" mode="aspectFill" src={{detail.top1.avaPath}} />
+          <view class="">
+            <text class="text-medium font-bold">{{detail.top1.displayName}}</text>
+            <text class="text-medium font-bold text-blue ml-2x-small">{{detail.top1.point}}</text>
+          </view>
+          <view class="">
+            <text class="text-small">{{detail.top1.shortReview}}</text>
+            <text class="text-small text-blue ml-5x-small">See more</text>
+          </view>
+        </view>
+        <block tiki:for="{{detail.leaderboard}}" tiki:key="topId">
+          <view class="px-medium py-2x-small mt-4x-small mb-2x-small radius-16px border-blue">
+            <view class="flex justify-between items-center"> 
+              <view class="flex align-center items-center">
+                <view class="font-bold text-blue">{{item.topId}}</view>
+                <image class="ava-other ml-small" mode="aspectFill" src={{item.avaPath}} />
+                <view class="ml-small"> {{item.displayName}}</view>
+              </view>
+              <view class="pr-small text-blue font-bold">{{item.point}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>    
+  </view>
+
+  <view tiki:if="{{isSubmitted}}" class="mt-2x-small px-small mb-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-16px">     
+      <review review="{{mySubmit}}"/>
+    </view>  
+  </view>
+  <view class="mt-2x-small px-small mb-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-16px">     
+      <block tiki:for="{{detail.reviews}}" tiki:key="userId">
+        <review review="{{item}}"/>
+      </block>
+    </view>    
+  </view>
+
+  <view>
+    <popup
+       position="{{position}}"
+       show="{{show}}"
+       mask="{{mask}}"
+       disableScroll
+       zIndex="10"
+       onClose="onCancel"
+    >
+    <view class="bg-white top-radius">
+      <view>
+        <view class="mt-small text-center text-blue font-bold text-medium">Submit your submission</view>
+        <view class="block">
+          <textarea value="" placeholder="Enter here" maxlength="600" onInput="onSubmitInput"/>
+        </view>
+        <view style="
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            margin-top:32px;
+        ">
+          <button
+          onTap="onBrowse"
+          size="big"
+          style="width:240px; margin-bottom:10px"
+          type="primary">Upload media content(s)</button>
+          <button
+            onTap="onSubmit"
+            size="big"
+            style="width:150px; margin-bottom:5px"
+            type="primary">Submit</button>
+        </view>
+        <block tiki:for="{{imgs}}">
+          <image class="image-cover" src="{{item}}" />
+        </block>
+      </view>
+    </view> 
+     </popup>
+  </view>
+</view>
+

@@ -195,3 +195,7 @@ export const getBookDetail = (bookId) => {
   return bookToReturn;
 }
 
+export const getChallenges = () => {
+  let challenges = require('./mock/challenges.json');
+  return challenges;
+}
