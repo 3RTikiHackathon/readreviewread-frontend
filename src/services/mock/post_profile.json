@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "userId": "1",
+    "bookId": "1",
+    "action": "reviewed",
+    "image":"/assets/images/dark-nhan-tam.png",
+    "content": "Cuốn sách Đắc Nhân Tâm ngoài việc dạy cho chúng ta những cách kỹ năng giao tiếp và bí quyết để thành công, thì nó còn giúp cho chúng ta cách đề phòng và giải quyết những khúc mắc, hiểu lầm từ nhỏ nhặt cho đến nghiêm trong trong vấn đề giao tiếp và ứng xử một cách chuyên nghiệp và tinh tế nhất trong bất kỳ tình huống và trường hợp nào. ",
+    "postedTime": "16:30 July 7, 2022",
+    "likes": 15,
+    "comments": 3,
+    "shares": 2,
+    "isLiked": false
+  },
+  {
+    "id": "2",
+    "userId": "1",
+    "bookId": "3",
+    "action": "reviewed",
+    "bookCover": "",
+    "image":"/assets/images/my-book.jpg",
+    "content": "Mình đánh giá cuốn sách này của Hoàng Dương không đáng tiền lắm, treo đầu dê bán thịt chó.",
+    "postedTime": "12:24 July 5, 2022",
+    "likes": 15,
+    "comments": 3,
+    "shares": 2,
+    "isLiked": false
+  }
+]
