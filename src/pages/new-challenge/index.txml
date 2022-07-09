@@ -1,6 +1,9 @@
 <view>
   <view class="section-divider product-section-divider"/>
-  <block-header title="What's new?" description=""/>
+  <!-- <block-header title="What's new?" description=""/> -->
+  <view class="bg-white">
+    <view class="ml-4x-small px-small py-2x-small text-bold text-16px">What's new?</view>
+  </view>
   <carousel indicator-dots arrows>
     <carousel-item>
       <image class="w-full carousel-item" mode="aspectFill" src="https://picsum.photos/714/327?random=1"/>
@@ -12,13 +15,18 @@
       <image class="w-full carousel-item" mode="aspectFill" src="https://picsum.photos/714/327?random=3"/>
     </carousel-item>
   </carousel>
-  <block-header title="In-progress challenges" description=""/>
+  <!-- <block-header title="In-progress challenges" description=""/> -->
+  <view class="bg-white">
+    <view class="ml-4x-small mt-small px-small py-2x-small text-bold text-16px">In-progress challenges</view>
+  </view>
   <block tiki:for="{{Challanges.data}}" tiki:key="id">
     <challenge challenge="{{item}}"/>
   </block>  
-  <block-header title="Leaderboard" description=""/>
-  
-  <view class="block-content gray10">
+  <!-- <block-header title="Leaderboard" description=""/> -->
+  <view class="bg-white">
+    <view class="ml-4x-small mt-small px-small py-2x-small text-bold text-16px">Leaderboard</view>
+  </view>
+  <view class="mt-3x-small mb-3x-small ml-small mr-small radius-8px">
     <!-- <text class="title mb-8">Variants</text>
     <text class="subtitle mb-8">Text only</text> -->
     <tabs tabs="{{tabs1}}" 
@@ -31,8 +39,8 @@
           <!-- <view class="tab-item" /> -->
           <block tiki:for="{{leaderboard.data[0].top}}" tiki:key="topId">
             <view class="mt-2x-small px-small mb-2x-small">
-              <view class="flex justify-between items-center">
-                <view class="flex">
+              <view class="flex justify-between items-center text-center">
+                <view class="flex items-center">
                   <image class="ava-40px" mode="aspectFill" src={{item.avaPath}} />
                   <view class="ml-small text-bold text-13px">{{item.displayName}}</view>
                 </view>

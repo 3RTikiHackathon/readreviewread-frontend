@@ -1,8 +1,8 @@
 <view class="mt-2x-small px-small mb-2x-small">
-  <view catchTap='onChallengeTap' class="bg-white px-medium py-2x-small radius-16px">
+  <view catchTap='onChallengeTap' class="bg-white px-medium py-2x-small radius-8px">
     <view class="flex justify-between items-center">
       <view class="flex">
-        <image class="book-cover" mode="aspectFill" src={{challenge.bookCover}} />
+        <image class="book-cover" mode="widthFix" src={{challenge.bookCover}} />
         <view class="ml-2x-small">
           <view class="font-bold text-medium text-blue mb-4x-small">{{challenge.title}}</view>
           <view class="text-small">{{challenge.content}}</view>
