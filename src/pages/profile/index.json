@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "coupon-n-point": "/components/coupon-n-point/index",
+    "post-profile":"components/post-profile/index",
     "my-orders": "/components/my-orders/index"
   }
 }

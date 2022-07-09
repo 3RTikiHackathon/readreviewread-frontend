@@ -346,3 +346,7 @@ image {
 .text-color-green{
   color:  #00C48C;
 }
+.activityeImage{
+  width: 80%;
+  border-radius: 10%;
+}

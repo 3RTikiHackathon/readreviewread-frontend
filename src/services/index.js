@@ -91,6 +91,31 @@ export const getBook = () =>  {
   return book;
 }
 
+export const getPostsProfile=()=>{
+  let posts = require('./mock/post_profile.json');
+  let books = require('./mock/books.json');
+  let users = require('./mock/user.json');
+  posts.map(post => {
+    books.map(book => {
+      if (book.id == post.bookId){
+        post.book = book;
+      }
+    })
+    users.map(user => {
+      if(user.id == post.userId){
+        post.user = user;
+      }
+    })
+  })
+  return {
+    data : posts,
+    paging: {
+      current_page: 1,
+      last_page: 1,
+    }
+  };
+}
+
 export const getPosts = () =>{
   let posts = require('./mock/post.json');
   let books = require('./mock/books.json');

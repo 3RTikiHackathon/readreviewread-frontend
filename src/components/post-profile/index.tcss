@@ -1,0 +1,42 @@
+.ava-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.product-section-horizontal {
+  overflow-x: auto;
+}
+
+
+
+.line-height{
+  line-height:1.4;
+}
+
+.post{
+  background-color: white;
+}
+
+.icon{
+  width: 24px;
+  height: 24px;
+}
+
+.post-interaction{
+  justify-content: space-between;
+}
+
+.icon-20px{
+  width: 20px;
+  height: 20px;
+}
+
+.text-justify{
+  text-align: justify;
+}
+.align_left{
+  margin-left: 14%;
+}
+.centerlizer{
+  align-items: center;
+}

@@ -19,18 +19,18 @@
 
 <template name="completed">
   <view class="flex bounding_box">
-    <view class="flex w-20 py-2x-small border-right-gray align_left">
+    <view class="flex w-50 border-right-gray">
       <image class="block size-40" src="/assets/images/astra.png"/>
       <view class="ml-1x-small mr-10x">
         <view class="mb-4x-small">Astra</view>
         <view class="text-medium font-bold">10000</view>
       </view>
     </view>
-    <view class="flex w-100 py-2x-small pl-medium">
-      <image class="block size-40" src="/assets/icons/coin_wallet.png"/>
+    <view class="flex w-100 pl-medium align-left">
+      <image class="block size-40" src="/assets/icons/coin.svg"/>
       <view class="ml-2x-small">
-        <view class="mb-4x-small">Wallet Address</view>
-        <view class="text-medium font-bold">0xe9ce5c0b2d6...</view>
+        <view class="mb-4x-small">Coin</view>
+        <view class="text-medium font-bold">213</view>
       </view>
     </view>
   </view>
